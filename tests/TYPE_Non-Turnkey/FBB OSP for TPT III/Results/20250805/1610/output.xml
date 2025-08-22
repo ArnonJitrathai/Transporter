@@ -1,0 +1,649 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.7.9 on win32)" generated="20250805 16:11:01.156" rpa="false" schemaversion="3">
+<suite id="s1" name="FBB OSP for TPT III" source="C:\Users\arnoj885\Robot Framework\Obsolate Transporter\tests\TYPE_Non-Turnkey\FBB OSP for TPT III">
+<suite id="s1-s1" name="FBB OSP for TPT III" source="C:\Users\arnoj885\Robot Framework\Obsolate Transporter\tests\TYPE_Non-Turnkey\FBB OSP for TPT III\FBB_OSP_for_TPT_III.robot">
+<kw name="Open Browser To Login Page" library="login_keywords" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20250805 16:11:02.660" level="INFO">Opening browser 'Chrome' to base url 'https://test-transporter.intra.ais/TPTWeb/login.jsf'.</msg>
+<status status="PASS" starttime="20250805 16:11:02.660" endtime="20250805 16:11:04.944"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20250805 16:11:04.944" endtime="20250805 16:11:05.077"/>
+</kw>
+<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<arg>10 seconds</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" starttime="20250805 16:11:05.077" endtime="20250805 16:11:05.084"/>
+</kw>
+<status status="PASS" starttime="20250805 16:11:02.660" endtime="20250805 16:11:05.084"/>
+</kw>
+<test id="s1-s1-t1" name="[2] สามารถล็อคอินเข้าสู่ระบบ Transporter" line="21">
+<kw name="Your connection is not private" library="login_keywords">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id=details-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20250805 16:11:05.098" level="INFO">Clicking button 'id=details-button'.</msg>
+<status status="PASS" starttime="20250805 16:11:05.097" endtime="20250805 16:11:05.207"/>
+</kw>
+<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<arg>3 seconds</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" starttime="20250805 16:11:05.208" endtime="20250805 16:11:05.208"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>id=proceed-link</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20250805 16:11:05.208" level="INFO">Clicking link 'id=proceed-link'.</msg>
+<status status="PASS" starttime="20250805 16:11:05.208" endtime="20250805 16:11:05.262"/>
+</kw>
+<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<arg>3 seconds</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" starttime="20250805 16:11:05.262" endtime="20250805 16:11:05.264"/>
+</kw>
+<status status="PASS" starttime="20250805 16:11:05.095" endtime="20250805 16:11:05.264"/>
+</kw>
+<kw name="Transporter_Login" library="login_keywords">
+<arg>${SSR Create Draft Site Code USER}</arg>
+<arg>${SSR Create Draft Site Code PASS}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=loginForm:username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20250805 16:11:05.267" level="INFO">Typing text 'arnonkus' into text field 'id=loginForm:username'.</msg>
+<status status="PASS" starttime="20250805 16:11:05.267" endtime="20250805 16:11:05.976"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=loginForm:password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20250805 16:11:05.977" level="INFO">Typing text '123' into text field 'id=loginForm:password'.</msg>
+<status status="PASS" starttime="20250805 16:11:05.976" endtime="20250805 16:11:06.056"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath=${LOGIN BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20250805 16:11:06.061" level="INFO">Clicking button 'xpath=//*[@id="loginForm:login"]'.</msg>
+<status status="PASS" starttime="20250805 16:11:06.061" endtime="20250805 16:11:06.981"/>
+</kw>
+<status status="PASS" starttime="20250805 16:11:05.265" endtime="20250805 16:11:06.982"/>
+</kw>
+<kw name="Welcome Page Should Be Open" library="login_keywords">
+<arg>${LOGIN TITLE}</arg>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>${Title}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20250805 16:11:06.990" level="INFO">Page title is 'Transporter Web (TPT)'.</msg>
+<status status="PASS" starttime="20250805 16:11:06.983" endtime="20250805 16:11:06.990"/>
+</kw>
+<status status="PASS" starttime="20250805 16:11:06.982" endtime="20250805 16:11:06.990"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250805 16:11:08.002" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20250805 16:11:06.992" endtime="20250805 16:11:08.002"/>
+</kw>
+<doc>ล็อคอินเข้าสู่ระบบ Transporter สร้าง Draft Site Code</doc>
+<tag>Standard_Test</tag>
+<tag>Test</tag>
+<status status="PASS" starttime="20250805 16:11:05.085" endtime="20250805 16:11:08.002"/>
+</test>
+<test id="s1-s1-t2" name="[13] สามารถกดออกจากระบบ Transporter ได้" line="206">
+<kw name="Log Out" library="Logout_keywords">
+<kw name="Click Menu List" library="menu_keywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${Menu List}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250805 16:11:08.006" level="INFO">Clicking element 'xpath=//form/div[1]/table/tbody/tr/td[1]/img'.</msg>
+<status status="PASS" starttime="20250805 16:11:08.006" endtime="20250805 16:11:08.077"/>
+</kw>
+<status status="PASS" starttime="20250805 16:11:08.006" endtime="20250805 16:11:08.077"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.getElementById("iconheader:frmMenu:LogOut").click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20250805 16:11:08.078" level="INFO">Executing JavaScript:
+document.getElementById("iconheader:frmMenu:LogOut").click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20250805 16:11:08.077" endtime="20250805 16:11:08.628"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250805 16:11:09.647" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20250805 16:11:08.628" endtime="20250805 16:11:09.647"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Login</arg>
+<arg>10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20250805 16:11:09.647" endtime="20250805 16:11:09.689"/>
+</kw>
+<status status="PASS" starttime="20250805 16:11:08.006" endtime="20250805 16:11:09.689"/>
+</kw>
+<doc>[10] สามารถกดออกจากระบบ Transporter ได้</doc>
+<tag>Standard_Test</tag>
+<tag>Test</tag>
+<status status="PASS" starttime="20250805 16:11:08.002" endtime="20250805 16:11:09.689"/>
+</test>
+<test id="s1-s1-t3" name="[14] สามารถล็อคอินเข้าสู่ระบบ Transporter ได้" line="211">
+<kw name="Transporter_Login" library="login_keywords">
+<arg>${DD Approved USER}</arg>
+<arg>${DD Approved PASS}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=loginForm:username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20250805 16:11:09.695" level="INFO">Typing text 'teerachu' into text field 'id=loginForm:username'.</msg>
+<status status="PASS" starttime="20250805 16:11:09.695" endtime="20250805 16:11:09.805"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=loginForm:password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20250805 16:11:09.805" level="INFO">Typing text '123' into text field 'id=loginForm:password'.</msg>
+<status status="PASS" starttime="20250805 16:11:09.805" endtime="20250805 16:11:09.885"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath=${LOGIN BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20250805 16:11:09.886" level="INFO">Clicking button 'xpath=//*[@id="loginForm:login"]'.</msg>
+<status status="PASS" starttime="20250805 16:11:09.886" endtime="20250805 16:11:10.169"/>
+</kw>
+<status status="PASS" starttime="20250805 16:11:09.695" endtime="20250805 16:11:10.169"/>
+</kw>
+<kw name="Welcome Page Should Be Open" library="login_keywords">
+<arg>${LOGIN TITLE}</arg>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>${Title}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20250805 16:11:10.178" level="INFO">Page title is 'Transporter Web (TPT)'.</msg>
+<status status="PASS" starttime="20250805 16:11:10.171" endtime="20250805 16:11:10.178"/>
+</kw>
+<status status="PASS" starttime="20250805 16:11:10.171" endtime="20250805 16:11:10.178"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250805 16:11:11.181" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20250805 16:11:10.178" endtime="20250805 16:11:11.181"/>
+</kw>
+<doc>สามารถล็อคอินเข้าสู่ระบบ Transporter ได้</doc>
+<tag>Standard_Test</tag>
+<tag>Test</tag>
+<status status="PASS" starttime="20250805 16:11:09.689" endtime="20250805 16:11:11.185"/>
+</test>
+<test id="s1-s1-t4" name="[15] สามารถทำรายการ DD Approved ได้" line="218">
+<kw name="Click Menu List" library="menu_keywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${Menu List}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250805 16:11:11.204" level="INFO">Clicking element 'xpath=//form/div[1]/table/tbody/tr/td[1]/img'.</msg>
+<status status="PASS" starttime="20250805 16:11:11.204" endtime="20250805 16:11:11.281"/>
+</kw>
+<status status="PASS" starttime="20250805 16:11:11.204" endtime="20250805 16:11:11.281"/>
+</kw>
+<kw name="Select Menu" library="menu_keywords">
+<arg>${Todo list Menu ID}</arg>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.getElementById("${Menu}").click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20250805 16:11:11.283" level="INFO">Executing JavaScript:
+document.getElementById("iconheader:frmMenu:TodoList").click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20250805 16:11:11.283" endtime="20250805 16:11:11.789"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250805 16:11:12.790" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20250805 16:11:11.789" endtime="20250805 16:11:12.791"/>
+</kw>
+<status status="PASS" starttime="20250805 16:11:11.282" endtime="20250805 16:11:12.791"/>
+</kw>
+<kw name="To Do List Serach SSR ID" library="menu_to_do_list_keywords">
+<arg>${SSR ID DD Approved By Pass}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=${Todo list Search SSR ID}</arg>
+<arg>${SSR ID}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20250805 16:11:12.798" level="INFO">Typing text 'BKK-2025000304' into text field 'xpath=//table/tbody/tr[2]/td[3]/input'.</msg>
+<status status="PASS" starttime="20250805 16:11:12.797" endtime="20250805 16:11:12.949"/>
+</kw>
+<status status="PASS" starttime="20250805 16:11:12.794" endtime="20250805 16:11:12.949"/>
+</kw>
+<kw name="To Do Click Serach SSR ID" library="menu_to_do_list_keywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${Todo list Menu Search Button Query}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250805 16:11:12.964" level="INFO">Clicking element 'xpath=//*[@id="ssrForm:btnQuery"]'.</msg>
+<status status="PASS" starttime="20250805 16:11:12.963" endtime="20250805 16:11:13.018"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${is_visible}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>xpath=${Todo list Menu Select First Row span}</arg>
+<arg>timeout=15s</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=${Todo list Menu Select First Row span}</arg>
+<arg>timeout=15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20250805 16:11:13.019" endtime="20250805 16:11:13.519"/>
+</kw>
+<msg timestamp="20250805 16:11:13.519" level="INFO">${is_visible} = True</msg>
+<status status="PASS" starttime="20250805 16:11:13.018" endtime="20250805 16:11:13.519"/>
+</kw>
+<if>
+<branch type="IF" condition="'${is_visible}' == 'True'">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0, document.body.scrollHeight)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20250805 16:11:13.523" level="INFO">Executing JavaScript:
+window.scrollTo(0, document.body.scrollHeight)
+Without any arguments.</msg>
+<status status="PASS" starttime="20250805 16:11:13.519" endtime="20250805 16:11:13.532"/>
+</kw>
+<status status="PASS" starttime="20250805 16:11:13.519" endtime="20250805 16:11:13.532"/>
+</branch>
+<branch type="ELSE">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${Todo list Menu Search Button Query}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20250805 16:11:13.532" endtime="20250805 16:11:13.532"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=${Todo list Menu Select First Row span}</arg>
+<arg>timeout=15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20250805 16:11:13.533" endtime="20250805 16:11:13.533"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0, document.body.scrollHeight)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="NOT RUN" starttime="20250805 16:11:13.533" endtime="20250805 16:11:13.533"/>
+</kw>
+<status status="NOT RUN" starttime="20250805 16:11:13.532" endtime="20250805 16:11:13.533"/>
+</branch>
+<status status="PASS" starttime="20250805 16:11:13.519" endtime="20250805 16:11:13.533"/>
+</if>
+<status status="PASS" starttime="20250805 16:11:12.963" endtime="20250805 16:11:13.533"/>
+</kw>
+<kw name="Selected SSR ID" library="menu_to_do_list_keywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${Todo list Menu Select First Row span}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250805 16:11:13.534" level="INFO">Clicking element 'xpath=//div[2]/table/tbody/tr/td[2]/span/a'.</msg>
+<status status="PASS" starttime="20250805 16:11:13.534" endtime="20250805 16:11:14.127"/>
+</kw>
+<status status="PASS" starttime="20250805 16:11:13.533" endtime="20250805 16:11:14.127"/>
+</kw>
+<kw name="Page Should Contains" library="result_massage_keywords">
+<arg>${SSR &gt; DD Approved}</arg>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${Text}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20250805 16:11:14.129" endtime="20250805 16:11:14.151"/>
+</kw>
+<status status="PASS" starttime="20250805 16:11:14.128" endtime="20250805 16:11:14.151"/>
+</kw>
+<kw name="DD Approved Route Type" library="DD_Approved_keywords">
+<arg>${Site to Site}</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${DD Approved Click Route Type}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250805 16:11:14.153" level="INFO">Clicking element 'xpath=//table[1]/tbody/tr[2]/td[3]/select'.</msg>
+<status status="PASS" starttime="20250805 16:11:14.153" endtime="20250805 16:11:14.232"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${Route Type}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250805 16:11:14.232" level="INFO">Clicking element 'xpath=//table[1]/tbody/tr[2]/td[3]/select/option[2]'.</msg>
+<status status="PASS" starttime="20250805 16:11:14.232" endtime="20250805 16:11:14.316"/>
+</kw>
+<status status="PASS" starttime="20250805 16:11:14.153" endtime="20250805 16:11:14.316"/>
+</kw>
+<kw name="DD Approved Cable Job Type" library="DD_Approved_keywords">
+<arg>${New}</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${DD Approved Click Cable Job Type}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250805 16:11:14.318" level="INFO">Clicking element 'xpath=//fieldset/table[1]/tbody/tr[2]/td[6]/select'.</msg>
+<status status="PASS" starttime="20250805 16:11:14.317" endtime="20250805 16:11:14.457"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${Cable Job Type}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250805 16:11:14.457" level="INFO">Clicking element 'xpath=//table[1]/tbody/tr[2]/td[6]/select/option[2]'.</msg>
+<status status="PASS" starttime="20250805 16:11:14.457" endtime="20250805 16:11:14.513"/>
+</kw>
+<status status="PASS" starttime="20250805 16:11:14.317" endtime="20250805 16:11:14.513"/>
+</kw>
+<kw name="DD Approved Point source site" library="DD_Approved_keywords">
+<arg>${CWT}</arg>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0, document.body.scrollHeight)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20250805 16:11:14.515" level="INFO">Executing JavaScript:
+window.scrollTo(0, document.body.scrollHeight)
+Without any arguments.</msg>
+<status status="PASS" starttime="20250805 16:11:14.514" endtime="20250805 16:11:14.522"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=${DD Approved Point source Serach}</arg>
+<arg>timeout=15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20250805 16:11:14.522" endtime="20250805 16:11:14.982"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${DD Approved Point source Serach}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250805 16:11:14.982" level="INFO">Clicking element 'xpath=//tr[2]/td[2]/fieldset/table/tbody/tr[2]/td[3]/input[2]'.</msg>
+<status status="PASS" starttime="20250805 16:11:14.982" endtime="20250805 16:11:15.033"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=${DD Approved Destination site Zone MC}</arg>
+<arg>timeout=15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20250805 16:11:15.033" endtime="20250805 16:11:15.276"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${DD Approved Destination site Zone MC}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250805 16:11:15.280" level="INFO">Clicking element 'xpath=//tbody/tr[2]/td/div/div/fieldset/table[1]/tbody/tr[2]/td[6]/select'.</msg>
+<status status="PASS" starttime="20250805 16:11:15.280" endtime="20250805 16:11:15.333"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${Zone MC}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250805 16:11:15.334" level="INFO">Clicking element 'xpath=//tbody/tr[2]/td[6]/select/option[11]'.</msg>
+<status status="PASS" starttime="20250805 16:11:15.334" endtime="20250805 16:11:15.376"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${Search Site Search Criteria}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250805 16:11:15.377" level="INFO">Clicking element 'xpath=//fieldset/table[2]/tbody/tr/td/input[1]'.</msg>
+<status status="PASS" starttime="20250805 16:11:15.376" endtime="20250805 16:11:15.447"/>
+</kw>
+<kw name="Random Page Destination" library="DD_Approved_keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=${Click Select page}</arg>
+<arg>timeout=15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20250805 16:11:15.448" endtime="20250805 16:11:23.047"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250805 16:11:24.049" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20250805 16:11:23.047" endtime="20250805 16:11:24.049"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${random_num Page}</var>
+<arg>random.randint(3, 12)</arg>
+<arg>modules=random</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20250805 16:11:24.050" level="INFO">${random_num Page} = 5</msg>
+<status status="PASS" starttime="20250805 16:11:24.050" endtime="20250805 16:11:24.050"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${xpath Random Page Destination}</var>
+<arg>//tr/td[1]/div/table/tbody/tr/td[${random_num Page}]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20250805 16:11:24.050" level="INFO">${xpath Random Page Destination} = //tr/td[1]/div/table/tbody/tr/td[5]</msg>
+<status status="PASS" starttime="20250805 16:11:24.050" endtime="20250805 16:11:24.050"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>XPath Page: ${xpath Random Page Destination}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20250805 16:11:24.050" level="INFO">XPath Page: //tr/td[1]/div/table/tbody/tr/td[5]</msg>
+<status status="PASS" starttime="20250805 16:11:24.050" endtime="20250805 16:11:24.050"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${xpath Random Page Destination}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250805 16:11:24.050" level="INFO">Clicking element 'xpath=//tr/td[1]/div/table/tbody/tr/td[5]'.</msg>
+<status status="PASS" starttime="20250805 16:11:24.050" endtime="20250805 16:11:24.146"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250805 16:11:25.154" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20250805 16:11:24.148" endtime="20250805 16:11:25.154"/>
+</kw>
+<status status="PASS" starttime="20250805 16:11:15.448" endtime="20250805 16:11:25.154"/>
+</kw>
+<kw name="Random Destination site" library="DD_Approved_keywords">
+<var>${Serach Result}</var>
+<kw name="Evaluate" library="BuiltIn">
+<var>${random_num}</var>
+<arg>${site Number} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20250805 16:11:25.155" level="INFO">${random_num} = 1</msg>
+<status status="PASS" starttime="20250805 16:11:25.155" endtime="20250805 16:11:25.155"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${random_num}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20250805 16:11:25.155" level="INFO">${random_num} = 1</msg>
+<status status="PASS" starttime="20250805 16:11:25.155" endtime="20250805 16:11:25.155"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${xpath Random Destination site}</var>
+<arg>//fieldset/span/div[2]/table/tbody/tr[${random_num}]/td[2]/a</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20250805 16:11:25.157" level="INFO">${xpath Random Destination site} = //fieldset/span/div[2]/table/tbody/tr[1]/td[2]/a</msg>
+<status status="PASS" starttime="20250805 16:11:25.157" endtime="20250805 16:11:25.157"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>XPath: ${xpath Random Destination site}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20250805 16:11:25.157" level="INFO">XPath: //fieldset/span/div[2]/table/tbody/tr[1]/td[2]/a</msg>
+<status status="PASS" starttime="20250805 16:11:25.157" endtime="20250805 16:11:25.157"/>
+</kw>
+<msg timestamp="20250805 16:11:25.157" level="INFO">${Serach Result} = //fieldset/span/div[2]/table/tbody/tr[1]/td[2]/a</msg>
+<status status="PASS" starttime="20250805 16:11:25.155" endtime="20250805 16:11:25.157"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<arg>${Serach Result}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" starttime="20250805 16:11:25.157" endtime="20250805 16:11:25.157"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=${Search Criteria Serach Result}</arg>
+<arg>timeout=15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20250805 16:11:25.159" endtime="20250805 16:11:25.181"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${Serach Result}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250805 16:11:25.182" level="INFO">Clicking element 'xpath=//fieldset/span/div[2]/table/tbody/tr[1]/td[2]/a'.</msg>
+<status status="PASS" starttime="20250805 16:11:25.181" endtime="20250805 16:11:25.230"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0, document.body.scrollHeight)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20250805 16:11:25.231" level="INFO">Executing JavaScript:
+window.scrollTo(0, document.body.scrollHeight)
+Without any arguments.</msg>
+<status status="PASS" starttime="20250805 16:11:25.230" endtime="20250805 16:11:25.239"/>
+</kw>
+<status status="PASS" starttime="20250805 16:11:14.514" endtime="20250805 16:11:25.239"/>
+</kw>
+<kw name="DD Approved Destination site" library="DD_Approved_keywords">
+<arg>${CWT}</arg>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0, document.body.scrollHeight)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20250805 16:11:25.241" level="INFO">Executing JavaScript:
+window.scrollTo(0, document.body.scrollHeight)
+Without any arguments.</msg>
+<status status="PASS" starttime="20250805 16:11:25.240" endtime="20250805 16:11:25.247"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=${DD Approved Destination site Serach}</arg>
+<arg>timeout=15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20250805 16:11:25.247" endtime="20250805 16:11:25.270"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${DD Approved Destination site Serach}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250805 16:11:25.271" level="INFO">Clicking element 'xpath=//tr[2]/td[4]/fieldset/table/tbody/tr[2]/td[3]/input[2]'.</msg>
+<msg timestamp="20250805 16:11:25.612" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20250805 16:11:25.612" level="FAIL">StaleElementReferenceException: Message: stale element reference: stale element not found
+  (Session info: chrome=114.0.5735.199)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x0072A813+48355]
+	(No symbol) [0x006BC4B1]
+	(No symbol) [0x005C5358]
+	(No symbol) [0x005C87A1]
+	(No symbol) [0x005C99E1]
+	(No symbol) [0x005C9A80]
+	(No symbol) [0x005F4F77]
+	(No symbol) [0x005F3B98]
+	(No symbol) [0x005F239B]
+	(No symbol) [0x005F179E]
+	(No symbol) [0x005E9F5C]
+	(No symbol) [0x0060A73C]
+	(No symbol) [0x005E9A36]
+	(No symbol) [0x0060AA94]
+	(No symbol) [0x0061C922]
+	(No symbol) [0x0060A536]
+	(No symbol) [0x005E82DC]
+	(No symbol) [0x005E93DD]
+	GetHandleVerifier [0x0098AABD+2539405]
+	GetHandleVerifier [0x009CA78F+2800735]
+	GetHandleVerifier [0x009C456C+2775612]
+	GetHandleVerifier [0x007B51E0+616112]
+	(No symbol) [0x006C5F8C]
+	(No symbol) [0x006C2328]
+	(No symbol) [0x006C240B]
+	(No symbol) [0x006B4FF7]
+	BaseThreadInitThunk [0x75B25D49+25]
+	RtlInitializeExceptionChain [0x76F7D1AB+107]
+	RtlGetAppContainerNamedObjectPath [0x76F7D131+561]
+</msg>
+<status status="FAIL" starttime="20250805 16:11:25.270" endtime="20250805 16:11:25.624"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=${DD Approved Destination site Zone MC}</arg>
+<arg>timeout=15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20250805 16:11:25.624" endtime="20250805 16:11:25.624"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${DD Approved Destination site Zone MC}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20250805 16:11:25.624" endtime="20250805 16:11:25.624"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${Zone MC}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20250805 16:11:25.624" endtime="20250805 16:11:25.624"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${Search Site Search Criteria}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20250805 16:11:25.624" endtime="20250805 16:11:25.624"/>
+</kw>
+<kw name="Random Page Destination" library="DD_Approved_keywords">
+<status status="NOT RUN" starttime="20250805 16:11:25.624" endtime="20250805 16:11:25.624"/>
+</kw>
+<kw name="Random Destination site" library="DD_Approved_keywords">
+<var>${Serach Result}</var>
+<status status="NOT RUN" starttime="20250805 16:11:25.624" endtime="20250805 16:11:25.624"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<arg>${Serach Result}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20250805 16:11:25.624" endtime="20250805 16:11:25.624"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=${Search Criteria Serach Result}</arg>
+<arg>timeout=15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20250805 16:11:25.624" endtime="20250805 16:11:25.624"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${Serach Result}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20250805 16:11:25.624" endtime="20250805 16:11:25.624"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0, document.body.scrollHeight)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="NOT RUN" starttime="20250805 16:11:25.624" endtime="20250805 16:11:25.624"/>
+</kw>
+<status status="FAIL" starttime="20250805 16:11:25.240" endtime="20250805 16:11:25.624"/>
+</kw>
+<kw name="DD Approved" library="DD_Approved_keywords">
+<arg>${DD Approved Case}</arg>
+<status status="NOT RUN" starttime="20250805 16:11:25.630" endtime="20250805 16:11:25.630"/>
+</kw>
+<doc>สามารถทำรายการ DD Approved ได้จนจบขั้นตอน</doc>
+<tag>Standard_Test</tag>
+<tag>Test</tag>
+<status status="FAIL" starttime="20250805 16:11:11.189" endtime="20250805 16:11:25.630">StaleElementReferenceException: Message: stale element reference: stale element not found
+  (Session info: chrome=114.0.5735.199)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x0072A813+48355]
+	(No symbol) [0x006BC4B1]
+	(No symbol) [0x005C5358]
+	(No symbol) [0x005C87A1]
+	(No symbol) [0x005C99E1]
+	(No symbol) [0x005C9A80]
+	(No symbol) [0x005F4F77]
+	(No symbol) [0x005F3B98]
+	(No symbol) [0x005F239B]
+	(No symbol) [0x005F179E]
+	(No symbol) [0x005E9F5C]
+	(No symbol) [0x0060A73C]
+	(No symbol) [0x005E9A36]
+	(No symbol) [0x0060AA94]
+	(No symbol) [0x0061C922]
+	(No symbol) [0x0060A536]
+	(No symbol) [0x005E82DC]
+	(No symbol) [0x005E93DD]
+	GetHandleVerifier [0x0098AABD+2539405]
+	GetHandleVerifier [0x009CA78F+2800735]
+	GetHandleVerifier [0x009C456C+2775612]
+	GetHandleVerifier [0x007B51E0+616112]
+	(No symbol) [0x006C5F8C]
+	(No symbol) [0x006C2328]
+	(No symbol) [0x006C240B]
+	(No symbol) [0x006B4FF7]
+	BaseThreadInitThunk [0x75B25D49+25]
+	RtlInitializeExceptionChain [0x76F7D1AB+107]
+	RtlGetAppContainerNamedObjectPath [0x76F7D131+561]
+</status>
+</test>
+<status status="FAIL" starttime="20250805 16:11:01.186" endtime="20250805 16:11:25.631"/>
+</suite>
+<status status="FAIL" starttime="20250805 16:11:01.156" endtime="20250805 16:11:25.631"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="3" fail="1" skip="0">Standard_Test</stat>
+<stat pass="3" fail="1" skip="0">Test</stat>
+</tag>
+<suite>
+<stat pass="3" fail="1" skip="0" id="s1" name="FBB OSP for TPT III">FBB OSP for TPT III</stat>
+<stat pass="3" fail="1" skip="0" id="s1-s1" name="FBB OSP for TPT III">FBB OSP for TPT III.FBB OSP for TPT III</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,3227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.7.9 on win32)" generated="20250805 14:45:37.258" rpa="false" schemaversion="3">
+<suite id="s1" name="FBB OSP for TPT III" source="C:\Users\arnoj885\Robot Framework\Obsolate Transporter\tests\TYPE_Non-Turnkey\FBB OSP for TPT III">
+<suite id="s1-s1" name="FBB OSP for TPT III" source="C:\Users\arnoj885\Robot Framework\Obsolate Transporter\tests\TYPE_Non-Turnkey\FBB OSP for TPT III\FBB_OSP_for_TPT_III.robot">
+<kw name="Open Browser To Login Page" library="login_keywords" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20250805 14:45:38.796" level="INFO">Opening browser 'Chrome' to base url 'https://test-transporter.intra.ais/TPTWeb/login.jsf'.</msg>
+<status status="PASS" starttime="20250805 14:45:38.796" endtime="20250805 14:45:41.535"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20250805 14:45:41.535" endtime="20250805 14:45:41.661"/>
+</kw>
+<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<arg>10 seconds</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" starttime="20250805 14:45:41.662" endtime="20250805 14:45:41.665"/>
+</kw>
+<status status="PASS" starttime="20250805 14:45:38.796" endtime="20250805 14:45:41.665"/>
+</kw>
+<test id="s1-s1-t1" name="[1] เตรียมข้อมูลสำหรับทดสอบระบบ" line="9">
+<kw name="Clear Excel Value" library="Excel_Template">
+<kw name="Open Workbook" library="RPA.Excel.Files">
+<arg>${SOURCE_FILE}</arg>
+<doc>Open an existing Excel workbook.</doc>
+<msg timestamp="20250805 14:45:41.697" level="INFO">Opened workbook: &lt;RPA.Excel.Files.XlsxWorkbook object at 0x000002223B49F588&gt;</msg>
+<status status="PASS" starttime="20250805 14:45:41.675" endtime="20250805 14:45:41.698"/>
+</kw>
+<kw name="Set Cell Value" library="RPA.Excel.Files">
+<arg>row=2</arg>
+<arg>column=14</arg>
+<arg>value=${EMPTY}</arg>
+<doc>Set a cell value in the given worksheet.</doc>
+<status status="PASS" starttime="20250805 14:45:41.698" endtime="20250805 14:45:41.702"/>
+</kw>
+<kw name="Set Cell Value" library="RPA.Excel.Files">
+<arg>row=2</arg>
+<arg>column=15</arg>
+<arg>value=${EMPTY}</arg>
+<doc>Set a cell value in the given worksheet.</doc>
+<status status="PASS" starttime="20250805 14:45:41.702" endtime="20250805 14:45:41.706"/>
+</kw>
+<kw name="Set Cell Value" library="RPA.Excel.Files">
+<arg>row=2</arg>
+<arg>column=16</arg>
+<arg>value=${EMPTY}</arg>
+<doc>Set a cell value in the given worksheet.</doc>
+<status status="PASS" starttime="20250805 14:45:41.706" endtime="20250805 14:45:41.711"/>
+</kw>
+<kw name="Set Cell Value" library="RPA.Excel.Files">
+<arg>row=2</arg>
+<arg>column=17</arg>
+<arg>value=${EMPTY}</arg>
+<doc>Set a cell value in the given worksheet.</doc>
+<status status="PASS" starttime="20250805 14:45:41.712" endtime="20250805 14:45:41.716"/>
+</kw>
+<kw name="Set Cell Value" library="RPA.Excel.Files">
+<arg>row=2</arg>
+<arg>column=18</arg>
+<arg>value=${EMPTY}</arg>
+<doc>Set a cell value in the given worksheet.</doc>
+<status status="PASS" starttime="20250805 14:45:41.716" endtime="20250805 14:45:41.720"/>
+</kw>
+<kw name="Set Cell Value" library="RPA.Excel.Files">
+<arg>row=2</arg>
+<arg>column=19</arg>
+<arg>value=${EMPTY}</arg>
+<doc>Set a cell value in the given worksheet.</doc>
+<status status="PASS" starttime="20250805 14:45:41.720" endtime="20250805 14:45:41.723"/>
+</kw>
+<kw name="Set Cell Value" library="RPA.Excel.Files">
+<arg>row=2</arg>
+<arg>column=20</arg>
+<arg>value=${EMPTY}</arg>
+<doc>Set a cell value in the given worksheet.</doc>
+<status status="PASS" starttime="20250805 14:45:41.723" endtime="20250805 14:45:41.723"/>
+</kw>
+<kw name="Save Workbook" library="RPA.Excel.Files">
+<doc>Save the active workbook.</doc>
+<status status="PASS" starttime="20250805 14:45:41.723" endtime="20250805 14:45:41.788"/>
+</kw>
+<kw name="Close Workbook" library="RPA.Excel.Files">
+<doc>Close the active workbook.</doc>
+<msg timestamp="20250805 14:45:41.788" level="INFO">Closing workbook: &lt;RPA.Excel.Files.XlsxWorkbook object at 0x000002223B49F588&gt;</msg>
+<status status="PASS" starttime="20250805 14:45:41.788" endtime="20250805 14:45:41.788"/>
+</kw>
+<status status="PASS" starttime="20250805 14:45:41.675" endtime="20250805 14:45:41.788"/>
+</kw>
+<kw name="Gennerate Reference Site Code" library="Excel_Template">
+<kw name="Get Current Date" library="DateTime">
+<var>${current_datetime}</var>
+<arg>result_format=%Y%m%d%H%M</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<msg timestamp="20250805 14:45:41.788" level="INFO">${current_datetime} = 202508051445</msg>
+<status status="PASS" starttime="20250805 14:45:41.788" endtime="20250805 14:45:41.788"/>
+</kw>
+<kw name="Length Should Be" library="BuiltIn">
+<arg>${current_datetime}</arg>
+<arg>12</arg>
+<doc>Verifies that the length of the given item is correct.</doc>
+<msg timestamp="20250805 14:45:41.792" level="INFO">Length is 12</msg>
+<status status="PASS" starttime="20250805 14:45:41.788" endtime="20250805 14:45:41.792"/>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<var>${Reference Site Code Value}</var>
+<arg>SEPARATOR=</arg>
+<arg>BSIF_</arg>
+<arg>${current_datetime}</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<msg timestamp="20250805 14:45:41.792" level="INFO">${Reference Site Code Value} = BSIF_202508051445</msg>
+<status status="PASS" starttime="20250805 14:45:41.792" endtime="20250805 14:45:41.792"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${Reference Site Code Value}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20250805 14:45:41.792" level="INFO">${Reference Site Code Value} = BSIF_202508051445</msg>
+<status status="PASS" starttime="20250805 14:45:41.792" endtime="20250805 14:45:41.792"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${Reference Site Code Value}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20250805 14:45:41.793" level="INFO">BSIF_202508051445</msg>
+<status status="PASS" starttime="20250805 14:45:41.793" endtime="20250805 14:45:41.793"/>
+</kw>
+<status status="PASS" starttime="20250805 14:45:41.788" endtime="20250805 14:45:41.793"/>
+</kw>
+<kw name="Write Value To Excel" library="Excel_Template">
+<kw name="Open Workbook" library="RPA.Excel.Files">
+<arg>${DESTINATION_FILE}</arg>
+<doc>Open an existing Excel workbook.</doc>
+<msg timestamp="20250805 14:45:41.811" level="INFO">Opened workbook: &lt;RPA.Excel.Files.XlsWorkbook object at 0x000002223B4A2A88&gt;</msg>
+<status status="PASS" starttime="20250805 14:45:41.793" endtime="20250805 14:45:41.811"/>
+</kw>
+<kw name="Set Cell Value" library="RPA.Excel.Files">
+<arg>row=3</arg>
+<arg>column=4</arg>
+<arg>value=${Reference Site Code Value}</arg>
+<doc>Set a cell value in the given worksheet.</doc>
+<status status="PASS" starttime="20250805 14:45:41.811" endtime="20250805 14:45:41.870"/>
+</kw>
+<kw name="Save Workbook" library="RPA.Excel.Files">
+<doc>Save the active workbook.</doc>
+<status status="PASS" starttime="20250805 14:45:41.870" endtime="20250805 14:45:41.945"/>
+</kw>
+<kw name="Close Workbook" library="RPA.Excel.Files">
+<doc>Close the active workbook.</doc>
+<msg timestamp="20250805 14:45:41.947" level="INFO">Closing workbook: &lt;RPA.Excel.Files.XlsWorkbook object at 0x000002223B4A2A88&gt;</msg>
+<status status="PASS" starttime="20250805 14:45:41.947" endtime="20250805 14:45:41.947"/>
+</kw>
+<status status="PASS" starttime="20250805 14:45:41.793" endtime="20250805 14:45:41.947"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${FULL_TIMESTAMP}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20250805 14:45:41.947" level="INFO">2025-08-05_14:45</msg>
+<status status="PASS" starttime="20250805 14:45:41.947" endtime="20250805 14:45:41.947"/>
+</kw>
+<kw name="Write Value Reference Site Code" library="Excel_Template">
+<kw name="Open Workbook" library="RPA.Excel.Files">
+<arg>${SOURCE_FILE}</arg>
+<doc>Open an existing Excel workbook.</doc>
+<msg timestamp="20250805 14:45:41.957" level="INFO">Opened workbook: &lt;RPA.Excel.Files.XlsxWorkbook object at 0x000002224B310148&gt;</msg>
+<status status="PASS" starttime="20250805 14:45:41.948" endtime="20250805 14:45:41.957"/>
+</kw>
+<kw name="Set Cell Value" library="RPA.Excel.Files">
+<arg>row=2</arg>
+<arg>column=16</arg>
+<arg>value=${Reference Site Code Value}</arg>
+<doc>Set a cell value in the given worksheet.</doc>
+<status status="PASS" starttime="20250805 14:45:41.959" endtime="20250805 14:45:41.959"/>
+</kw>
+<kw name="Save Workbook" library="RPA.Excel.Files">
+<doc>Save the active workbook.</doc>
+<status status="PASS" starttime="20250805 14:45:41.959" endtime="20250805 14:45:42.021"/>
+</kw>
+<kw name="Close Workbook" library="RPA.Excel.Files">
+<doc>Close the active workbook.</doc>
+<msg timestamp="20250805 14:45:42.021" level="INFO">Closing workbook: &lt;RPA.Excel.Files.XlsxWorkbook object at 0x000002224B310148&gt;</msg>
+<status status="PASS" starttime="20250805 14:45:42.021" endtime="20250805 14:45:42.021"/>
+</kw>
+<status status="PASS" starttime="20250805 14:45:41.948" endtime="20250805 14:45:42.021"/>
+</kw>
+<kw name="Write Value Running Date" library="Excel_Template">
+<arg>${FULL_TIMESTAMP}</arg>
+<kw name="Open Workbook" library="RPA.Excel.Files">
+<arg>${SOURCE_FILE}</arg>
+<doc>Open an existing Excel workbook.</doc>
+<msg timestamp="20250805 14:45:42.033" level="INFO">Opened workbook: &lt;RPA.Excel.Files.XlsxWorkbook object at 0x000002224B3F4648&gt;</msg>
+<status status="PASS" starttime="20250805 14:45:42.021" endtime="20250805 14:45:42.033"/>
+</kw>
+<kw name="Set Cell Value" library="RPA.Excel.Files">
+<arg>row=2</arg>
+<arg>column=14</arg>
+<arg>value=${current_datetime}</arg>
+<doc>Set a cell value in the given worksheet.</doc>
+<status status="PASS" starttime="20250805 14:45:42.033" endtime="20250805 14:45:42.033"/>
+</kw>
+<kw name="Save Workbook" library="RPA.Excel.Files">
+<doc>Save the active workbook.</doc>
+<status status="PASS" starttime="20250805 14:45:42.033" endtime="20250805 14:45:42.100"/>
+</kw>
+<kw name="Close Workbook" library="RPA.Excel.Files">
+<doc>Close the active workbook.</doc>
+<msg timestamp="20250805 14:45:42.100" level="INFO">Closing workbook: &lt;RPA.Excel.Files.XlsxWorkbook object at 0x000002224B3F4648&gt;</msg>
+<status status="PASS" starttime="20250805 14:45:42.100" endtime="20250805 14:45:42.100"/>
+</kw>
+<status status="PASS" starttime="20250805 14:45:42.021" endtime="20250805 14:45:42.100"/>
+</kw>
+<kw name="Write Value To Excel Result" library="Excel_Template">
+<arg>Fail</arg>
+<kw name="Open Workbook" library="RPA.Excel.Files">
+<arg>${SOURCE_FILE}</arg>
+<doc>Open an existing Excel workbook.</doc>
+<msg timestamp="20250805 14:45:42.111" level="INFO">Opened workbook: &lt;RPA.Excel.Files.XlsxWorkbook object at 0x000002224B40D8C8&gt;</msg>
+<status status="PASS" starttime="20250805 14:45:42.100" endtime="20250805 14:45:42.111"/>
+</kw>
+<kw name="Set Cell Value" library="RPA.Excel.Files">
+<arg>row=2</arg>
+<arg>column=20</arg>
+<arg>value=${Step}</arg>
+<doc>Set a cell value in the given worksheet.</doc>
+<status status="PASS" starttime="20250805 14:45:42.111" endtime="20250805 14:45:42.111"/>
+</kw>
+<kw name="Save Workbook" library="RPA.Excel.Files">
+<doc>Save the active workbook.</doc>
+<status status="PASS" starttime="20250805 14:45:42.111" endtime="20250805 14:45:42.181"/>
+</kw>
+<kw name="Close Workbook" library="RPA.Excel.Files">
+<doc>Close the active workbook.</doc>
+<msg timestamp="20250805 14:45:42.181" level="INFO">Closing workbook: &lt;RPA.Excel.Files.XlsxWorkbook object at 0x000002224B40D8C8&gt;</msg>
+<status status="PASS" starttime="20250805 14:45:42.181" endtime="20250805 14:45:42.181"/>
+</kw>
+<status status="PASS" starttime="20250805 14:45:42.100" endtime="20250805 14:45:42.182"/>
+</kw>
+<doc>เตรียมข้อมูลสำหรับทดสอบ 1.สร้าง Reference Site Code 2.สร้างวันที่และเวลา</doc>
+<tag>Standard_Test</tag>
+<status status="PASS" starttime="20250805 14:45:41.666" endtime="20250805 14:45:42.182"/>
+</test>
+<test id="s1-s1-t2" name="[2] สามารถล็อคอินเข้าสู่ระบบ Transporter" line="21">
+<kw name="Your connection is not private" library="login_keywords">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id=details-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20250805 14:45:42.182" level="INFO">Clicking button 'id=details-button'.</msg>
+<status status="PASS" starttime="20250805 14:45:42.182" endtime="20250805 14:45:42.253"/>
+</kw>
+<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<arg>3 seconds</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" starttime="20250805 14:45:42.253" endtime="20250805 14:45:42.254"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>id=proceed-link</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20250805 14:45:42.255" level="INFO">Clicking link 'id=proceed-link'.</msg>
+<status status="PASS" starttime="20250805 14:45:42.255" endtime="20250805 14:45:42.308"/>
+</kw>
+<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<arg>3 seconds</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" starttime="20250805 14:45:42.309" endtime="20250805 14:45:42.310"/>
+</kw>
+<status status="PASS" starttime="20250805 14:45:42.182" endtime="20250805 14:45:42.311"/>
+</kw>
+<kw name="Transporter_Login" library="login_keywords">
+<arg>${SSR Create Draft Site Code USER}</arg>
+<arg>${SSR Create Draft Site Code PASS}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=loginForm:username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20250805 14:45:42.313" level="INFO">Typing text 'arnonkus' into text field 'id=loginForm:username'.</msg>
+<status status="PASS" starttime="20250805 14:45:42.312" endtime="20250805 14:45:43.242"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=loginForm:password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20250805 14:45:43.243" level="INFO">Typing text '123' into text field 'id=loginForm:password'.</msg>
+<status status="PASS" starttime="20250805 14:45:43.242" endtime="20250805 14:45:43.326"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath=${LOGIN BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20250805 14:45:43.326" level="INFO">Clicking button 'xpath=//*[@id="loginForm:login"]'.</msg>
+<status status="PASS" starttime="20250805 14:45:43.326" endtime="20250805 14:45:44.064"/>
+</kw>
+<status status="PASS" starttime="20250805 14:45:42.311" endtime="20250805 14:45:44.064"/>
+</kw>
+<kw name="Welcome Page Should Be Open" library="login_keywords">
+<arg>${LOGIN TITLE}</arg>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>${Title}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20250805 14:45:44.072" level="INFO">Page title is 'Transporter Web (TPT)'.</msg>
+<status status="PASS" starttime="20250805 14:45:44.064" endtime="20250805 14:45:44.072"/>
+</kw>
+<status status="PASS" starttime="20250805 14:45:44.064" endtime="20250805 14:45:44.072"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250805 14:45:45.076" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20250805 14:45:44.073" endtime="20250805 14:45:45.076"/>
+</kw>
+<doc>ล็อคอินเข้าสู่ระบบ Transporter สร้าง Draft Site Code</doc>
+<tag>Standard_Test</tag>
+<status status="PASS" starttime="20250805 14:45:42.182" endtime="20250805 14:45:45.076"/>
+</test>
+<test id="s1-s1-t3" name="[3] สามารถกดเมนู Site Management Menu และ สามารถกด Create Draft Site Code Menu ได้" line="29">
+<kw name="Click Menu List" library="menu_keywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${Menu List}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250805 14:45:45.094" level="INFO">Clicking element 'xpath=//form/div[1]/table/tbody/tr/td[1]/img'.</msg>
+<status status="PASS" starttime="20250805 14:45:45.092" endtime="20250805 14:45:45.175"/>
+</kw>
+<status status="PASS" starttime="20250805 14:45:45.090" endtime="20250805 14:45:45.175"/>
+</kw>
+<kw name="Select Menu" library="menu_keywords">
+<arg>${Site Management Menu ID}</arg>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.getElementById("${Menu}").click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20250805 14:45:45.177" level="INFO">Executing JavaScript:
+document.getElementById("iconheader:frmMenu:SiteManagement").click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20250805 14:45:45.176" endtime="20250805 14:45:45.184"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250805 14:45:46.191" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20250805 14:45:45.184" endtime="20250805 14:45:46.191"/>
+</kw>
+<status status="PASS" starttime="20250805 14:45:45.176" endtime="20250805 14:45:46.191"/>
+</kw>
+<kw name="Select Menu" library="menu_keywords">
+<arg>${Create Draft Site Code Menu ID}</arg>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.getElementById("${Menu}").click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20250805 14:45:46.194" level="INFO">Executing JavaScript:
+document.getElementById("iconheader:frmMenu:CreateDraftSiteCode").click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20250805 14:45:46.193" endtime="20250805 14:45:46.680"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250805 14:45:47.686" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20250805 14:45:46.680" endtime="20250805 14:45:47.686"/>
+</kw>
+<status status="PASS" starttime="20250805 14:45:46.192" endtime="20250805 14:45:47.686"/>
+</kw>
+<kw name="Click Import" library="create_draft_site_code">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${Import Create Draft Site Code}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250805 14:45:47.687" level="INFO">Clicking element 'xpath=//form/table/tbody/tr/td[2]/input[1]'.</msg>
+<status status="PASS" starttime="20250805 14:45:47.687" endtime="20250805 14:45:48.249"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Import Site Information</arg>
+<arg>timeout=15s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20250805 14:45:48.250" endtime="20250805 14:45:48.277"/>
+</kw>
+<status status="PASS" starttime="20250805 14:45:47.686" endtime="20250805 14:45:48.278"/>
+</kw>
+<kw name="Click Search Proforma No" library="create_draft_site_code">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${Search Proforma No}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250805 14:45:48.279" level="INFO">Clicking element 'xpath=//form/fieldset[2]/table/tbody/tr[2]/td[3]/input[2]'.</msg>
+<status status="PASS" starttime="20250805 14:45:48.279" endtime="20250805 14:45:48.354"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=${Proferma No Input}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20250805 14:45:48.354" endtime="20250805 14:45:48.610"/>
+</kw>
+<status status="PASS" starttime="20250805 14:45:48.278" endtime="20250805 14:45:48.610"/>
+</kw>
+<kw name="Get Column Values By Name" library="Excel_Template">
+<var>${Proferma No List}</var>
+<arg>Proferma_No</arg>
+<kw name="Open Workbook" library="RPA.Excel.Files">
+<arg>${SOURCE_FILE}</arg>
+<doc>Open an existing Excel workbook.</doc>
+<msg timestamp="20250805 14:45:48.623" level="INFO">Opened workbook: &lt;RPA.Excel.Files.XlsxWorkbook object at 0x000002224B41F748&gt;</msg>
+<status status="PASS" starttime="20250805 14:45:48.615" endtime="20250805 14:45:48.623"/>
+</kw>
+<kw name="Read Worksheet As Table" library="RPA.Excel.Files">
+<var>${rows}</var>
+<arg>header=True</arg>
+<doc>Read the contents of a worksheet into a Table container. Allows
+sorting/filtering/manipulating using the ``RPA.Tables`` library.</doc>
+<msg timestamp="20250805 14:45:48.623" level="INFO">Created table: Table(columns=['Test_Case_ID', 'Proferma_No', 'Import_Site_Template_File', 'SSR_Routing_Submitted_Latitude_Start', 'SSR_Routing_Submitted_Latitude_End', 'SSR_Routing_Submitted_Longitude_Start', 'SSR_Routing_Submitted_Longitude_End', 'SSR_Routing_Submitted_Cable_Distance', 'SSR_Routing_Submitted_Upload_File', 'DD_Submitted_Upload_file', 'Permission_Start_Submitted_Upload_file', 'PAT_BOQ_Submitted_Upload_file', 'FAT_Permission_iGIS_Submitted_Upload_file', 'Date Running', 'Run_Status', 'Reference_Site_Code', 'SSR_ID', 'Pre-PR', 'PO', 'Result'], rows=1)</msg>
+<msg timestamp="20250805 14:45:48.623" level="INFO">${rows} = Table(columns=['Test_Case_ID', 'Proferma_No', 'Import_Site_Template_File', 'SSR_Routing_Submitted_Latitude_Start', 'SSR_Routing_Submitted_Latitude_End', 'SSR_Routing_Submitted_Longitude_Start', 'SSR_R...</msg>
+<status status="PASS" starttime="20250805 14:45:48.623" endtime="20250805 14:45:48.623"/>
+</kw>
+<kw name="Create List" library="BuiltIn">
+<var>${values}</var>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20250805 14:45:48.623" level="INFO">${values} = []</msg>
+<status status="PASS" starttime="20250805 14:45:48.623" endtime="20250805 14:45:48.623"/>
+</kw>
+<for flavor="IN">
+<var>${row}</var>
+<value>@{rows}</value>
+<iter>
+<var name="${row}">{'Test_Case_ID': '001', 'Proferma_No': 1010001072, 'Import_Site_Template_File': 'Import_Site_Template_Proforma OSP.xls', 'SSR_Routing_Submitted_Latitude_Start': 4.12345, 'SSR_Routing_Submitted_Latitud...</var>
+<kw name="Get From Dictionary" library="Collections">
+<var>${value}</var>
+<arg>${row}</arg>
+<arg>${column_name}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<msg timestamp="20250805 14:45:48.623" level="INFO">${value} = 1010001072</msg>
+<status status="PASS" starttime="20250805 14:45:48.623" endtime="20250805 14:45:48.623"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${values}</arg>
+<arg>${value}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20250805 14:45:48.623" endtime="20250805 14:45:48.623"/>
+</kw>
+<status status="PASS" starttime="20250805 14:45:48.623" endtime="20250805 14:45:48.623"/>
+</iter>
+<status status="PASS" starttime="20250805 14:45:48.623" endtime="20250805 14:45:48.623"/>
+</for>
+<kw name="Close Workbook" library="RPA.Excel.Files">
+<doc>Close the active workbook.</doc>
+<msg timestamp="20250805 14:45:48.623" level="INFO">Closing workbook: &lt;RPA.Excel.Files.XlsxWorkbook object at 0x000002224B41F748&gt;</msg>
+<status status="PASS" starttime="20250805 14:45:48.623" endtime="20250805 14:45:48.623"/>
+</kw>
+<msg timestamp="20250805 14:45:48.623" level="INFO">${Proferma No List} = [1010001072]</msg>
+<status status="PASS" starttime="20250805 14:45:48.615" endtime="20250805 14:45:48.623"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${Proferma No}</var>
+<arg>${Proferma No List[0]}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20250805 14:45:48.623" level="INFO">${Proferma No} = 1010001072</msg>
+<status status="PASS" starttime="20250805 14:45:48.623" endtime="20250805 14:45:48.623"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Proferma No :&gt;&gt;&gt;${Proferma No}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20250805 14:45:48.623" level="INFO">Proferma No :&gt;&gt;&gt;1010001072</msg>
+<status status="PASS" starttime="20250805 14:45:48.623" endtime="20250805 14:45:48.623"/>
+</kw>
+<kw name="Search Proforma No" library="create_draft_site_code">
+<arg>${Proferma No}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=${Proferma No Input}</arg>
+<arg>${Proferma Number}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20250805 14:45:48.623" level="INFO">Typing text '1010001072' into text field 'xpath=//div/div[2]/table/tbody/tr[2]/td/form/div[1]/div/fieldset/table[1]/tbody/tr[3]/td[3]/input'.</msg>
+<status status="PASS" starttime="20250805 14:45:48.623" endtime="20250805 14:45:48.752"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${Proferma Serach Button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250805 14:45:48.752" level="INFO">Clicking element 'xpath=//div[2]/div[2]/div/div[2]/table/tbody/tr[2]/td/form/div[1]/div/fieldset/table[2]/tbody/tr[1]/td/input[1]'.</msg>
+<status status="PASS" starttime="20250805 14:45:48.752" endtime="20250805 14:45:48.808"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=${First Proferma No}</arg>
+<arg>timeout=15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20250805 14:45:48.809" endtime="20250805 14:45:49.045"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${First Proferma No}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250805 14:45:49.045" level="INFO">Clicking element 'xpath=//div[2]/table/tbody/tr[2]/td/form/div[1]/div/span/fieldset/span/div[2]/table/tbody/tr/td[2]/div/a'.</msg>
+<status status="PASS" starttime="20250805 14:45:49.045" endtime="20250805 14:45:49.397"/>
+</kw>
+<status status="PASS" starttime="20250805 14:45:48.623" endtime="20250805 14:45:49.397"/>
+</kw>
+<kw name="Click Budget Check List" library="create_draft_site_code">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${Serach Budget Check List}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250805 14:45:49.399" level="INFO">Clicking element 'xpath=//tbody/tr/td/form/fieldset[2]/table/tbody/tr[7]/td[3]/input[2]'.</msg>
+<status status="PASS" starttime="20250805 14:45:49.399" endtime="20250805 14:45:49.466"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=${Purchase Cat Group}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20250805 14:45:49.466" endtime="20250805 14:45:49.707"/>
+</kw>
+<status status="PASS" starttime="20250805 14:45:49.398" endtime="20250805 14:45:49.711"/>
+</kw>
+<kw name="Search Budget Check List" library="create_draft_site_code">
+<arg>${Telecom-Radio}</arg>
+<arg>${Service Management Fee}</arg>
+<arg>${Installation Upgrade Optimization}</arg>
+<arg>${4G}</arg>
+<arg>${Telecom}</arg>
+<arg>${AWN}</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${Purchase Cat Group}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250805 14:45:49.711" level="INFO">Clicking element 'xpath=//div[2]/div[2]/div/div[2]/table/tbody/tr[2]/td/form/div[1]/div/fieldset/table[1]/tbody/tr[3]/td[3]/select'.</msg>
+<status status="PASS" starttime="20250805 14:45:49.711" endtime="20250805 14:45:49.777"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${Select Purchase Cat Group}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250805 14:45:49.777" level="INFO">Clicking element 'xpath=//*[@id="purchasePopupId:popupPurchasefrom:purchaseCatGroupId"]/option[6]'.</msg>
+<status status="PASS" starttime="20250805 14:45:49.777" endtime="20250805 14:45:49.851"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250805 14:45:50.358" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20250805 14:45:49.851" endtime="20250805 14:45:50.358"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${Purchase Cat}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250805 14:45:50.358" level="INFO">Clicking element 'xpath=//div[2]/div[2]/div/div[2]/table/tbody/tr[2]/td/form/div[1]/div/fieldset/table[1]/tbody/tr[3]/td[6]/select'.</msg>
+<status status="PASS" starttime="20250805 14:45:50.358" endtime="20250805 14:45:50.419"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${Select Purchase Cat}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250805 14:45:50.419" level="INFO">Clicking element 'xpath=//tr[2]/td/form/div[1]/div/fieldset/table[1]/tbody/tr[3]/td[6]/select/option[2]'.</msg>
+<status status="PASS" starttime="20250805 14:45:50.419" endtime="20250805 14:45:50.468"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250805 14:45:50.983" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20250805 14:45:50.469" endtime="20250805 14:45:50.983"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${Action Type}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250805 14:45:50.983" level="INFO">Clicking element 'xpath=//div[2]/div[2]/div/div[2]/table/tbody/tr[2]/td/form/div[1]/div/fieldset/table[1]/tbody/tr[4]/td[3]/select'.</msg>
+<status status="PASS" starttime="20250805 14:45:50.983" endtime="20250805 14:45:51.050"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${Select Action Type}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250805 14:45:51.051" level="INFO">Clicking element 'xpath=//*[@id="purchasePopupId:popupPurchasefrom:actionTypeId"]/option[2]'.</msg>
+<status status="PASS" starttime="20250805 14:45:51.051" endtime="20250805 14:45:51.141"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250805 14:45:51.648" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20250805 14:45:51.141" endtime="20250805 14:45:51.648"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${System Type}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250805 14:45:51.648" level="INFO">Clicking element 'xpath=//div[2]/div[2]/div/div[2]/table/tbody/tr[2]/td/form/div[1]/div/fieldset/table[1]/tbody/tr[4]/td[6]/select'.</msg>
+<status status="PASS" starttime="20250805 14:45:51.648" endtime="20250805 14:45:51.783"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${Select System Type}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250805 14:45:51.783" level="INFO">Clicking element 'xpath=//div[2]/div[2]/div/div[2]/table/tbody/tr[2]/td/form/div[1]/div/fieldset/table[1]/tbody/tr[4]/td[6]/select/option[4]'.</msg>
+<status status="PASS" starttime="20250805 14:45:51.783" endtime="20250805 14:45:51.822"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250805 14:45:52.334" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20250805 14:45:51.822" endtime="20250805 14:45:52.334"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${Service Code}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250805 14:45:52.334" level="INFO">Clicking element 'xpath=//div[2]/div[2]/div/div[2]/table/tbody/tr[2]/td/form/div[1]/div/fieldset/table[1]/tbody/tr[5]/td[3]/select'.</msg>
+<status status="PASS" starttime="20250805 14:45:52.334" endtime="20250805 14:45:52.432"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${Select Service Code}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250805 14:45:52.433" level="INFO">Clicking element 'xpath=//table/tbody/tr[2]/td/form/div[1]/div/fieldset/table[1]/tbody/tr[5]/td[3]/select/option[2]'.</msg>
+<status status="PASS" starttime="20250805 14:45:52.432" endtime="20250805 14:45:52.484"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250805 14:45:52.998" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20250805 14:45:52.484" endtime="20250805 14:45:52.998"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${Company Code}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250805 14:45:52.998" level="INFO">Clicking element 'xpath=//div[2]/div[2]/div/div[2]/table/tbody/tr[2]/td/form/div[1]/div/fieldset/table[1]/tbody/tr[5]/td[6]/select'.</msg>
+<status status="PASS" starttime="20250805 14:45:52.998" endtime="20250805 14:45:53.101"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${Select Company Code}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250805 14:45:53.103" level="INFO">Clicking element 'xpath=//table/tbody/tr[2]/td/form/div[1]/div/fieldset/table[1]/tbody/tr[5]/td[6]/select/option[2]'.</msg>
+<status status="PASS" starttime="20250805 14:45:53.101" endtime="20250805 14:45:53.129"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250805 14:45:53.633" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20250805 14:45:53.129" endtime="20250805 14:45:53.633"/>
+</kw>
+<status status="PASS" starttime="20250805 14:45:49.711" endtime="20250805 14:45:53.633"/>
+</kw>
+<kw name="Clck Search Purchase" library="create_draft_site_code">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${Purchase Serach}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250805 14:45:53.633" level="INFO">Clicking element 'xpath=//div[2]/div[2]/div/div[2]/table/tbody/tr[2]/td/form/div[1]/div/fieldset/table[2]/tbody/tr[1]/td/input[1]'.</msg>
+<status status="PASS" starttime="20250805 14:45:53.633" endtime="20250805 14:45:53.749"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=${First Purchase Row Select}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20250805 14:45:53.749" endtime="20250805 14:45:53.990"/>
+</kw>
+<status status="PASS" starttime="20250805 14:45:53.633" endtime="20250805 14:45:53.990"/>
+</kw>
+<kw name="Select Purchase Cat Group" library="create_draft_site_code">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${First Purchase Row Select}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250805 14:45:53.992" level="INFO">Clicking element 'xpath=//div[2]/div[2]/div/div[2]/table/tbody/tr[2]/td/form/div[1]/div/span/fieldset/span/div[2]/table/tbody/tr[1]/td[2]/div/a'.</msg>
+<status status="PASS" starttime="20250805 14:45:53.991" endtime="20250805 14:45:54.340"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250805 14:45:54.842" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20250805 14:45:54.340" endtime="20250805 14:45:54.842"/>
+</kw>
+<status status="PASS" starttime="20250805 14:45:53.991" endtime="20250805 14:45:54.844"/>
+</kw>
+<kw name="Click Search Procurator" library="create_draft_site_code">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${Click Search Procurator Button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250805 14:45:54.844" level="INFO">Clicking element 'xpath=//tbody/tr/td/form/fieldset[2]/table/tbody/tr[10]/td[4]/input'.</msg>
+<status status="PASS" starttime="20250805 14:45:54.844" endtime="20250805 14:45:54.951"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=${Workflow Type}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20250805 14:45:54.951" endtime="20250805 14:45:55.253"/>
+</kw>
+<status status="PASS" starttime="20250805 14:45:54.844" endtime="20250805 14:45:55.253"/>
+</kw>
+<kw name="Search Procurator" library="create_draft_site_code">
+<arg>${FBB OSP for TPT III Auto PO}</arg>
+<arg>${FBB OSP TPT3}</arg>
+<arg>${BKK}</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${Workflow Type}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250805 14:45:55.253" level="INFO">Clicking element 'xpath=//div[2]/div[2]/div/div[2]/table/tbody/tr[2]/td/form/div[1]/div/fieldset/table[1]/tbody/tr[3]/td[3]/select'.</msg>
+<status status="PASS" starttime="20250805 14:45:55.253" endtime="20250805 14:45:55.310"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${Select Workflow Type}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250805 14:45:55.311" level="INFO">Clicking element 'xpath=//table[1]/tbody/tr[3]/td[3]/select/option[28]'.</msg>
+<status status="PASS" starttime="20250805 14:45:55.310" endtime="20250805 14:45:55.347"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250805 14:45:55.858" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20250805 14:45:55.347" endtime="20250805 14:45:55.858"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${SSR Type}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250805 14:45:55.858" level="INFO">Clicking element 'xpath=//div[2]/div[2]/div/div[2]/table/tbody/tr[2]/td/form/div[1]/div/fieldset/table[1]/tbody/tr[3]/td[6]/select'.</msg>
+<status status="PASS" starttime="20250805 14:45:55.858" endtime="20250805 14:45:55.972"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${Select SSR Type}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250805 14:45:55.972" level="INFO">Clicking element 'xpath=//*[@id="viewProcuratorByCompanyCodePopupId:popupPurchasefrom:ssrTypeId"]/option[2]'.</msg>
+<status status="PASS" starttime="20250805 14:45:55.972" endtime="20250805 14:45:56.034"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250805 14:45:56.546" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20250805 14:45:56.034" endtime="20250805 14:45:56.546"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${Region}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250805 14:45:56.548" level="INFO">Clicking element 'xpath=//div[2]/div[2]/div/div[2]/table/tbody/tr[2]/td/form/div[1]/div/fieldset/table[1]/tbody/tr[4]/td[3]/select'.</msg>
+<status status="PASS" starttime="20250805 14:45:56.546" endtime="20250805 14:45:56.618"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${Select Region}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250805 14:45:56.619" level="INFO">Clicking element 'xpath=//div[2]/div[2]/div/div[2]/table/tbody/tr[2]/td/form/div[1]/div/fieldset/table[1]/tbody/tr[4]/td[3]/select/option[2]'.</msg>
+<status status="PASS" starttime="20250805 14:45:56.619" endtime="20250805 14:45:56.647"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250805 14:45:57.161" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20250805 14:45:56.647" endtime="20250805 14:45:57.161"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${Click Procurator Search}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250805 14:45:57.161" level="INFO">Clicking element 'xpath=//div[2]/div[2]/div/div[2]/table/tbody/tr[2]/td/form/div[1]/div/fieldset/table[2]/tbody/tr[1]/td/input[1]'.</msg>
+<status status="PASS" starttime="20250805 14:45:57.161" endtime="20250805 14:45:57.247"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=${First Row Procurator Select}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20250805 14:45:57.247" endtime="20250805 14:45:57.543"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${First Row Procurator Select}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250805 14:45:57.543" level="INFO">Clicking element 'xpath=//div[2]/div[2]/div/div[2]/table/tbody/tr[2]/td/form/div[1]/div/span/fieldset/span/div[2]/table/tbody/tr/td[2]/div/a'.</msg>
+<status status="PASS" starttime="20250805 14:45:57.543" endtime="20250805 14:45:57.965"/>
+</kw>
+<status status="PASS" starttime="20250805 14:45:55.253" endtime="20250805 14:45:57.965"/>
+</kw>
+<kw name="Get Column Values By Name" library="Excel_Template">
+<var>${Import Site Template File List}</var>
+<arg>Import_Site_Template_File</arg>
+<kw name="Open Workbook" library="RPA.Excel.Files">
+<arg>${SOURCE_FILE}</arg>
+<doc>Open an existing Excel workbook.</doc>
+<msg timestamp="20250805 14:45:57.975" level="INFO">Opened workbook: &lt;RPA.Excel.Files.XlsxWorkbook object at 0x000002224B0F5048&gt;</msg>
+<status status="PASS" starttime="20250805 14:45:57.966" endtime="20250805 14:45:57.975"/>
+</kw>
+<kw name="Read Worksheet As Table" library="RPA.Excel.Files">
+<var>${rows}</var>
+<arg>header=True</arg>
+<doc>Read the contents of a worksheet into a Table container. Allows
+sorting/filtering/manipulating using the ``RPA.Tables`` library.</doc>
+<msg timestamp="20250805 14:45:57.976" level="INFO">Created table: Table(columns=['Test_Case_ID', 'Proferma_No', 'Import_Site_Template_File', 'SSR_Routing_Submitted_Latitude_Start', 'SSR_Routing_Submitted_Latitude_End', 'SSR_Routing_Submitted_Longitude_Start', 'SSR_Routing_Submitted_Longitude_End', 'SSR_Routing_Submitted_Cable_Distance', 'SSR_Routing_Submitted_Upload_File', 'DD_Submitted_Upload_file', 'Permission_Start_Submitted_Upload_file', 'PAT_BOQ_Submitted_Upload_file', 'FAT_Permission_iGIS_Submitted_Upload_file', 'Date Running', 'Run_Status', 'Reference_Site_Code', 'SSR_ID', 'Pre-PR', 'PO', 'Result'], rows=1)</msg>
+<msg timestamp="20250805 14:45:57.976" level="INFO">${rows} = Table(columns=['Test_Case_ID', 'Proferma_No', 'Import_Site_Template_File', 'SSR_Routing_Submitted_Latitude_Start', 'SSR_Routing_Submitted_Latitude_End', 'SSR_Routing_Submitted_Longitude_Start', 'SSR_R...</msg>
+<status status="PASS" starttime="20250805 14:45:57.975" endtime="20250805 14:45:57.976"/>
+</kw>
+<kw name="Create List" library="BuiltIn">
+<var>${values}</var>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20250805 14:45:57.977" level="INFO">${values} = []</msg>
+<status status="PASS" starttime="20250805 14:45:57.976" endtime="20250805 14:45:57.977"/>
+</kw>
+<for flavor="IN">
+<var>${row}</var>
+<value>@{rows}</value>
+<iter>
+<var name="${row}">{'Test_Case_ID': '001', 'Proferma_No': 1010001072, 'Import_Site_Template_File': 'Import_Site_Template_Proforma OSP.xls', 'SSR_Routing_Submitted_Latitude_Start': 4.12345, 'SSR_Routing_Submitted_Latitud...</var>
+<kw name="Get From Dictionary" library="Collections">
+<var>${value}</var>
+<arg>${row}</arg>
+<arg>${column_name}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<msg timestamp="20250805 14:45:57.978" level="INFO">${value} = Import_Site_Template_Proforma OSP.xls</msg>
+<status status="PASS" starttime="20250805 14:45:57.977" endtime="20250805 14:45:57.978"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${values}</arg>
+<arg>${value}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20250805 14:45:57.978" endtime="20250805 14:45:57.979"/>
+</kw>
+<status status="PASS" starttime="20250805 14:45:57.977" endtime="20250805 14:45:57.979"/>
+</iter>
+<status status="PASS" starttime="20250805 14:45:57.977" endtime="20250805 14:45:57.979"/>
+</for>
+<kw name="Close Workbook" library="RPA.Excel.Files">
+<doc>Close the active workbook.</doc>
+<msg timestamp="20250805 14:45:57.979" level="INFO">Closing workbook: &lt;RPA.Excel.Files.XlsxWorkbook object at 0x000002224B0F5048&gt;</msg>
+<status status="PASS" starttime="20250805 14:45:57.979" endtime="20250805 14:45:57.979"/>
+</kw>
+<msg timestamp="20250805 14:45:57.980" level="INFO">${Import Site Template File List} = ['Import_Site_Template_Proforma OSP.xls']</msg>
+<status status="PASS" starttime="20250805 14:45:57.966" endtime="20250805 14:45:57.980"/>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<var>${Import_Site_Template path}</var>
+<arg>SEPARATOR=</arg>
+<arg>C:\\Users\\arnoj885\\Robot Framework\\Obsolate Transporter\\tests\\TYPE_Non-Turnkey\\FBB OSP for TPT III/../../../data file/</arg>
+<arg>${Import Site Template File List[0]}</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<msg timestamp="20250805 14:45:57.985" level="INFO">${Import_Site_Template path} = C:\Users\arnoj885\Robot Framework\Obsolate Transporter\tests\TYPE_Non-Turnkey\FBB OSP for TPT III/../../../data file/Import_Site_Template_Proforma OSP.xls</msg>
+<status status="PASS" starttime="20250805 14:45:57.981" endtime="20250805 14:45:57.985"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${Import_Site_Template path}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20250805 14:45:57.986" level="INFO">${Import_Site_Template path} = C:\Users\arnoj885\Robot Framework\Obsolate Transporter\tests\TYPE_Non-Turnkey\FBB OSP for TPT III/../../../data file/Import_Site_Template_Proforma OSP.xls</msg>
+<status status="PASS" starttime="20250805 14:45:57.986" endtime="20250805 14:45:57.986"/>
+</kw>
+<kw name="Normalize Path" library="OperatingSystem">
+<var>${Import_Site_Template path}</var>
+<arg>${Import_Site_Template path}</arg>
+<doc>Normalizes the given path.</doc>
+<msg timestamp="20250805 14:45:57.987" level="INFO">${Import_Site_Template path} = C:\Users\arnoj885\Robot Framework\Obsolate Transporter\data file\Import_Site_Template_Proforma OSP.xls</msg>
+<status status="PASS" starttime="20250805 14:45:57.987" endtime="20250805 14:45:57.987"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${Import_Site_Template path}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20250805 14:45:57.989" level="INFO">C:\Users\arnoj885\Robot Framework\Obsolate Transporter\data file\Import_Site_Template_Proforma OSP.xls</msg>
+<status status="PASS" starttime="20250805 14:45:57.989" endtime="20250805 14:45:57.989"/>
+</kw>
+<kw name="Import Type" library="create_draft_site_code">
+<arg>${Import_Site_Template path}</arg>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0, document.body.scrollHeight)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20250805 14:45:57.990" level="INFO">Executing JavaScript:
+window.scrollTo(0, document.body.scrollHeight)
+Without any arguments.</msg>
+<status status="PASS" starttime="20250805 14:45:57.990" endtime="20250805 14:45:58.003"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${Import Type}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250805 14:45:58.003" level="INFO">Clicking element 'xpath=//fieldset[3]/table/tbody/tr[1]/td[2]/table/tbody/tr/td/input'.</msg>
+<status status="PASS" starttime="20250805 14:45:58.003" endtime="20250805 14:45:58.055"/>
+</kw>
+<kw name="Choose File" library="SeleniumLibrary">
+<arg>xpath=${Choose Import Site File}</arg>
+<arg>${Import Site File}</arg>
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<msg timestamp="20250805 14:45:58.055" level="INFO">Sending C:\Users\arnoj885\Robot Framework\Obsolate Transporter\data file\Import_Site_Template_Proforma OSP.xls to browser.</msg>
+<status status="PASS" starttime="20250805 14:45:58.055" endtime="20250805 14:45:58.090"/>
+</kw>
+<status status="PASS" starttime="20250805 14:45:57.989" endtime="20250805 14:45:58.090"/>
+</kw>
+<kw name="Upload Site" library="create_draft_site_code">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${Button Upload}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250805 14:45:58.090" level="INFO">Clicking element 'xpath=//tr/td/form/table[3]/tbody/tr/td/span/input'.</msg>
+<status status="PASS" starttime="20250805 14:45:58.090" endtime="20250805 14:46:10.021"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Success Result</arg>
+<arg>timeout=15s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20250805 14:46:10.021" endtime="20250805 14:46:10.038"/>
+</kw>
+<status status="PASS" starttime="20250805 14:45:58.090" endtime="20250805 14:46:10.038"/>
+</kw>
+<kw name="Reference Site Code" library="result_massage_keywords">
+<var>${SSR ID Reference Site Code}</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Reference Site Code}</var>
+<arg>xpath=${Reference Site Code result}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20250805 14:46:10.067" level="INFO">${Reference Site Code} = BSIF_202508051445</msg>
+<status status="PASS" starttime="20250805 14:46:10.039" endtime="20250805 14:46:10.067"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${Reference Site Code value}</var>
+<arg>${Reference Site Code}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20250805 14:46:10.067" level="INFO">${Reference Site Code value} = BSIF_202508051445</msg>
+<status status="PASS" starttime="20250805 14:46:10.067" endtime="20250805 14:46:10.067"/>
+</kw>
+<msg timestamp="20250805 14:46:10.068" level="INFO">${SSR ID Reference Site Code} = BSIF_202508051445</msg>
+<status status="PASS" starttime="20250805 14:46:10.039" endtime="20250805 14:46:10.068"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${SSR ID Reference Site Code}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20250805 14:46:10.069" level="INFO">${SSR ID Reference Site Code} = BSIF_202508051445</msg>
+<status status="PASS" starttime="20250805 14:46:10.068" endtime="20250805 14:46:10.069"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Reference Site Code เลขที่ดึงออกมา: ${SSR ID Reference Site Code}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20250805 14:46:10.070" level="INFO">Reference Site Code เลขที่ดึงออกมา: BSIF_202508051445</msg>
+<status status="PASS" starttime="20250805 14:46:10.070" endtime="20250805 14:46:10.070"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250805 14:46:11.077" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20250805 14:46:10.071" endtime="20250805 14:46:11.077"/>
+</kw>
+<kw name="Write Value To Excel Status" library="Excel_Template">
+<arg>TC_001 Create Draft Site Code</arg>
+<kw name="Open Workbook" library="RPA.Excel.Files">
+<arg>${SOURCE_FILE}</arg>
+<doc>Open an existing Excel workbook.</doc>
+<msg timestamp="20250805 14:46:11.108" level="INFO">Opened workbook: &lt;RPA.Excel.Files.XlsxWorkbook object at 0x000002224B475708&gt;</msg>
+<status status="PASS" starttime="20250805 14:46:11.077" endtime="20250805 14:46:11.108"/>
+</kw>
+<kw name="Set Cell Value" library="RPA.Excel.Files">
+<arg>row=2</arg>
+<arg>column=15</arg>
+<arg>value=${Step}</arg>
+<doc>Set a cell value in the given worksheet.</doc>
+<status status="PASS" starttime="20250805 14:46:11.108" endtime="20250805 14:46:11.124"/>
+</kw>
+<kw name="Save Workbook" library="RPA.Excel.Files">
+<doc>Save the active workbook.</doc>
+<status status="PASS" starttime="20250805 14:46:11.124" endtime="20250805 14:46:11.223"/>
+</kw>
+<kw name="Close Workbook" library="RPA.Excel.Files">
+<doc>Close the active workbook.</doc>
+<msg timestamp="20250805 14:46:11.223" level="INFO">Closing workbook: &lt;RPA.Excel.Files.XlsxWorkbook object at 0x000002224B475708&gt;</msg>
+<status status="PASS" starttime="20250805 14:46:11.223" endtime="20250805 14:46:11.223"/>
+</kw>
+<status status="PASS" starttime="20250805 14:46:11.077" endtime="20250805 14:46:11.223"/>
+</kw>
+<doc>สามารถ Create Draft Site Code ได้</doc>
+<tag>Standard_Test</tag>
+<status status="PASS" starttime="20250805 14:45:45.076" endtime="20250805 14:46:11.223"/>
+</test>
+<test id="s1-s1-t4" name="[4] สามารถกดออกจากระบบ Transporter ได้" line="66">
+<kw name="Log Out" library="Logout_keywords">
+<kw name="Click Menu List" library="menu_keywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${Menu List}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250805 14:46:11.223" level="INFO">Clicking element 'xpath=//form/div[1]/table/tbody/tr/td[1]/img'.</msg>
+<status status="PASS" starttime="20250805 14:46:11.223" endtime="20250805 14:46:11.274"/>
+</kw>
+<status status="PASS" starttime="20250805 14:46:11.223" endtime="20250805 14:46:11.275"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.getElementById("iconheader:frmMenu:LogOut").click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20250805 14:46:11.275" level="INFO">Executing JavaScript:
+document.getElementById("iconheader:frmMenu:LogOut").click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20250805 14:46:11.275" endtime="20250805 14:46:11.813"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250805 14:46:12.824" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20250805 14:46:11.816" endtime="20250805 14:46:12.824"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Login</arg>
+<arg>10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20250805 14:46:12.824" endtime="20250805 14:46:12.866"/>
+</kw>
+<status status="PASS" starttime="20250805 14:46:11.223" endtime="20250805 14:46:12.866"/>
+</kw>
+<doc>สามารถกดออกจากระบบ Transporter เพื่อดำเนินการต่อในขั้นตอนถัดไป</doc>
+<tag>Standard_Test</tag>
+<status status="PASS" starttime="20250805 14:46:11.223" endtime="20250805 14:46:12.871"/>
+</test>
+<test id="s1-s1-t5" name="[5] สามารถล็อคอินเข้าสู่ระบบ Transporter ได้" line="71">
+<kw name="Transporter_Login" library="login_keywords">
+<arg>${SSR Create USER}</arg>
+<arg>${SSR Create PASS}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=loginForm:username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20250805 14:46:12.871" level="INFO">Typing text 'tana_huawei' into text field 'id=loginForm:username'.</msg>
+<status status="PASS" starttime="20250805 14:46:12.871" endtime="20250805 14:46:13.000"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=loginForm:password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20250805 14:46:13.001" level="INFO">Typing text '123' into text field 'id=loginForm:password'.</msg>
+<status status="PASS" starttime="20250805 14:46:13.000" endtime="20250805 14:46:13.077"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath=${LOGIN BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20250805 14:46:13.077" level="INFO">Clicking button 'xpath=//*[@id="loginForm:login"]'.</msg>
+<status status="PASS" starttime="20250805 14:46:13.077" endtime="20250805 14:46:13.358"/>
+</kw>
+<status status="PASS" starttime="20250805 14:46:12.871" endtime="20250805 14:46:13.358"/>
+</kw>
+<kw name="Welcome Page Should Be Open" library="login_keywords">
+<arg>${LOGIN TITLE}</arg>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>${Title}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20250805 14:46:13.360" level="INFO">Page title is 'Transporter Web (TPT)'.</msg>
+<status status="PASS" starttime="20250805 14:46:13.359" endtime="20250805 14:46:13.360"/>
+</kw>
+<status status="PASS" starttime="20250805 14:46:13.358" endtime="20250805 14:46:13.360"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250805 14:46:14.363" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20250805 14:46:13.360" endtime="20250805 14:46:14.363"/>
+</kw>
+<doc>สามารถล็อคอินเข้าสู่ระบบ Transporter ได้โดยใช้บัญชีที่เกี่ยวข้อง</doc>
+<tag>Standard_Test</tag>
+<status status="PASS" starttime="20250805 14:46:12.871" endtime="20250805 14:46:14.364"/>
+</test>
+<test id="s1-s1-t6" name="[6] สามารถสร้าง SSR ได้" line="78">
+<kw name="Click Menu List" library="menu_keywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${Menu List}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250805 14:46:14.373" level="INFO">Clicking element 'xpath=//form/div[1]/table/tbody/tr/td[1]/img'.</msg>
+<status status="PASS" starttime="20250805 14:46:14.370" endtime="20250805 14:46:14.426"/>
+</kw>
+<status status="PASS" starttime="20250805 14:46:14.370" endtime="20250805 14:46:14.426"/>
+</kw>
+<kw name="Select Menu" library="menu_keywords">
+<arg>${SSR Create Menu ID}</arg>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.getElementById("${Menu}").click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20250805 14:46:14.428" level="INFO">Executing JavaScript:
+document.getElementById("iconheader:frmMenu:SSRCreate").click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20250805 14:46:14.427" endtime="20250805 14:46:14.611"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250805 14:46:15.614" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20250805 14:46:14.611" endtime="20250805 14:46:15.614"/>
+</kw>
+<status status="PASS" starttime="20250805 14:46:14.427" endtime="20250805 14:46:15.614"/>
+</kw>
+<kw name="SSR Search Site Workflow Type" library="ssr_create_keywords">
+<arg>${FBB OSP for TPT III Auto PO}</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${SSR Click Workflow Type}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250805 14:46:15.616" level="INFO">Clicking element 'xpath=//table/tbody/tr[3]/td[3]/select'.</msg>
+<status status="PASS" starttime="20250805 14:46:15.616" endtime="20250805 14:46:15.721"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${workflow type}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250805 14:46:15.722" level="INFO">Clicking element 'xpath=//table[1]/tbody/tr[3]/td[3]/select/option[28]'.</msg>
+<status status="PASS" starttime="20250805 14:46:15.721" endtime="20250805 14:46:15.758"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250805 14:46:16.266" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20250805 14:46:15.758" endtime="20250805 14:46:16.266"/>
+</kw>
+<status status="PASS" starttime="20250805 14:46:15.616" endtime="20250805 14:46:16.266"/>
+</kw>
+<kw name="SSR Search Reference Site Code" library="ssr_create_keywords">
+<arg>${SSR ID Reference Site Code}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=${SSR Reference Site Code}</arg>
+<arg>${Reference Site Code}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20250805 14:46:16.272" level="INFO">Typing text 'BSIF_202508051445' into text field 'xpath=//table/tbody/tr[4]/td[3]/input'.</msg>
+<status status="PASS" starttime="20250805 14:46:16.272" endtime="20250805 14:46:16.435"/>
+</kw>
+<status status="PASS" starttime="20250805 14:46:16.266" endtime="20250805 14:46:16.435"/>
+</kw>
+<kw name="SSR Click Search Reference Site Code" library="ssr_create_keywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${SSR Reference Site Code Search Button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250805 14:46:16.437" level="INFO">Clicking element 'xpath=//table/tbody/tr[11]/td/input[1]'.</msg>
+<status status="PASS" starttime="20250805 14:46:16.436" endtime="20250805 14:46:16.482"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250805 14:46:16.982" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20250805 14:46:16.482" endtime="20250805 14:46:16.982"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=${Select SSR Reference Site Code First Row}</arg>
+<arg>timeout=15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20250805 14:46:16.982" endtime="20250805 14:46:17.030"/>
+</kw>
+<status status="PASS" starttime="20250805 14:46:16.435" endtime="20250805 14:46:17.030"/>
+</kw>
+<kw name="SSR Select Reference Site Code" library="ssr_create_keywords">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0, document.body.scrollHeight)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20250805 14:46:17.030" level="INFO">Executing JavaScript:
+window.scrollTo(0, document.body.scrollHeight)
+Without any arguments.</msg>
+<status status="PASS" starttime="20250805 14:46:17.030" endtime="20250805 14:46:17.053"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${Select SSR Reference Site Code First Row}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250805 14:46:17.053" level="INFO">Clicking element 'xpath=//table/tbody/tr/td[2]/div/a'.</msg>
+<status status="PASS" starttime="20250805 14:46:17.053" endtime="20250805 14:46:17.567"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>SSR &gt; SSR Routing Submitted New</arg>
+<arg>timeout=15s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20250805 14:46:17.568" endtime="20250805 14:46:17.586"/>
+</kw>
+<status status="PASS" starttime="20250805 14:46:17.030" endtime="20250805 14:46:17.586"/>
+</kw>
+<kw name="Get Column Values By Name" library="Excel_Template">
+<var>${Input Latitude Start List}</var>
+<arg>SSR_Routing_Submitted_Latitude_Start</arg>
+<kw name="Open Workbook" library="RPA.Excel.Files">
+<arg>${SOURCE_FILE}</arg>
+<doc>Open an existing Excel workbook.</doc>
+<msg timestamp="20250805 14:46:17.596" level="INFO">Opened workbook: &lt;RPA.Excel.Files.XlsxWorkbook object at 0x000002224B4845C8&gt;</msg>
+<status status="PASS" starttime="20250805 14:46:17.586" endtime="20250805 14:46:17.596"/>
+</kw>
+<kw name="Read Worksheet As Table" library="RPA.Excel.Files">
+<var>${rows}</var>
+<arg>header=True</arg>
+<doc>Read the contents of a worksheet into a Table container. Allows
+sorting/filtering/manipulating using the ``RPA.Tables`` library.</doc>
+<msg timestamp="20250805 14:46:17.597" level="INFO">Created table: Table(columns=['Test_Case_ID', 'Proferma_No', 'Import_Site_Template_File', 'SSR_Routing_Submitted_Latitude_Start', 'SSR_Routing_Submitted_Latitude_End', 'SSR_Routing_Submitted_Longitude_Start', 'SSR_Routing_Submitted_Longitude_End', 'SSR_Routing_Submitted_Cable_Distance', 'SSR_Routing_Submitted_Upload_File', 'DD_Submitted_Upload_file', 'Permission_Start_Submitted_Upload_file', 'PAT_BOQ_Submitted_Upload_file', 'FAT_Permission_iGIS_Submitted_Upload_file', 'Date Running', 'Run_Status', 'Reference_Site_Code', 'SSR_ID', 'Pre-PR', 'PO', 'Result'], rows=1)</msg>
+<msg timestamp="20250805 14:46:17.597" level="INFO">${rows} = Table(columns=['Test_Case_ID', 'Proferma_No', 'Import_Site_Template_File', 'SSR_Routing_Submitted_Latitude_Start', 'SSR_Routing_Submitted_Latitude_End', 'SSR_Routing_Submitted_Longitude_Start', 'SSR_R...</msg>
+<status status="PASS" starttime="20250805 14:46:17.597" endtime="20250805 14:46:17.597"/>
+</kw>
+<kw name="Create List" library="BuiltIn">
+<var>${values}</var>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20250805 14:46:17.598" level="INFO">${values} = []</msg>
+<status status="PASS" starttime="20250805 14:46:17.598" endtime="20250805 14:46:17.598"/>
+</kw>
+<for flavor="IN">
+<var>${row}</var>
+<value>@{rows}</value>
+<iter>
+<var name="${row}">{'Test_Case_ID': '001', 'Proferma_No': 1010001072, 'Import_Site_Template_File': 'Import_Site_Template_Proforma OSP.xls', 'SSR_Routing_Submitted_Latitude_Start': 4.12345, 'SSR_Routing_Submitted_Latitud...</var>
+<kw name="Get From Dictionary" library="Collections">
+<var>${value}</var>
+<arg>${row}</arg>
+<arg>${column_name}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<msg timestamp="20250805 14:46:17.599" level="INFO">${value} = 4.12345</msg>
+<status status="PASS" starttime="20250805 14:46:17.598" endtime="20250805 14:46:17.599"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${values}</arg>
+<arg>${value}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20250805 14:46:17.599" endtime="20250805 14:46:17.599"/>
+</kw>
+<status status="PASS" starttime="20250805 14:46:17.598" endtime="20250805 14:46:17.599"/>
+</iter>
+<status status="PASS" starttime="20250805 14:46:17.598" endtime="20250805 14:46:17.599"/>
+</for>
+<kw name="Close Workbook" library="RPA.Excel.Files">
+<doc>Close the active workbook.</doc>
+<msg timestamp="20250805 14:46:17.599" level="INFO">Closing workbook: &lt;RPA.Excel.Files.XlsxWorkbook object at 0x000002224B4845C8&gt;</msg>
+<status status="PASS" starttime="20250805 14:46:17.599" endtime="20250805 14:46:17.599"/>
+</kw>
+<msg timestamp="20250805 14:46:17.600" level="INFO">${Input Latitude Start List} = [4.12345]</msg>
+<status status="PASS" starttime="20250805 14:46:17.586" endtime="20250805 14:46:17.600"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${Input Latitude Start}</var>
+<arg>${Input Latitude Start List[0]}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20250805 14:46:17.604" level="INFO">${Input Latitude Start} = 4.12345</msg>
+<status status="PASS" starttime="20250805 14:46:17.600" endtime="20250805 14:46:17.604"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${Input Latitude Start}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20250805 14:46:17.605" level="INFO">${Input Latitude Start} = 4.12345</msg>
+<status status="PASS" starttime="20250805 14:46:17.605" endtime="20250805 14:46:17.605"/>
+</kw>
+<kw name="Get Column Values By Name" library="Excel_Template">
+<var>${Input Longitude Start List}</var>
+<arg>SSR_Routing_Submitted_Longitude_Start</arg>
+<kw name="Open Workbook" library="RPA.Excel.Files">
+<arg>${SOURCE_FILE}</arg>
+<doc>Open an existing Excel workbook.</doc>
+<msg timestamp="20250805 14:46:17.612" level="INFO">Opened workbook: &lt;RPA.Excel.Files.XlsxWorkbook object at 0x000002224B48F348&gt;</msg>
+<status status="PASS" starttime="20250805 14:46:17.606" endtime="20250805 14:46:17.612"/>
+</kw>
+<kw name="Read Worksheet As Table" library="RPA.Excel.Files">
+<var>${rows}</var>
+<arg>header=True</arg>
+<doc>Read the contents of a worksheet into a Table container. Allows
+sorting/filtering/manipulating using the ``RPA.Tables`` library.</doc>
+<msg timestamp="20250805 14:46:17.612" level="INFO">Created table: Table(columns=['Test_Case_ID', 'Proferma_No', 'Import_Site_Template_File', 'SSR_Routing_Submitted_Latitude_Start', 'SSR_Routing_Submitted_Latitude_End', 'SSR_Routing_Submitted_Longitude_Start', 'SSR_Routing_Submitted_Longitude_End', 'SSR_Routing_Submitted_Cable_Distance', 'SSR_Routing_Submitted_Upload_File', 'DD_Submitted_Upload_file', 'Permission_Start_Submitted_Upload_file', 'PAT_BOQ_Submitted_Upload_file', 'FAT_Permission_iGIS_Submitted_Upload_file', 'Date Running', 'Run_Status', 'Reference_Site_Code', 'SSR_ID', 'Pre-PR', 'PO', 'Result'], rows=1)</msg>
+<msg timestamp="20250805 14:46:17.612" level="INFO">${rows} = Table(columns=['Test_Case_ID', 'Proferma_No', 'Import_Site_Template_File', 'SSR_Routing_Submitted_Latitude_Start', 'SSR_Routing_Submitted_Latitude_End', 'SSR_Routing_Submitted_Longitude_Start', 'SSR_R...</msg>
+<status status="PASS" starttime="20250805 14:46:17.612" endtime="20250805 14:46:17.612"/>
+</kw>
+<kw name="Create List" library="BuiltIn">
+<var>${values}</var>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20250805 14:46:17.612" level="INFO">${values} = []</msg>
+<status status="PASS" starttime="20250805 14:46:17.612" endtime="20250805 14:46:17.612"/>
+</kw>
+<for flavor="IN">
+<var>${row}</var>
+<value>@{rows}</value>
+<iter>
+<var name="${row}">{'Test_Case_ID': '001', 'Proferma_No': 1010001072, 'Import_Site_Template_File': 'Import_Site_Template_Proforma OSP.xls', 'SSR_Routing_Submitted_Latitude_Start': 4.12345, 'SSR_Routing_Submitted_Latitud...</var>
+<kw name="Get From Dictionary" library="Collections">
+<var>${value}</var>
+<arg>${row}</arg>
+<arg>${column_name}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<msg timestamp="20250805 14:46:17.612" level="INFO">${value} = 4.44444</msg>
+<status status="PASS" starttime="20250805 14:46:17.612" endtime="20250805 14:46:17.612"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${values}</arg>
+<arg>${value}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20250805 14:46:17.612" endtime="20250805 14:46:17.612"/>
+</kw>
+<status status="PASS" starttime="20250805 14:46:17.612" endtime="20250805 14:46:17.612"/>
+</iter>
+<status status="PASS" starttime="20250805 14:46:17.612" endtime="20250805 14:46:17.612"/>
+</for>
+<kw name="Close Workbook" library="RPA.Excel.Files">
+<doc>Close the active workbook.</doc>
+<msg timestamp="20250805 14:46:17.621" level="INFO">Closing workbook: &lt;RPA.Excel.Files.XlsxWorkbook object at 0x000002224B48F348&gt;</msg>
+<status status="PASS" starttime="20250805 14:46:17.612" endtime="20250805 14:46:17.621"/>
+</kw>
+<msg timestamp="20250805 14:46:17.621" level="INFO">${Input Longitude Start List} = [4.44444]</msg>
+<status status="PASS" starttime="20250805 14:46:17.606" endtime="20250805 14:46:17.621"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${Input Longitude Start}</var>
+<arg>${Input Longitude Start List[0]}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20250805 14:46:17.621" level="INFO">${Input Longitude Start} = 4.44444</msg>
+<status status="PASS" starttime="20250805 14:46:17.621" endtime="20250805 14:46:17.621"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${Input Longitude Start}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20250805 14:46:17.621" level="INFO">${Input Longitude Start} = 4.44444</msg>
+<status status="PASS" starttime="20250805 14:46:17.621" endtime="20250805 14:46:17.621"/>
+</kw>
+<kw name="Get Column Values By Name" library="Excel_Template">
+<var>${Input Latitude End List}</var>
+<arg>SSR_Routing_Submitted_Latitude_End</arg>
+<kw name="Open Workbook" library="RPA.Excel.Files">
+<arg>${SOURCE_FILE}</arg>
+<doc>Open an existing Excel workbook.</doc>
+<msg timestamp="20250805 14:46:17.629" level="INFO">Opened workbook: &lt;RPA.Excel.Files.XlsxWorkbook object at 0x000002224B465288&gt;</msg>
+<status status="PASS" starttime="20250805 14:46:17.627" endtime="20250805 14:46:17.629"/>
+</kw>
+<kw name="Read Worksheet As Table" library="RPA.Excel.Files">
+<var>${rows}</var>
+<arg>header=True</arg>
+<doc>Read the contents of a worksheet into a Table container. Allows
+sorting/filtering/manipulating using the ``RPA.Tables`` library.</doc>
+<msg timestamp="20250805 14:46:17.629" level="INFO">Created table: Table(columns=['Test_Case_ID', 'Proferma_No', 'Import_Site_Template_File', 'SSR_Routing_Submitted_Latitude_Start', 'SSR_Routing_Submitted_Latitude_End', 'SSR_Routing_Submitted_Longitude_Start', 'SSR_Routing_Submitted_Longitude_End', 'SSR_Routing_Submitted_Cable_Distance', 'SSR_Routing_Submitted_Upload_File', 'DD_Submitted_Upload_file', 'Permission_Start_Submitted_Upload_file', 'PAT_BOQ_Submitted_Upload_file', 'FAT_Permission_iGIS_Submitted_Upload_file', 'Date Running', 'Run_Status', 'Reference_Site_Code', 'SSR_ID', 'Pre-PR', 'PO', 'Result'], rows=1)</msg>
+<msg timestamp="20250805 14:46:17.629" level="INFO">${rows} = Table(columns=['Test_Case_ID', 'Proferma_No', 'Import_Site_Template_File', 'SSR_Routing_Submitted_Latitude_Start', 'SSR_Routing_Submitted_Latitude_End', 'SSR_Routing_Submitted_Longitude_Start', 'SSR_R...</msg>
+<status status="PASS" starttime="20250805 14:46:17.629" endtime="20250805 14:46:17.629"/>
+</kw>
+<kw name="Create List" library="BuiltIn">
+<var>${values}</var>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20250805 14:46:17.629" level="INFO">${values} = []</msg>
+<status status="PASS" starttime="20250805 14:46:17.629" endtime="20250805 14:46:17.629"/>
+</kw>
+<for flavor="IN">
+<var>${row}</var>
+<value>@{rows}</value>
+<iter>
+<var name="${row}">{'Test_Case_ID': '001', 'Proferma_No': 1010001072, 'Import_Site_Template_File': 'Import_Site_Template_Proforma OSP.xls', 'SSR_Routing_Submitted_Latitude_Start': 4.12345, 'SSR_Routing_Submitted_Latitud...</var>
+<kw name="Get From Dictionary" library="Collections">
+<var>${value}</var>
+<arg>${row}</arg>
+<arg>${column_name}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<msg timestamp="20250805 14:46:17.629" level="INFO">${value} = 5.67897</msg>
+<status status="PASS" starttime="20250805 14:46:17.629" endtime="20250805 14:46:17.629"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${values}</arg>
+<arg>${value}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20250805 14:46:17.629" endtime="20250805 14:46:17.629"/>
+</kw>
+<status status="PASS" starttime="20250805 14:46:17.629" endtime="20250805 14:46:17.629"/>
+</iter>
+<status status="PASS" starttime="20250805 14:46:17.629" endtime="20250805 14:46:17.629"/>
+</for>
+<kw name="Close Workbook" library="RPA.Excel.Files">
+<doc>Close the active workbook.</doc>
+<msg timestamp="20250805 14:46:17.629" level="INFO">Closing workbook: &lt;RPA.Excel.Files.XlsxWorkbook object at 0x000002224B465288&gt;</msg>
+<status status="PASS" starttime="20250805 14:46:17.629" endtime="20250805 14:46:17.629"/>
+</kw>
+<msg timestamp="20250805 14:46:17.629" level="INFO">${Input Latitude End List} = [5.67897]</msg>
+<status status="PASS" starttime="20250805 14:46:17.621" endtime="20250805 14:46:17.629"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${Input Latitude End}</var>
+<arg>${Input Latitude End List[0]}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20250805 14:46:17.645" level="INFO">${Input Latitude End} = 5.67897</msg>
+<status status="PASS" starttime="20250805 14:46:17.629" endtime="20250805 14:46:17.645"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${Input Latitude End}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20250805 14:46:17.645" level="INFO">${Input Latitude End} = 5.67897</msg>
+<status status="PASS" starttime="20250805 14:46:17.645" endtime="20250805 14:46:17.645"/>
+</kw>
+<kw name="Get Column Values By Name" library="Excel_Template">
+<var>${Input Longitude End List}</var>
+<arg>SSR_Routing_Submitted_Longitude_End</arg>
+<kw name="Open Workbook" library="RPA.Excel.Files">
+<arg>${SOURCE_FILE}</arg>
+<doc>Open an existing Excel workbook.</doc>
+<msg timestamp="20250805 14:46:17.659" level="INFO">Opened workbook: &lt;RPA.Excel.Files.XlsxWorkbook object at 0x000002224B4048C8&gt;</msg>
+<status status="PASS" starttime="20250805 14:46:17.645" endtime="20250805 14:46:17.659"/>
+</kw>
+<kw name="Read Worksheet As Table" library="RPA.Excel.Files">
+<var>${rows}</var>
+<arg>header=True</arg>
+<doc>Read the contents of a worksheet into a Table container. Allows
+sorting/filtering/manipulating using the ``RPA.Tables`` library.</doc>
+<msg timestamp="20250805 14:46:17.659" level="INFO">Created table: Table(columns=['Test_Case_ID', 'Proferma_No', 'Import_Site_Template_File', 'SSR_Routing_Submitted_Latitude_Start', 'SSR_Routing_Submitted_Latitude_End', 'SSR_Routing_Submitted_Longitude_Start', 'SSR_Routing_Submitted_Longitude_End', 'SSR_Routing_Submitted_Cable_Distance', 'SSR_Routing_Submitted_Upload_File', 'DD_Submitted_Upload_file', 'Permission_Start_Submitted_Upload_file', 'PAT_BOQ_Submitted_Upload_file', 'FAT_Permission_iGIS_Submitted_Upload_file', 'Date Running', 'Run_Status', 'Reference_Site_Code', 'SSR_ID', 'Pre-PR', 'PO', 'Result'], rows=1)</msg>
+<msg timestamp="20250805 14:46:17.659" level="INFO">${rows} = Table(columns=['Test_Case_ID', 'Proferma_No', 'Import_Site_Template_File', 'SSR_Routing_Submitted_Latitude_Start', 'SSR_Routing_Submitted_Latitude_End', 'SSR_Routing_Submitted_Longitude_Start', 'SSR_R...</msg>
+<status status="PASS" starttime="20250805 14:46:17.659" endtime="20250805 14:46:17.659"/>
+</kw>
+<kw name="Create List" library="BuiltIn">
+<var>${values}</var>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20250805 14:46:17.659" level="INFO">${values} = []</msg>
+<status status="PASS" starttime="20250805 14:46:17.659" endtime="20250805 14:46:17.659"/>
+</kw>
+<for flavor="IN">
+<var>${row}</var>
+<value>@{rows}</value>
+<iter>
+<var name="${row}">{'Test_Case_ID': '001', 'Proferma_No': 1010001072, 'Import_Site_Template_File': 'Import_Site_Template_Proforma OSP.xls', 'SSR_Routing_Submitted_Latitude_Start': 4.12345, 'SSR_Routing_Submitted_Latitud...</var>
+<kw name="Get From Dictionary" library="Collections">
+<var>${value}</var>
+<arg>${row}</arg>
+<arg>${column_name}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<msg timestamp="20250805 14:46:17.659" level="INFO">${value} = 7.34567</msg>
+<status status="PASS" starttime="20250805 14:46:17.659" endtime="20250805 14:46:17.659"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${values}</arg>
+<arg>${value}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20250805 14:46:17.659" endtime="20250805 14:46:17.659"/>
+</kw>
+<status status="PASS" starttime="20250805 14:46:17.659" endtime="20250805 14:46:17.659"/>
+</iter>
+<status status="PASS" starttime="20250805 14:46:17.659" endtime="20250805 14:46:17.659"/>
+</for>
+<kw name="Close Workbook" library="RPA.Excel.Files">
+<doc>Close the active workbook.</doc>
+<msg timestamp="20250805 14:46:17.659" level="INFO">Closing workbook: &lt;RPA.Excel.Files.XlsxWorkbook object at 0x000002224B4048C8&gt;</msg>
+<status status="PASS" starttime="20250805 14:46:17.659" endtime="20250805 14:46:17.659"/>
+</kw>
+<msg timestamp="20250805 14:46:17.659" level="INFO">${Input Longitude End List} = [7.34567]</msg>
+<status status="PASS" starttime="20250805 14:46:17.645" endtime="20250805 14:46:17.659"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${Input Longitude End}</var>
+<arg>${Input Longitude End List[0]}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20250805 14:46:17.669" level="INFO">${Input Longitude End} = 7.34567</msg>
+<status status="PASS" starttime="20250805 14:46:17.659" endtime="20250805 14:46:17.669"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${Input Longitude End}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20250805 14:46:17.670" level="INFO">${Input Longitude End} = 7.34567</msg>
+<status status="PASS" starttime="20250805 14:46:17.670" endtime="20250805 14:46:17.670"/>
+</kw>
+<kw name="Get Column Values By Name" library="Excel_Template">
+<var>${Cable_Distance List}</var>
+<arg>SSR_Routing_Submitted_Cable_Distance</arg>
+<kw name="Open Workbook" library="RPA.Excel.Files">
+<arg>${SOURCE_FILE}</arg>
+<doc>Open an existing Excel workbook.</doc>
+<msg timestamp="20250805 14:46:17.682" level="INFO">Opened workbook: &lt;RPA.Excel.Files.XlsxWorkbook object at 0x000002224B4195C8&gt;</msg>
+<status status="PASS" starttime="20250805 14:46:17.671" endtime="20250805 14:46:17.682"/>
+</kw>
+<kw name="Read Worksheet As Table" library="RPA.Excel.Files">
+<var>${rows}</var>
+<arg>header=True</arg>
+<doc>Read the contents of a worksheet into a Table container. Allows
+sorting/filtering/manipulating using the ``RPA.Tables`` library.</doc>
+<msg timestamp="20250805 14:46:17.683" level="INFO">Created table: Table(columns=['Test_Case_ID', 'Proferma_No', 'Import_Site_Template_File', 'SSR_Routing_Submitted_Latitude_Start', 'SSR_Routing_Submitted_Latitude_End', 'SSR_Routing_Submitted_Longitude_Start', 'SSR_Routing_Submitted_Longitude_End', 'SSR_Routing_Submitted_Cable_Distance', 'SSR_Routing_Submitted_Upload_File', 'DD_Submitted_Upload_file', 'Permission_Start_Submitted_Upload_file', 'PAT_BOQ_Submitted_Upload_file', 'FAT_Permission_iGIS_Submitted_Upload_file', 'Date Running', 'Run_Status', 'Reference_Site_Code', 'SSR_ID', 'Pre-PR', 'PO', 'Result'], rows=1)</msg>
+<msg timestamp="20250805 14:46:17.683" level="INFO">${rows} = Table(columns=['Test_Case_ID', 'Proferma_No', 'Import_Site_Template_File', 'SSR_Routing_Submitted_Latitude_Start', 'SSR_Routing_Submitted_Latitude_End', 'SSR_Routing_Submitted_Longitude_Start', 'SSR_R...</msg>
+<status status="PASS" starttime="20250805 14:46:17.682" endtime="20250805 14:46:17.683"/>
+</kw>
+<kw name="Create List" library="BuiltIn">
+<var>${values}</var>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20250805 14:46:17.684" level="INFO">${values} = []</msg>
+<status status="PASS" starttime="20250805 14:46:17.683" endtime="20250805 14:46:17.684"/>
+</kw>
+<for flavor="IN">
+<var>${row}</var>
+<value>@{rows}</value>
+<iter>
+<var name="${row}">{'Test_Case_ID': '001', 'Proferma_No': 1010001072, 'Import_Site_Template_File': 'Import_Site_Template_Proforma OSP.xls', 'SSR_Routing_Submitted_Latitude_Start': 4.12345, 'SSR_Routing_Submitted_Latitud...</var>
+<kw name="Get From Dictionary" library="Collections">
+<var>${value}</var>
+<arg>${row}</arg>
+<arg>${column_name}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<msg timestamp="20250805 14:46:17.684" level="INFO">${value} = 100</msg>
+<status status="PASS" starttime="20250805 14:46:17.684" endtime="20250805 14:46:17.684"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${values}</arg>
+<arg>${value}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20250805 14:46:17.685" endtime="20250805 14:46:17.685"/>
+</kw>
+<status status="PASS" starttime="20250805 14:46:17.684" endtime="20250805 14:46:17.685"/>
+</iter>
+<status status="PASS" starttime="20250805 14:46:17.684" endtime="20250805 14:46:17.685"/>
+</for>
+<kw name="Close Workbook" library="RPA.Excel.Files">
+<doc>Close the active workbook.</doc>
+<msg timestamp="20250805 14:46:17.685" level="INFO">Closing workbook: &lt;RPA.Excel.Files.XlsxWorkbook object at 0x000002224B4195C8&gt;</msg>
+<status status="PASS" starttime="20250805 14:46:17.685" endtime="20250805 14:46:17.685"/>
+</kw>
+<msg timestamp="20250805 14:46:17.685" level="INFO">${Cable_Distance List} = [100]</msg>
+<status status="PASS" starttime="20250805 14:46:17.671" endtime="20250805 14:46:17.685"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${Cable_Distance}</var>
+<arg>${Cable_Distance List[0]}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20250805 14:46:17.690" level="INFO">${Cable_Distance} = 100</msg>
+<status status="PASS" starttime="20250805 14:46:17.686" endtime="20250805 14:46:17.690"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${Cable_Distance}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20250805 14:46:17.691" level="INFO">${Cable_Distance} = 100</msg>
+<status status="PASS" starttime="20250805 14:46:17.691" endtime="20250805 14:46:17.691"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Latitude Start:&gt;&gt;&gt;${Input Latitude Start}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20250805 14:46:17.692" level="INFO">Latitude Start:&gt;&gt;&gt;4.12345</msg>
+<status status="PASS" starttime="20250805 14:46:17.692" endtime="20250805 14:46:17.692"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Longitude Start:&gt;&gt;&gt;${Input Longitude Start}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20250805 14:46:17.693" level="INFO">Longitude Start:&gt;&gt;&gt;4.44444</msg>
+<status status="PASS" starttime="20250805 14:46:17.692" endtime="20250805 14:46:17.693"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Latitude End:&gt;&gt;&gt;${Input Latitude End}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20250805 14:46:17.694" level="INFO">Latitude End:&gt;&gt;&gt;5.67897</msg>
+<status status="PASS" starttime="20250805 14:46:17.693" endtime="20250805 14:46:17.694"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Longitude End:&gt;&gt;&gt;${Input Longitude End}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20250805 14:46:17.694" level="INFO">Longitude End:&gt;&gt;&gt;7.34567</msg>
+<status status="PASS" starttime="20250805 14:46:17.694" endtime="20250805 14:46:17.694"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Cable_Distance:&gt;&gt;&gt;${Cable_Distance}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20250805 14:46:17.696" level="INFO">Cable_Distance:&gt;&gt;&gt;100</msg>
+<status status="PASS" starttime="20250805 14:46:17.695" endtime="20250805 14:46:17.696"/>
+</kw>
+<kw name="Page Should Contains" library="result_massage_keywords">
+<arg>${SSR &gt; SSR Routing Submitted New}</arg>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${Text}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20250805 14:46:17.697" endtime="20250805 14:46:17.711"/>
+</kw>
+<status status="PASS" starttime="20250805 14:46:17.697" endtime="20250805 14:46:17.711"/>
+</kw>
+<kw name="Survey Information" library="routing_submitted_keywords">
+<arg>${Input Latitude Start}</arg>
+<arg>${Input Longitude Start}</arg>
+<arg>${Input Latitude End}</arg>
+<arg>${Input Longitude End}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=${Latitude First}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20250805 14:46:17.713" endtime="20250805 14:46:17.737"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=${Latitude First}</arg>
+<arg>${Latitude F}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20250805 14:46:17.737" level="INFO">Typing text '4.12345' into text field 'xpath=//div[2]/fieldset[1]/table/tbody/tr[2]/td[3]/input'.</msg>
+<status status="PASS" starttime="20250805 14:46:17.737" endtime="20250805 14:46:17.833"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=${Longitude First}</arg>
+<arg>${Longitude F}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20250805 14:46:17.834" level="INFO">Typing text '4.44444' into text field 'xpath=//div[2]/fieldset[1]/table/tbody/tr[2]/td[6]/input'.</msg>
+<status status="PASS" starttime="20250805 14:46:17.833" endtime="20250805 14:46:17.931"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=${Latitude Last}</arg>
+<arg>${Latitude L}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20250805 14:46:17.931" level="INFO">Typing text '5.67897' into text field 'xpath=//div[2]/fieldset[1]/table/tbody/tr[3]/td[3]/input'.</msg>
+<status status="PASS" starttime="20250805 14:46:17.931" endtime="20250805 14:46:18.017"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=${Longitude Last}</arg>
+<arg>${Longitude L}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20250805 14:46:18.017" level="INFO">Typing text '7.34567' into text field 'xpath=//div[2]/fieldset[1]/table/tbody/tr[3]/td[6]/input'.</msg>
+<status status="PASS" starttime="20250805 14:46:18.017" endtime="20250805 14:46:18.114"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250805 14:46:19.127" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20250805 14:46:18.114" endtime="20250805 14:46:19.127"/>
+</kw>
+<status status="PASS" starttime="20250805 14:46:17.712" endtime="20250805 14:46:19.127"/>
+</kw>
+<kw name="Cable Type Information" library="routing_submitted_keywords">
+<arg>${ADSS}</arg>
+<arg>${48}</arg>
+<arg>${Cable_Distance}</arg>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0, 200)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20250805 14:46:19.127" level="INFO">Executing JavaScript:
+window.scrollTo(0, 200)
+Without any arguments.</msg>
+<status status="PASS" starttime="20250805 14:46:19.127" endtime="20250805 14:46:19.167"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250805 14:46:20.177" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20250805 14:46:19.167" endtime="20250805 14:46:20.177"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${Click Cable Type}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250805 14:46:20.179" level="INFO">Clicking element 'xpath=//fieldset[2]/table/tbody/tr[4]/td[2]/div/table/tbody/tr/td[3]/select'.</msg>
+<status status="PASS" starttime="20250805 14:46:20.179" endtime="20250805 14:46:20.279"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${Cable Type}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250805 14:46:20.280" level="INFO">Clicking element 'xpath=//table/tbody/tr[4]/td[2]/div/table/tbody/tr/td[3]/select/option[2]'.</msg>
+<status status="PASS" starttime="20250805 14:46:20.279" endtime="20250805 14:46:20.313"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250805 14:46:20.821" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20250805 14:46:20.313" endtime="20250805 14:46:20.821"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${Click Cable Type Core}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250805 14:46:20.821" level="INFO">Clicking element 'xpath=//tr[4]/td[2]/div/table/tbody/tr/td[4]/select'.</msg>
+<status status="PASS" starttime="20250805 14:46:20.821" endtime="20250805 14:46:20.936"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${Cable Core No}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250805 14:46:20.936" level="INFO">Clicking element 'xpath=//fieldset[2]/table/tbody/tr[4]/td[2]/div/table/tbody/tr/td[4]/select/option[6]'.</msg>
+<status status="PASS" starttime="20250805 14:46:20.936" endtime="20250805 14:46:20.967"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250805 14:46:21.476" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20250805 14:46:20.967" endtime="20250805 14:46:21.476"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=${Cable Distance Input}</arg>
+<arg>${Cable Distance}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20250805 14:46:21.476" level="INFO">Typing text '100' into text field 'xpath=//fieldset[2]/table/tbody/tr[4]/td[2]/div/table/tbody/tr/td[5]/input'.</msg>
+<status status="PASS" starttime="20250805 14:46:21.476" endtime="20250805 14:46:21.613"/>
+</kw>
+<status status="PASS" starttime="20250805 14:46:19.127" endtime="20250805 14:46:21.613"/>
+</kw>
+<kw name="Get Column Values By Name" library="Excel_Template">
+<var>${SSR_Routing_Submitted_Upload_File List}</var>
+<arg>SSR_Routing_Submitted_Upload_File</arg>
+<kw name="Open Workbook" library="RPA.Excel.Files">
+<arg>${SOURCE_FILE}</arg>
+<doc>Open an existing Excel workbook.</doc>
+<msg timestamp="20250805 14:46:21.623" level="INFO">Opened workbook: &lt;RPA.Excel.Files.XlsxWorkbook object at 0x000002224B310BC8&gt;</msg>
+<status status="PASS" starttime="20250805 14:46:21.619" endtime="20250805 14:46:21.623"/>
+</kw>
+<kw name="Read Worksheet As Table" library="RPA.Excel.Files">
+<var>${rows}</var>
+<arg>header=True</arg>
+<doc>Read the contents of a worksheet into a Table container. Allows
+sorting/filtering/manipulating using the ``RPA.Tables`` library.</doc>
+<msg timestamp="20250805 14:46:21.629" level="INFO">Created table: Table(columns=['Test_Case_ID', 'Proferma_No', 'Import_Site_Template_File', 'SSR_Routing_Submitted_Latitude_Start', 'SSR_Routing_Submitted_Latitude_End', 'SSR_Routing_Submitted_Longitude_Start', 'SSR_Routing_Submitted_Longitude_End', 'SSR_Routing_Submitted_Cable_Distance', 'SSR_Routing_Submitted_Upload_File', 'DD_Submitted_Upload_file', 'Permission_Start_Submitted_Upload_file', 'PAT_BOQ_Submitted_Upload_file', 'FAT_Permission_iGIS_Submitted_Upload_file', 'Date Running', 'Run_Status', 'Reference_Site_Code', 'SSR_ID', 'Pre-PR', 'PO', 'Result'], rows=1)</msg>
+<msg timestamp="20250805 14:46:21.629" level="INFO">${rows} = Table(columns=['Test_Case_ID', 'Proferma_No', 'Import_Site_Template_File', 'SSR_Routing_Submitted_Latitude_Start', 'SSR_Routing_Submitted_Latitude_End', 'SSR_Routing_Submitted_Longitude_Start', 'SSR_R...</msg>
+<status status="PASS" starttime="20250805 14:46:21.623" endtime="20250805 14:46:21.629"/>
+</kw>
+<kw name="Create List" library="BuiltIn">
+<var>${values}</var>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20250805 14:46:21.629" level="INFO">${values} = []</msg>
+<status status="PASS" starttime="20250805 14:46:21.629" endtime="20250805 14:46:21.629"/>
+</kw>
+<for flavor="IN">
+<var>${row}</var>
+<value>@{rows}</value>
+<iter>
+<var name="${row}">{'Test_Case_ID': '001', 'Proferma_No': 1010001072, 'Import_Site_Template_File': 'Import_Site_Template_Proforma OSP.xls', 'SSR_Routing_Submitted_Latitude_Start': 4.12345, 'SSR_Routing_Submitted_Latitud...</var>
+<kw name="Get From Dictionary" library="Collections">
+<var>${value}</var>
+<arg>${row}</arg>
+<arg>${column_name}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<msg timestamp="20250805 14:46:21.630" level="INFO">${value} = Cat000122#_[]().jpg</msg>
+<status status="PASS" starttime="20250805 14:46:21.630" endtime="20250805 14:46:21.630"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${values}</arg>
+<arg>${value}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20250805 14:46:21.630" endtime="20250805 14:46:21.630"/>
+</kw>
+<status status="PASS" starttime="20250805 14:46:21.630" endtime="20250805 14:46:21.631"/>
+</iter>
+<status status="PASS" starttime="20250805 14:46:21.629" endtime="20250805 14:46:21.631"/>
+</for>
+<kw name="Close Workbook" library="RPA.Excel.Files">
+<doc>Close the active workbook.</doc>
+<msg timestamp="20250805 14:46:21.631" level="INFO">Closing workbook: &lt;RPA.Excel.Files.XlsxWorkbook object at 0x000002224B310BC8&gt;</msg>
+<status status="PASS" starttime="20250805 14:46:21.631" endtime="20250805 14:46:21.631"/>
+</kw>
+<msg timestamp="20250805 14:46:21.631" level="INFO">${SSR_Routing_Submitted_Upload_File List} = ['Cat000122#_[]().jpg']</msg>
+<status status="PASS" starttime="20250805 14:46:21.613" endtime="20250805 14:46:21.631"/>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<var>${SSR_Routing_Submitted_Upload_File path}</var>
+<arg>SEPARATOR=</arg>
+<arg>C:\\Users\\arnoj885\\Robot Framework\\Obsolate Transporter\\tests\\TYPE_Non-Turnkey\\FBB OSP for TPT III/../../../data file/</arg>
+<arg>${SSR_Routing_Submitted_Upload_File List[0]}</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<msg timestamp="20250805 14:46:21.634" level="INFO">${SSR_Routing_Submitted_Upload_File path} = C:\Users\arnoj885\Robot Framework\Obsolate Transporter\tests\TYPE_Non-Turnkey\FBB OSP for TPT III/../../../data file/Cat000122#_[]().jpg</msg>
+<status status="PASS" starttime="20250805 14:46:21.632" endtime="20250805 14:46:21.634"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${SSR_Routing_Submitted_Upload_File path}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20250805 14:46:21.635" level="INFO">${SSR_Routing_Submitted_Upload_File path} = C:\Users\arnoj885\Robot Framework\Obsolate Transporter\tests\TYPE_Non-Turnkey\FBB OSP for TPT III/../../../data file/Cat000122#_[]().jpg</msg>
+<status status="PASS" starttime="20250805 14:46:21.635" endtime="20250805 14:46:21.635"/>
+</kw>
+<kw name="Normalize Path" library="OperatingSystem">
+<var>${SSR_Routing_Submitted_Upload_File path}</var>
+<arg>${SSR_Routing_Submitted_Upload_File path}</arg>
+<doc>Normalizes the given path.</doc>
+<msg timestamp="20250805 14:46:21.636" level="INFO">${SSR_Routing_Submitted_Upload_File path} = C:\Users\arnoj885\Robot Framework\Obsolate Transporter\data file\Cat000122#_[]().jpg</msg>
+<status status="PASS" starttime="20250805 14:46:21.636" endtime="20250805 14:46:21.636"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${SSR_Routing_Submitted_Upload_File path}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20250805 14:46:21.637" level="INFO">C:\Users\arnoj885\Robot Framework\Obsolate Transporter\data file\Cat000122#_[]().jpg</msg>
+<status status="PASS" starttime="20250805 14:46:21.636" endtime="20250805 14:46:21.637"/>
+</kw>
+<kw name="Routing Submitted Upload File" library="routing_submitted_keywords">
+<arg>${SSR_Routing_Submitted_Upload_File path}</arg>
+<kw name="Choose File" library="SeleniumLibrary">
+<arg>xpath=${Routing Submitted Add}</arg>
+<arg>${Picture}</arg>
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<msg timestamp="20250805 14:46:21.638" level="INFO">Sending C:\Users\arnoj885\Robot Framework\Obsolate Transporter\data file\Cat000122#_[]().jpg to browser.</msg>
+<status status="PASS" starttime="20250805 14:46:21.638" endtime="20250805 14:46:21.677"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250805 14:46:22.181" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20250805 14:46:21.677" endtime="20250805 14:46:22.181"/>
+</kw>
+<kw name="Normalize Path" library="OperatingSystem">
+<var>${Picture Folder path}</var>
+<arg>${Picture Folder}/Routing_Submitted.png</arg>
+<doc>Normalizes the given path.</doc>
+<msg timestamp="20250805 14:46:22.182" level="INFO">${Picture Folder path} = C:\Users\arnoj885\Robot Framework\Obsolate Transporter\tests\TYPE_Non-Turnkey\FBB OSP for TPT III\Results\20250805\1445\Routing_Submitted.png</msg>
+<status status="PASS" starttime="20250805 14:46:22.181" endtime="20250805 14:46:22.182"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>${Picture Folder path}</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20250805 14:46:22.366" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Routing_Submitted.png"&gt;&lt;img src="Routing_Submitted.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20250805 14:46:22.182" endtime="20250805 14:46:22.366"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${Routing Submitted Upload}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250805 14:46:22.366" level="INFO">Clicking element 'xpath=//fieldset[3]/table/tbody/tr[2]/td/span/div/div/table/tbody/tr/td/div[2]/div'.</msg>
+<status status="PASS" starttime="20250805 14:46:22.366" endtime="20250805 14:46:22.451"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=${ing Check Pount}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20250805 14:46:22.451" endtime="20250805 14:46:22.730"/>
+</kw>
+<status status="PASS" starttime="20250805 14:46:21.637" endtime="20250805 14:46:22.731"/>
+</kw>
+<kw name="Routing Submitted Save" library="routing_submitted_keywords">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0, document.body.scrollHeight)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20250805 14:46:22.732" level="INFO">Executing JavaScript:
+window.scrollTo(0, document.body.scrollHeight)
+Without any arguments.</msg>
+<status status="PASS" starttime="20250805 14:46:22.732" endtime="20250805 14:46:22.739"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${Routing Submitted Save}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250805 14:46:22.739" level="INFO">Clicking element 'xpath=//tbody/tr[1]/td[3]/input[4]'.</msg>
+<status status="PASS" starttime="20250805 14:46:22.739" endtime="20250805 14:46:22.793"/>
+</kw>
+<status status="PASS" starttime="20250805 14:46:22.731" endtime="20250805 14:46:22.794"/>
+</kw>
+<kw name="Result Massage Data recorded" library="result_massage_keywords">
+<var>${SSR ID Approval I}</var>
+<arg>${SSR ID Routing Submitted}</arg>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>บันทึกข้อมูลเรียบร้อย</arg>
+<arg>timeout=90s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20250805 14:46:22.795" endtime="20250805 14:46:23.550"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Result Massage Full Text}</var>
+<arg>xpath=${Target Xpath}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20250805 14:46:23.613" level="INFO">${Result Massage Full Text} = บันทึกข้อมูลเรียบร้อย หมายเลข SSR ID : BKK-2025000303</msg>
+<status status="PASS" starttime="20250805 14:46:23.550" endtime="20250805 14:46:23.613"/>
+</kw>
+<kw name="Split String" library="String">
+<var>${Array Massage}</var>
+<arg>${Result Massage Full Text}</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<msg timestamp="20250805 14:46:23.613" level="INFO">${Array Massage} = ['บันทึกข้อมูลเรียบร้อย', 'หมายเลข', 'SSR', 'ID', ':', 'BKK-2025000303']</msg>
+<status status="PASS" starttime="20250805 14:46:23.613" endtime="20250805 14:46:23.613"/>
+</kw>
+<kw name="Strip String" library="String">
+<var>${Data recorded}</var>
+<arg>${Array Massage[0]}</arg>
+<doc>Remove leading and/or trailing whitespaces from the given string.</doc>
+<msg timestamp="20250805 14:46:23.613" level="INFO">${Data recorded} = บันทึกข้อมูลเรียบร้อย</msg>
+<status status="PASS" starttime="20250805 14:46:23.613" endtime="20250805 14:46:23.613"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${Data recorded}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20250805 14:46:23.613" level="INFO">${Data recorded} = บันทึกข้อมูลเรียบร้อย</msg>
+<status status="PASS" starttime="20250805 14:46:23.613" endtime="20250805 14:46:23.613"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${Data recorded}' != 'บันทึกข้อมูลเรียบร้อย'</arg>
+<arg>Fail</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20250805 14:46:23.613" endtime="20250805 14:46:23.613"/>
+</kw>
+<kw name="Split String" library="String">
+<var>${SSR ID Massage}</var>
+<arg>${Result Massage Full Text}</arg>
+<arg>:</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<msg timestamp="20250805 14:46:23.613" level="INFO">${SSR ID Massage} = ['บันทึกข้อมูลเรียบร้อย หมายเลข SSR ID ', ' BKK-2025000303']</msg>
+<status status="PASS" starttime="20250805 14:46:23.613" endtime="20250805 14:46:23.613"/>
+</kw>
+<kw name="Strip String" library="String">
+<var>${SSR ID}</var>
+<arg>${SSR ID Massage[1]}</arg>
+<doc>Remove leading and/or trailing whitespaces from the given string.</doc>
+<msg timestamp="20250805 14:46:23.613" level="INFO">${SSR ID} = BKK-2025000303</msg>
+<status status="PASS" starttime="20250805 14:46:23.613" endtime="20250805 14:46:23.613"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${SSR ID}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20250805 14:46:23.613" level="INFO">${SSR ID} = BKK-2025000303</msg>
+<status status="PASS" starttime="20250805 14:46:23.613" endtime="20250805 14:46:23.613"/>
+</kw>
+<msg timestamp="20250805 14:46:23.613" level="INFO">${SSR ID Approval I} = BKK-2025000303</msg>
+<status status="PASS" starttime="20250805 14:46:22.794" endtime="20250805 14:46:23.613"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${SSR ID Approval I}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20250805 14:46:23.613" level="INFO">${SSR ID Approval I} = BKK-2025000303</msg>
+<status status="PASS" starttime="20250805 14:46:23.613" endtime="20250805 14:46:23.613"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>SSR ID Approval 1 เลขที่ดึงออกมา: ${SSR ID Approval I}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20250805 14:46:23.630" level="INFO">SSR ID Approval 1 เลขที่ดึงออกมา: BKK-2025000303</msg>
+<status status="PASS" starttime="20250805 14:46:23.613" endtime="20250805 14:46:23.630"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250805 14:46:24.636" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20250805 14:46:23.630" endtime="20250805 14:46:24.636"/>
+</kw>
+<kw name="Write Value SSD ID" library="Excel_Template">
+<arg>${SSR ID Approval I}</arg>
+<kw name="Open Workbook" library="RPA.Excel.Files">
+<arg>${SOURCE_FILE}</arg>
+<doc>Open an existing Excel workbook.</doc>
+<msg timestamp="20250805 14:46:24.667" level="INFO">Opened workbook: &lt;RPA.Excel.Files.XlsxWorkbook object at 0x000002224B479688&gt;</msg>
+<status status="PASS" starttime="20250805 14:46:24.640" endtime="20250805 14:46:24.667"/>
+</kw>
+<kw name="Set Cell Value" library="RPA.Excel.Files">
+<arg>row=2</arg>
+<arg>column=17</arg>
+<arg>value=${SSR ID}</arg>
+<doc>Set a cell value in the given worksheet.</doc>
+<status status="PASS" starttime="20250805 14:46:24.667" endtime="20250805 14:46:24.667"/>
+</kw>
+<kw name="Save Workbook" library="RPA.Excel.Files">
+<doc>Save the active workbook.</doc>
+<status status="PASS" starttime="20250805 14:46:24.683" endtime="20250805 14:46:24.778"/>
+</kw>
+<kw name="Close Workbook" library="RPA.Excel.Files">
+<doc>Close the active workbook.</doc>
+<msg timestamp="20250805 14:46:24.778" level="INFO">Closing workbook: &lt;RPA.Excel.Files.XlsxWorkbook object at 0x000002224B479688&gt;</msg>
+<status status="PASS" starttime="20250805 14:46:24.778" endtime="20250805 14:46:24.778"/>
+</kw>
+<status status="PASS" starttime="20250805 14:46:24.636" endtime="20250805 14:46:24.778"/>
+</kw>
+<kw name="Write Value To Excel Status" library="Excel_Template">
+<arg>TC_002 SSR Create</arg>
+<kw name="Open Workbook" library="RPA.Excel.Files">
+<arg>${SOURCE_FILE}</arg>
+<doc>Open an existing Excel workbook.</doc>
+<msg timestamp="20250805 14:46:24.794" level="INFO">Opened workbook: &lt;RPA.Excel.Files.XlsxWorkbook object at 0x000002224B4ACC48&gt;</msg>
+<status status="PASS" starttime="20250805 14:46:24.778" endtime="20250805 14:46:24.794"/>
+</kw>
+<kw name="Set Cell Value" library="RPA.Excel.Files">
+<arg>row=2</arg>
+<arg>column=15</arg>
+<arg>value=${Step}</arg>
+<doc>Set a cell value in the given worksheet.</doc>
+<status status="PASS" starttime="20250805 14:46:24.794" endtime="20250805 14:46:24.810"/>
+</kw>
+<kw name="Save Workbook" library="RPA.Excel.Files">
+<doc>Save the active workbook.</doc>
+<status status="PASS" starttime="20250805 14:46:24.810" endtime="20250805 14:46:24.884"/>
+</kw>
+<kw name="Close Workbook" library="RPA.Excel.Files">
+<doc>Close the active workbook.</doc>
+<msg timestamp="20250805 14:46:24.884" level="INFO">Closing workbook: &lt;RPA.Excel.Files.XlsxWorkbook object at 0x000002224B4ACC48&gt;</msg>
+<status status="PASS" starttime="20250805 14:46:24.884" endtime="20250805 14:46:24.884"/>
+</kw>
+<status status="PASS" starttime="20250805 14:46:24.778" endtime="20250805 14:46:24.884"/>
+</kw>
+<doc>สามารถสร้าง SSR และใส่ข้อมูลตาม Excel ได้</doc>
+<tag>Standard_Test</tag>
+<status status="PASS" starttime="20250805 14:46:14.367" endtime="20250805 14:46:24.884"/>
+</test>
+<test id="s1-s1-t7" name="[7] สามารถกดออกจากระบบ Transporter ได้" line="136">
+<kw name="Log Out" library="Logout_keywords">
+<kw name="Click Menu List" library="menu_keywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${Menu List}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250805 14:46:24.890" level="INFO">Clicking element 'xpath=//form/div[1]/table/tbody/tr/td[1]/img'.</msg>
+<status status="PASS" starttime="20250805 14:46:24.890" endtime="20250805 14:46:24.932"/>
+</kw>
+<status status="PASS" starttime="20250805 14:46:24.890" endtime="20250805 14:46:24.933"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.getElementById("iconheader:frmMenu:LogOut").click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20250805 14:46:24.933" level="INFO">Executing JavaScript:
+document.getElementById("iconheader:frmMenu:LogOut").click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20250805 14:46:24.933" endtime="20250805 14:46:25.033"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250805 14:46:26.040" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20250805 14:46:25.034" endtime="20250805 14:46:26.040"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Login</arg>
+<arg>10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20250805 14:46:26.042" endtime="20250805 14:46:26.079"/>
+</kw>
+<status status="PASS" starttime="20250805 14:46:24.890" endtime="20250805 14:46:26.080"/>
+</kw>
+<doc>สามารถกดออกจากระบบ Transporter เพื่อดำเนินการต่อในขั้นตอนถัดไป</doc>
+<tag>Standard_Test</tag>
+<status status="PASS" starttime="20250805 14:46:24.884" endtime="20250805 14:46:26.082"/>
+</test>
+<test id="s1-s1-t8" name="[8] สามารถล็อคอินเข้าสู่ระบบ Transporter ได้" line="141">
+<kw name="Transporter_Login" library="login_keywords">
+<arg>${SSR Approval 1 USER}</arg>
+<arg>${SSR Approval 1 PASS}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=loginForm:username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20250805 14:46:26.089" level="INFO">Typing text 'teerachu' into text field 'id=loginForm:username'.</msg>
+<status status="PASS" starttime="20250805 14:46:26.089" endtime="20250805 14:46:26.218"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=loginForm:password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20250805 14:46:26.218" level="INFO">Typing text '123' into text field 'id=loginForm:password'.</msg>
+<status status="PASS" starttime="20250805 14:46:26.218" endtime="20250805 14:46:26.289"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath=${LOGIN BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20250805 14:46:26.289" level="INFO">Clicking button 'xpath=//*[@id="loginForm:login"]'.</msg>
+<status status="PASS" starttime="20250805 14:46:26.289" endtime="20250805 14:46:26.546"/>
+</kw>
+<status status="PASS" starttime="20250805 14:46:26.089" endtime="20250805 14:46:26.547"/>
+</kw>
+<kw name="Welcome Page Should Be Open" library="login_keywords">
+<arg>${LOGIN TITLE}</arg>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>${Title}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20250805 14:46:26.554" level="INFO">Page title is 'Transporter Web (TPT)'.</msg>
+<status status="PASS" starttime="20250805 14:46:26.548" endtime="20250805 14:46:26.554"/>
+</kw>
+<status status="PASS" starttime="20250805 14:46:26.547" endtime="20250805 14:46:26.555"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250805 14:46:27.566" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20250805 14:46:26.555" endtime="20250805 14:46:27.566"/>
+</kw>
+<doc>สามารถล็อคอินเข้าสู่ระบบ Transporter ได้โดยใช้บัญชีที่เกี่ยวข้อง</doc>
+<tag>Standard_Test</tag>
+<status status="PASS" starttime="20250805 14:46:26.087" endtime="20250805 14:46:27.566"/>
+</test>
+<test id="s1-s1-t9" name="[9] สามารถทำรายการ Process SSR Approval 1 ได้" line="148">
+<kw name="Click Menu List" library="menu_keywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${Menu List}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250805 14:46:27.584" level="INFO">Clicking element 'xpath=//form/div[1]/table/tbody/tr/td[1]/img'.</msg>
+<status status="PASS" starttime="20250805 14:46:27.584" endtime="20250805 14:46:27.666"/>
+</kw>
+<status status="PASS" starttime="20250805 14:46:27.582" endtime="20250805 14:46:27.666"/>
+</kw>
+<kw name="Select Menu" library="menu_keywords">
+<arg>${Todo list Menu ID}</arg>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.getElementById("${Menu}").click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20250805 14:46:27.668" level="INFO">Executing JavaScript:
+document.getElementById("iconheader:frmMenu:TodoList").click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20250805 14:46:27.667" endtime="20250805 14:46:27.874"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250805 14:46:28.885" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20250805 14:46:27.874" endtime="20250805 14:46:28.885"/>
+</kw>
+<status status="PASS" starttime="20250805 14:46:27.666" endtime="20250805 14:46:28.886"/>
+</kw>
+<kw name="To Do List Serach SSR ID" library="menu_to_do_list_keywords">
+<arg>${SSR ID Approval I}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=${Todo list Search SSR ID}</arg>
+<arg>${SSR ID}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20250805 14:46:28.892" level="INFO">Typing text 'BKK-2025000303' into text field 'xpath=//table/tbody/tr[2]/td[3]/input'.</msg>
+<status status="PASS" starttime="20250805 14:46:28.890" endtime="20250805 14:46:29.059"/>
+</kw>
+<status status="PASS" starttime="20250805 14:46:28.888" endtime="20250805 14:46:29.059"/>
+</kw>
+<kw name="To Do Click Serach SSR ID" library="menu_to_do_list_keywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${Todo list Menu Search Button Query}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250805 14:46:29.059" level="INFO">Clicking element 'xpath=//*[@id="ssrForm:btnQuery"]'.</msg>
+<status status="PASS" starttime="20250805 14:46:29.059" endtime="20250805 14:46:29.109"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${is_visible}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>xpath=${Todo list Menu Select First Row span}</arg>
+<arg>timeout=15s</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=${Todo list Menu Select First Row span}</arg>
+<arg>timeout=15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20250805 14:46:29.109" endtime="20250805 14:46:29.355"/>
+</kw>
+<msg timestamp="20250805 14:46:29.355" level="INFO">${is_visible} = True</msg>
+<status status="PASS" starttime="20250805 14:46:29.109" endtime="20250805 14:46:29.355"/>
+</kw>
+<if>
+<branch type="IF" condition="'${is_visible}' == 'True'">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0, document.body.scrollHeight)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20250805 14:46:29.356" level="INFO">Executing JavaScript:
+window.scrollTo(0, document.body.scrollHeight)
+Without any arguments.</msg>
+<status status="PASS" starttime="20250805 14:46:29.356" endtime="20250805 14:46:29.362"/>
+</kw>
+<status status="PASS" starttime="20250805 14:46:29.355" endtime="20250805 14:46:29.362"/>
+</branch>
+<branch type="ELSE">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${Todo list Menu Search Button Query}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20250805 14:46:29.363" endtime="20250805 14:46:29.363"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=${Todo list Menu Select First Row span}</arg>
+<arg>timeout=15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20250805 14:46:29.363" endtime="20250805 14:46:29.363"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0, document.body.scrollHeight)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="NOT RUN" starttime="20250805 14:46:29.363" endtime="20250805 14:46:29.363"/>
+</kw>
+<status status="NOT RUN" starttime="20250805 14:46:29.362" endtime="20250805 14:46:29.363"/>
+</branch>
+<status status="PASS" starttime="20250805 14:46:29.355" endtime="20250805 14:46:29.363"/>
+</if>
+<status status="PASS" starttime="20250805 14:46:29.059" endtime="20250805 14:46:29.363"/>
+</kw>
+<kw name="Selected SSR ID" library="menu_to_do_list_keywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${Todo list Menu Select First Row span}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250805 14:46:29.366" level="INFO">Clicking element 'xpath=//div[2]/table/tbody/tr/td[2]/span/a'.</msg>
+<status status="PASS" starttime="20250805 14:46:29.365" endtime="20250805 14:46:29.738"/>
+</kw>
+<status status="PASS" starttime="20250805 14:46:29.364" endtime="20250805 14:46:29.738"/>
+</kw>
+<kw name="Page Should Contains" library="result_massage_keywords">
+<arg>${SSR &gt; SSR Approval}</arg>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${Text}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20250805 14:46:29.739" endtime="20250805 14:46:29.757"/>
+</kw>
+<status status="PASS" starttime="20250805 14:46:29.738" endtime="20250805 14:46:29.757"/>
+</kw>
+<kw name="SSR Approval Approved Or Rejected" library="SSR_Approval_Kewords">
+<arg>${SSR Approved Case}</arg>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0, 200)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20250805 14:46:29.759" level="INFO">Executing JavaScript:
+window.scrollTo(0, 200)
+Without any arguments.</msg>
+<status status="PASS" starttime="20250805 14:46:29.758" endtime="20250805 14:46:29.766"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${SSR Approved Case Select}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250805 14:46:29.766" level="INFO">Clicking element 'xpath=//tr[2]/td/table/tbody/tr/td[2]/select'.</msg>
+<status status="PASS" starttime="20250805 14:46:29.766" endtime="20250805 14:46:29.822"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250805 14:46:30.334" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20250805 14:46:29.822" endtime="20250805 14:46:30.334"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${Case}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250805 14:46:30.334" level="INFO">Clicking element 'xpath=//tbody/tr/td[2]/select/option[2]'.</msg>
+<status status="PASS" starttime="20250805 14:46:30.334" endtime="20250805 14:46:30.417"/>
+</kw>
+<status status="PASS" starttime="20250805 14:46:29.758" endtime="20250805 14:46:30.417"/>
+</kw>
+<kw name="SSR Approval Job Type" library="SSR_Approval_Kewords">
+<arg>${New Cable}</arg>
+<kw name="Sleep" library="BuiltIn">
+<arg>1 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250805 14:46:31.423" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20250805 14:46:30.418" endtime="20250805 14:46:31.423"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${SSR Approved Job Type Select}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250805 14:46:31.423" level="INFO">Clicking element 'xpath=//tr[2]/td/table/tbody/tr/td[3]/select'.</msg>
+<status status="PASS" starttime="20250805 14:46:31.423" endtime="20250805 14:46:31.525"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250805 14:46:32.037" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20250805 14:46:31.525" endtime="20250805 14:46:32.037"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${Job Type}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250805 14:46:32.037" level="INFO">Clicking element 'xpath=//tbody/tr/td[3]/select/option[2]'.</msg>
+<status status="PASS" starttime="20250805 14:46:32.037" endtime="20250805 14:46:32.170"/>
+</kw>
+<status status="PASS" starttime="20250805 14:46:30.418" endtime="20250805 14:46:32.170"/>
+</kw>
+<kw name="SSR Approval Click Save" library="SSR_Approval_Kewords">
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250805 14:46:32.676" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20250805 14:46:32.173" endtime="20250805 14:46:32.676"/>
+</kw>
+<kw name="Normalize Path" library="OperatingSystem">
+<var>${Picture Folder path}</var>
+<arg>${Picture Folder}/SSR_Approval.png</arg>
+<doc>Normalizes the given path.</doc>
+<msg timestamp="20250805 14:46:32.676" level="INFO">${Picture Folder path} = C:\Users\arnoj885\Robot Framework\Obsolate Transporter\tests\TYPE_Non-Turnkey\FBB OSP for TPT III\Results\20250805\1445\SSR_Approval.png</msg>
+<status status="PASS" starttime="20250805 14:46:32.676" endtime="20250805 14:46:32.676"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>${Picture Folder path}</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20250805 14:46:32.885" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="SSR_Approval.png"&gt;&lt;img src="SSR_Approval.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20250805 14:46:32.676" endtime="20250805 14:46:32.885"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${SSR Approval Save Button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250805 14:46:32.885" level="INFO">Clicking element 'xpath=//tbody/tr[1]/td[3]/input[4]'.</msg>
+<status status="PASS" starttime="20250805 14:46:32.885" endtime="20250805 14:46:32.933"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=${SSR Approval Result Massage}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20250805 14:46:32.933" endtime="20250805 14:46:38.586"/>
+</kw>
+<status status="PASS" starttime="20250805 14:46:32.170" endtime="20250805 14:46:38.586"/>
+</kw>
+<kw name="Result Massage Data recorded" library="result_massage_keywords">
+<var>${SSR ID DD Submitted}</var>
+<arg>${SSR Approval Result Massage}</arg>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>บันทึกข้อมูลเรียบร้อย</arg>
+<arg>timeout=90s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20250805 14:46:38.586" endtime="20250805 14:46:38.618"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Result Massage Full Text}</var>
+<arg>xpath=${Target Xpath}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20250805 14:46:38.668" level="INFO">${Result Massage Full Text} = บันทึกข้อมูลเรียบร้อย หมายเลข SSR ID : BKK-2025000303</msg>
+<status status="PASS" starttime="20250805 14:46:38.618" endtime="20250805 14:46:38.668"/>
+</kw>
+<kw name="Split String" library="String">
+<var>${Array Massage}</var>
+<arg>${Result Massage Full Text}</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<msg timestamp="20250805 14:46:38.668" level="INFO">${Array Massage} = ['บันทึกข้อมูลเรียบร้อย', 'หมายเลข', 'SSR', 'ID', ':', 'BKK-2025000303']</msg>
+<status status="PASS" starttime="20250805 14:46:38.668" endtime="20250805 14:46:38.668"/>
+</kw>
+<kw name="Strip String" library="String">
+<var>${Data recorded}</var>
+<arg>${Array Massage[0]}</arg>
+<doc>Remove leading and/or trailing whitespaces from the given string.</doc>
+<msg timestamp="20250805 14:46:38.668" level="INFO">${Data recorded} = บันทึกข้อมูลเรียบร้อย</msg>
+<status status="PASS" starttime="20250805 14:46:38.668" endtime="20250805 14:46:38.668"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${Data recorded}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20250805 14:46:38.668" level="INFO">${Data recorded} = บันทึกข้อมูลเรียบร้อย</msg>
+<status status="PASS" starttime="20250805 14:46:38.668" endtime="20250805 14:46:38.668"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${Data recorded}' != 'บันทึกข้อมูลเรียบร้อย'</arg>
+<arg>Fail</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20250805 14:46:38.668" endtime="20250805 14:46:38.668"/>
+</kw>
+<kw name="Split String" library="String">
+<var>${SSR ID Massage}</var>
+<arg>${Result Massage Full Text}</arg>
+<arg>:</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<msg timestamp="20250805 14:46:38.668" level="INFO">${SSR ID Massage} = ['บันทึกข้อมูลเรียบร้อย หมายเลข SSR ID ', ' BKK-2025000303']</msg>
+<status status="PASS" starttime="20250805 14:46:38.668" endtime="20250805 14:46:38.668"/>
+</kw>
+<kw name="Strip String" library="String">
+<var>${SSR ID}</var>
+<arg>${SSR ID Massage[1]}</arg>
+<doc>Remove leading and/or trailing whitespaces from the given string.</doc>
+<msg timestamp="20250805 14:46:38.677" level="INFO">${SSR ID} = BKK-2025000303</msg>
+<status status="PASS" starttime="20250805 14:46:38.668" endtime="20250805 14:46:38.677"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${SSR ID}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20250805 14:46:38.677" level="INFO">${SSR ID} = BKK-2025000303</msg>
+<status status="PASS" starttime="20250805 14:46:38.677" endtime="20250805 14:46:38.677"/>
+</kw>
+<msg timestamp="20250805 14:46:38.677" level="INFO">${SSR ID DD Submitted} = BKK-2025000303</msg>
+<status status="PASS" starttime="20250805 14:46:38.586" endtime="20250805 14:46:38.677"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${SSR ID DD Submitted}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20250805 14:46:38.677" level="INFO">${SSR ID DD Submitted} = BKK-2025000303</msg>
+<status status="PASS" starttime="20250805 14:46:38.677" endtime="20250805 14:46:38.677"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>SSR ID DD Submitted เลขที่ดึงออกมา: ${SSR ID DD Submitted}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20250805 14:46:38.681" level="INFO">SSR ID DD Submitted เลขที่ดึงออกมา: BKK-2025000303</msg>
+<status status="PASS" starttime="20250805 14:46:38.681" endtime="20250805 14:46:38.681"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250805 14:46:39.696" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20250805 14:46:38.682" endtime="20250805 14:46:39.696"/>
+</kw>
+<kw name="Write Value To Excel Status" library="Excel_Template">
+<arg>TC_003 SSR Approval 1</arg>
+<kw name="Open Workbook" library="RPA.Excel.Files">
+<arg>${SOURCE_FILE}</arg>
+<doc>Open an existing Excel workbook.</doc>
+<msg timestamp="20250805 14:46:39.759" level="INFO">Opened workbook: &lt;RPA.Excel.Files.XlsxWorkbook object at 0x000002224B4A6D48&gt;</msg>
+<status status="PASS" starttime="20250805 14:46:39.696" endtime="20250805 14:46:39.759"/>
+</kw>
+<kw name="Set Cell Value" library="RPA.Excel.Files">
+<arg>row=2</arg>
+<arg>column=15</arg>
+<arg>value=${Step}</arg>
+<doc>Set a cell value in the given worksheet.</doc>
+<status status="PASS" starttime="20250805 14:46:39.759" endtime="20250805 14:46:39.759"/>
+</kw>
+<kw name="Save Workbook" library="RPA.Excel.Files">
+<doc>Save the active workbook.</doc>
+<status status="PASS" starttime="20250805 14:46:39.759" endtime="20250805 14:46:39.838"/>
+</kw>
+<kw name="Close Workbook" library="RPA.Excel.Files">
+<doc>Close the active workbook.</doc>
+<msg timestamp="20250805 14:46:39.838" level="INFO">Closing workbook: &lt;RPA.Excel.Files.XlsxWorkbook object at 0x000002224B4A6D48&gt;</msg>
+<status status="PASS" starttime="20250805 14:46:39.838" endtime="20250805 14:46:39.838"/>
+</kw>
+<status status="PASS" starttime="20250805 14:46:39.696" endtime="20250805 14:46:39.840"/>
+</kw>
+<doc>สามารถทำรายการ Process SSR Approval 1 ได้จนจบขั้นตอน</doc>
+<tag>Standard_Test</tag>
+<status status="PASS" starttime="20250805 14:46:27.566" endtime="20250805 14:46:39.840"/>
+</test>
+<test id="s1-s1-t10" name="[10] สามารถกดออกจากระบบ Transporter ได้" line="167">
+<kw name="Log Out" library="Logout_keywords">
+<kw name="Click Menu List" library="menu_keywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${Menu List}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250805 14:46:39.840" level="INFO">Clicking element 'xpath=//form/div[1]/table/tbody/tr/td[1]/img'.</msg>
+<status status="PASS" starttime="20250805 14:46:39.840" endtime="20250805 14:46:39.892"/>
+</kw>
+<status status="PASS" starttime="20250805 14:46:39.840" endtime="20250805 14:46:39.892"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.getElementById("iconheader:frmMenu:LogOut").click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20250805 14:46:39.892" level="INFO">Executing JavaScript:
+document.getElementById("iconheader:frmMenu:LogOut").click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20250805 14:46:39.892" endtime="20250805 14:46:40.116"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250805 14:46:41.120" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20250805 14:46:40.116" endtime="20250805 14:46:41.121"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Login</arg>
+<arg>10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20250805 14:46:41.121" endtime="20250805 14:46:41.158"/>
+</kw>
+<status status="PASS" starttime="20250805 14:46:39.840" endtime="20250805 14:46:41.158"/>
+</kw>
+<doc>สามารถกดออกจากระบบ Transporter เพื่อดำเนินการต่อในขั้นตอนถัดไป</doc>
+<tag>Standard_Test</tag>
+<status status="PASS" starttime="20250805 14:46:39.840" endtime="20250805 14:46:41.158"/>
+</test>
+<test id="s1-s1-t11" name="[11] สามารถล็อคอินเข้าสู่ระบบ Transporter ได้" line="172">
+<kw name="Transporter_Login" library="login_keywords">
+<arg>${DD Submitted USER}</arg>
+<arg>${DD Submitted PASS}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=loginForm:username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20250805 14:46:41.176" level="INFO">Typing text 'tana_huawei' into text field 'id=loginForm:username'.</msg>
+<status status="PASS" starttime="20250805 14:46:41.174" endtime="20250805 14:46:41.300"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=loginForm:password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20250805 14:46:41.302" level="INFO">Typing text '123' into text field 'id=loginForm:password'.</msg>
+<status status="PASS" starttime="20250805 14:46:41.300" endtime="20250805 14:46:41.376"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath=${LOGIN BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20250805 14:46:41.376" level="INFO">Clicking button 'xpath=//*[@id="loginForm:login"]'.</msg>
+<status status="PASS" starttime="20250805 14:46:41.376" endtime="20250805 14:46:41.649"/>
+</kw>
+<status status="PASS" starttime="20250805 14:46:41.158" endtime="20250805 14:46:41.650"/>
+</kw>
+<kw name="Welcome Page Should Be Open" library="login_keywords">
+<arg>${LOGIN TITLE}</arg>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>${Title}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20250805 14:46:41.653" level="INFO">Page title is 'Transporter Web (TPT)'.</msg>
+<status status="PASS" starttime="20250805 14:46:41.651" endtime="20250805 14:46:41.653"/>
+</kw>
+<status status="PASS" starttime="20250805 14:46:41.650" endtime="20250805 14:46:41.653"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250805 14:46:42.662" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20250805 14:46:41.653" endtime="20250805 14:46:42.662"/>
+</kw>
+<doc>สามารถล็อคอินเข้าสู่ระบบ Transporter ได้</doc>
+<tag>Standard_Test</tag>
+<status status="PASS" starttime="20250805 14:46:41.158" endtime="20250805 14:46:42.663"/>
+</test>
+<test id="s1-s1-t12" name="[12] สามารถทำรายการ DD Submitted ได้" line="179">
+<kw name="Click Menu List" library="menu_keywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${Menu List}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250805 14:46:42.682" level="INFO">Clicking element 'xpath=//form/div[1]/table/tbody/tr/td[1]/img'.</msg>
+<status status="PASS" starttime="20250805 14:46:42.680" endtime="20250805 14:46:42.766"/>
+</kw>
+<status status="PASS" starttime="20250805 14:46:42.680" endtime="20250805 14:46:42.768"/>
+</kw>
+<kw name="Select Menu" library="menu_keywords">
+<arg>${Todo list Menu ID}</arg>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.getElementById("${Menu}").click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20250805 14:46:42.769" level="INFO">Executing JavaScript:
+document.getElementById("iconheader:frmMenu:TodoList").click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20250805 14:46:42.768" endtime="20250805 14:46:43.046"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250805 14:46:44.060" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20250805 14:46:43.047" endtime="20250805 14:46:44.060"/>
+</kw>
+<status status="PASS" starttime="20250805 14:46:42.768" endtime="20250805 14:46:44.060"/>
+</kw>
+<kw name="To Do List Serach SSR ID" library="menu_to_do_list_keywords">
+<arg>${SSR ID DD Submitted}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=${Todo list Search SSR ID}</arg>
+<arg>${SSR ID}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20250805 14:46:44.065" level="INFO">Typing text 'BKK-2025000303' into text field 'xpath=//table/tbody/tr[2]/td[3]/input'.</msg>
+<status status="PASS" starttime="20250805 14:46:44.063" endtime="20250805 14:46:44.213"/>
+</kw>
+<status status="PASS" starttime="20250805 14:46:44.063" endtime="20250805 14:46:44.213"/>
+</kw>
+<kw name="To Do Click Serach SSR ID" library="menu_to_do_list_keywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${Todo list Menu Search Button Query}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250805 14:46:44.217" level="INFO">Clicking element 'xpath=//*[@id="ssrForm:btnQuery"]'.</msg>
+<status status="PASS" starttime="20250805 14:46:44.217" endtime="20250805 14:46:44.262"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${is_visible}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>xpath=${Todo list Menu Select First Row span}</arg>
+<arg>timeout=15s</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=${Todo list Menu Select First Row span}</arg>
+<arg>timeout=15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20250805 14:46:44.264" endtime="20250805 14:46:44.743"/>
+</kw>
+<msg timestamp="20250805 14:46:44.743" level="INFO">${is_visible} = True</msg>
+<status status="PASS" starttime="20250805 14:46:44.263" endtime="20250805 14:46:44.743"/>
+</kw>
+<if>
+<branch type="IF" condition="'${is_visible}' == 'True'">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0, document.body.scrollHeight)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20250805 14:46:44.744" level="INFO">Executing JavaScript:
+window.scrollTo(0, document.body.scrollHeight)
+Without any arguments.</msg>
+<status status="PASS" starttime="20250805 14:46:44.743" endtime="20250805 14:46:44.750"/>
+</kw>
+<status status="PASS" starttime="20250805 14:46:44.743" endtime="20250805 14:46:44.750"/>
+</branch>
+<branch type="ELSE">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${Todo list Menu Search Button Query}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20250805 14:46:44.751" endtime="20250805 14:46:44.751"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=${Todo list Menu Select First Row span}</arg>
+<arg>timeout=15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20250805 14:46:44.751" endtime="20250805 14:46:44.751"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0, document.body.scrollHeight)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="NOT RUN" starttime="20250805 14:46:44.751" endtime="20250805 14:46:44.751"/>
+</kw>
+<status status="NOT RUN" starttime="20250805 14:46:44.750" endtime="20250805 14:46:44.751"/>
+</branch>
+<status status="PASS" starttime="20250805 14:46:44.743" endtime="20250805 14:46:44.751"/>
+</if>
+<status status="PASS" starttime="20250805 14:46:44.213" endtime="20250805 14:46:44.751"/>
+</kw>
+<kw name="Selected SSR ID" library="menu_to_do_list_keywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${Todo list Menu Select First Row span}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250805 14:46:44.753" level="INFO">Clicking element 'xpath=//div[2]/table/tbody/tr/td[2]/span/a'.</msg>
+<status status="PASS" starttime="20250805 14:46:44.752" endtime="20250805 14:46:45.139"/>
+</kw>
+<status status="PASS" starttime="20250805 14:46:44.752" endtime="20250805 14:46:45.139"/>
+</kw>
+<kw name="Page Should Contains" library="result_massage_keywords">
+<arg>${SSR &gt; DD Submitted}</arg>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${Text}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20250805 14:46:45.140" endtime="20250805 14:46:45.160"/>
+</kw>
+<status status="PASS" starttime="20250805 14:46:45.140" endtime="20250805 14:46:45.162"/>
+</kw>
+<kw name="Get Column Values By Name" library="Excel_Template">
+<var>${DD_Submitted_Upload_file List}</var>
+<arg>DD_Submitted_Upload_file</arg>
+<kw name="Open Workbook" library="RPA.Excel.Files">
+<arg>${SOURCE_FILE}</arg>
+<doc>Open an existing Excel workbook.</doc>
+<msg timestamp="20250805 14:46:45.163" level="INFO">Opened workbook: &lt;RPA.Excel.Files.XlsxWorkbook object at 0x000002223B934F88&gt;</msg>
+<status status="PASS" starttime="20250805 14:46:45.163" endtime="20250805 14:46:45.163"/>
+</kw>
+<kw name="Read Worksheet As Table" library="RPA.Excel.Files">
+<var>${rows}</var>
+<arg>header=True</arg>
+<doc>Read the contents of a worksheet into a Table container. Allows
+sorting/filtering/manipulating using the ``RPA.Tables`` library.</doc>
+<msg timestamp="20250805 14:46:45.163" level="INFO">Created table: Table(columns=['Test_Case_ID', 'Proferma_No', 'Import_Site_Template_File', 'SSR_Routing_Submitted_Latitude_Start', 'SSR_Routing_Submitted_Latitude_End', 'SSR_Routing_Submitted_Longitude_Start', 'SSR_Routing_Submitted_Longitude_End', 'SSR_Routing_Submitted_Cable_Distance', 'SSR_Routing_Submitted_Upload_File', 'DD_Submitted_Upload_file', 'Permission_Start_Submitted_Upload_file', 'PAT_BOQ_Submitted_Upload_file', 'FAT_Permission_iGIS_Submitted_Upload_file', 'Date Running', 'Run_Status', 'Reference_Site_Code', 'SSR_ID', 'Pre-PR', 'PO', 'Result'], rows=1)</msg>
+<msg timestamp="20250805 14:46:45.163" level="INFO">${rows} = Table(columns=['Test_Case_ID', 'Proferma_No', 'Import_Site_Template_File', 'SSR_Routing_Submitted_Latitude_Start', 'SSR_Routing_Submitted_Latitude_End', 'SSR_Routing_Submitted_Longitude_Start', 'SSR_R...</msg>
+<status status="PASS" starttime="20250805 14:46:45.163" endtime="20250805 14:46:45.163"/>
+</kw>
+<kw name="Create List" library="BuiltIn">
+<var>${values}</var>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20250805 14:46:45.163" level="INFO">${values} = []</msg>
+<status status="PASS" starttime="20250805 14:46:45.163" endtime="20250805 14:46:45.163"/>
+</kw>
+<for flavor="IN">
+<var>${row}</var>
+<value>@{rows}</value>
+<iter>
+<var name="${row}">{'Test_Case_ID': '001', 'Proferma_No': 1010001072, 'Import_Site_Template_File': 'Import_Site_Template_Proforma OSP.xls', 'SSR_Routing_Submitted_Latitude_Start': 4.12345, 'SSR_Routing_Submitted_Latitud...</var>
+<kw name="Get From Dictionary" library="Collections">
+<var>${value}</var>
+<arg>${row}</arg>
+<arg>${column_name}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<msg timestamp="20250805 14:46:45.163" level="INFO">${value} = Cat000125#_[]().jpg</msg>
+<status status="PASS" starttime="20250805 14:46:45.163" endtime="20250805 14:46:45.163"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${values}</arg>
+<arg>${value}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20250805 14:46:45.163" endtime="20250805 14:46:45.163"/>
+</kw>
+<status status="PASS" starttime="20250805 14:46:45.163" endtime="20250805 14:46:45.163"/>
+</iter>
+<status status="PASS" starttime="20250805 14:46:45.163" endtime="20250805 14:46:45.163"/>
+</for>
+<kw name="Close Workbook" library="RPA.Excel.Files">
+<doc>Close the active workbook.</doc>
+<msg timestamp="20250805 14:46:45.163" level="INFO">Closing workbook: &lt;RPA.Excel.Files.XlsxWorkbook object at 0x000002223B934F88&gt;</msg>
+<status status="PASS" starttime="20250805 14:46:45.163" endtime="20250805 14:46:45.163"/>
+</kw>
+<msg timestamp="20250805 14:46:45.163" level="INFO">${DD_Submitted_Upload_file List} = ['Cat000125#_[]().jpg']</msg>
+<status status="PASS" starttime="20250805 14:46:45.162" endtime="20250805 14:46:45.163"/>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<var>${DD_Submitted_Upload_file path}</var>
+<arg>SEPARATOR=</arg>
+<arg>C:\\Users\\arnoj885\\Robot Framework\\Obsolate Transporter\\tests\\TYPE_Non-Turnkey\\FBB OSP for TPT III/../../../data file/</arg>
+<arg>${DD_Submitted_Upload_file List[0]}</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<msg timestamp="20250805 14:46:45.181" level="INFO">${DD_Submitted_Upload_file path} = C:\Users\arnoj885\Robot Framework\Obsolate Transporter\tests\TYPE_Non-Turnkey\FBB OSP for TPT III/../../../data file/Cat000125#_[]().jpg</msg>
+<status status="PASS" starttime="20250805 14:46:45.177" endtime="20250805 14:46:45.181"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${DD_Submitted_Upload_file path}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20250805 14:46:45.183" level="INFO">${DD_Submitted_Upload_file path} = C:\Users\arnoj885\Robot Framework\Obsolate Transporter\tests\TYPE_Non-Turnkey\FBB OSP for TPT III/../../../data file/Cat000125#_[]().jpg</msg>
+<status status="PASS" starttime="20250805 14:46:45.183" endtime="20250805 14:46:45.183"/>
+</kw>
+<kw name="Normalize Path" library="OperatingSystem">
+<var>${DD_Submitted_Upload_file path}</var>
+<arg>${DD_Submitted_Upload_file path}</arg>
+<doc>Normalizes the given path.</doc>
+<msg timestamp="20250805 14:46:45.184" level="INFO">${DD_Submitted_Upload_file path} = C:\Users\arnoj885\Robot Framework\Obsolate Transporter\data file\Cat000125#_[]().jpg</msg>
+<status status="PASS" starttime="20250805 14:46:45.184" endtime="20250805 14:46:45.185"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${DD_Submitted_Upload_file path}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20250805 14:46:45.185" level="INFO">C:\Users\arnoj885\Robot Framework\Obsolate Transporter\data file\Cat000125#_[]().jpg</msg>
+<status status="PASS" starttime="20250805 14:46:45.185" endtime="20250805 14:46:45.185"/>
+</kw>
+<kw name="DD Submitted Add Picture" library="DD_Submitted_keywords">
+<arg>${DD_Submitted_Upload_file path}</arg>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0, 200)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20250805 14:46:45.187" level="INFO">Executing JavaScript:
+window.scrollTo(0, 200)
+Without any arguments.</msg>
+<status status="PASS" starttime="20250805 14:46:45.186" endtime="20250805 14:46:45.196"/>
+</kw>
+<kw name="Choose File" library="SeleniumLibrary">
+<arg>xpath=${DD Submitted Add Picture}</arg>
+<arg>${Picture}</arg>
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<msg timestamp="20250805 14:46:45.197" level="INFO">Sending C:\Users\arnoj885\Robot Framework\Obsolate Transporter\data file\Cat000125#_[]().jpg to browser.</msg>
+<status status="PASS" starttime="20250805 14:46:45.196" endtime="20250805 14:46:45.236"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=${DD Submitted Upload Picture}</arg>
+<arg>timeout=15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20250805 14:46:45.236" endtime="20250805 14:46:45.261"/>
+</kw>
+<status status="PASS" starttime="20250805 14:46:45.186" endtime="20250805 14:46:45.261"/>
+</kw>
+<kw name="DD Submitted Upload Picture" library="DD_Submitted_keywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${DD Submitted Upload Picture}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250805 14:46:45.262" level="INFO">Clicking element 'xpath=//div/div/table/tbody/tr/td/div[2]/div'.</msg>
+<status status="PASS" starttime="20250805 14:46:45.262" endtime="20250805 14:46:45.316"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0, document.body.scrollHeight)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20250805 14:46:45.317" level="INFO">Executing JavaScript:
+window.scrollTo(0, document.body.scrollHeight)
+Without any arguments.</msg>
+<status status="PASS" starttime="20250805 14:46:45.316" endtime="20250805 14:46:45.333"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250805 14:46:45.839" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20250805 14:46:45.335" endtime="20250805 14:46:45.839"/>
+</kw>
+<status status="PASS" starttime="20250805 14:46:45.262" endtime="20250805 14:46:45.839"/>
+</kw>
+<kw name="DD Submitted Save" library="DD_Submitted_keywords">
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250805 14:46:46.352" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20250805 14:46:45.840" endtime="20250805 14:46:46.352"/>
+</kw>
+<kw name="Normalize Path" library="OperatingSystem">
+<var>${Picture Folder path}</var>
+<arg>${Picture Folder}/DD_Submitted.png</arg>
+<doc>Normalizes the given path.</doc>
+<msg timestamp="20250805 14:46:46.352" level="INFO">${Picture Folder path} = C:\Users\arnoj885\Robot Framework\Obsolate Transporter\tests\TYPE_Non-Turnkey\FBB OSP for TPT III\Results\20250805\1445\DD_Submitted.png</msg>
+<status status="PASS" starttime="20250805 14:46:46.352" endtime="20250805 14:46:46.352"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>${Picture Folder path}</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20250805 14:46:46.539" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="DD_Submitted.png"&gt;&lt;img src="DD_Submitted.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20250805 14:46:46.356" endtime="20250805 14:46:46.539"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${DD Submitted Save}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250805 14:46:46.539" level="INFO">Clicking element 'xpath=//table/tbody/tr[1]/td[3]/input[4]'.</msg>
+<status status="PASS" starttime="20250805 14:46:46.539" endtime="20250805 14:46:46.593"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=${DD Submitted Result Massage}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20250805 14:46:46.593" endtime="20250805 14:46:47.092"/>
+</kw>
+<status status="PASS" starttime="20250805 14:46:45.840" endtime="20250805 14:46:47.092"/>
+</kw>
+<kw name="Result Massage Data recorded" library="result_massage_keywords">
+<var>${SSR ID DD Approved}</var>
+<arg>${DD Submitted Result Massage}</arg>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>บันทึกข้อมูลเรียบร้อย</arg>
+<arg>timeout=90s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20250805 14:46:47.093" endtime="20250805 14:46:47.108"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Result Massage Full Text}</var>
+<arg>xpath=${Target Xpath}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20250805 14:46:47.120" level="INFO">${Result Massage Full Text} = บันทึกข้อมูลเรียบร้อย หมายเลข SSR ID : BKK-2025000303</msg>
+<status status="PASS" starttime="20250805 14:46:47.108" endtime="20250805 14:46:47.120"/>
+</kw>
+<kw name="Split String" library="String">
+<var>${Array Massage}</var>
+<arg>${Result Massage Full Text}</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<msg timestamp="20250805 14:46:47.124" level="INFO">${Array Massage} = ['บันทึกข้อมูลเรียบร้อย', 'หมายเลข', 'SSR', 'ID', ':', 'BKK-2025000303']</msg>
+<status status="PASS" starttime="20250805 14:46:47.124" endtime="20250805 14:46:47.124"/>
+</kw>
+<kw name="Strip String" library="String">
+<var>${Data recorded}</var>
+<arg>${Array Massage[0]}</arg>
+<doc>Remove leading and/or trailing whitespaces from the given string.</doc>
+<msg timestamp="20250805 14:46:47.128" level="INFO">${Data recorded} = บันทึกข้อมูลเรียบร้อย</msg>
+<status status="PASS" starttime="20250805 14:46:47.124" endtime="20250805 14:46:47.128"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${Data recorded}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20250805 14:46:47.128" level="INFO">${Data recorded} = บันทึกข้อมูลเรียบร้อย</msg>
+<status status="PASS" starttime="20250805 14:46:47.128" endtime="20250805 14:46:47.128"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${Data recorded}' != 'บันทึกข้อมูลเรียบร้อย'</arg>
+<arg>Fail</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20250805 14:46:47.128" endtime="20250805 14:46:47.128"/>
+</kw>
+<kw name="Split String" library="String">
+<var>${SSR ID Massage}</var>
+<arg>${Result Massage Full Text}</arg>
+<arg>:</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<msg timestamp="20250805 14:46:47.128" level="INFO">${SSR ID Massage} = ['บันทึกข้อมูลเรียบร้อย หมายเลข SSR ID ', ' BKK-2025000303']</msg>
+<status status="PASS" starttime="20250805 14:46:47.128" endtime="20250805 14:46:47.128"/>
+</kw>
+<kw name="Strip String" library="String">
+<var>${SSR ID}</var>
+<arg>${SSR ID Massage[1]}</arg>
+<doc>Remove leading and/or trailing whitespaces from the given string.</doc>
+<msg timestamp="20250805 14:46:47.132" level="INFO">${SSR ID} = BKK-2025000303</msg>
+<status status="PASS" starttime="20250805 14:46:47.128" endtime="20250805 14:46:47.132"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${SSR ID}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20250805 14:46:47.132" level="INFO">${SSR ID} = BKK-2025000303</msg>
+<status status="PASS" starttime="20250805 14:46:47.132" endtime="20250805 14:46:47.132"/>
+</kw>
+<msg timestamp="20250805 14:46:47.132" level="INFO">${SSR ID DD Approved} = BKK-2025000303</msg>
+<status status="PASS" starttime="20250805 14:46:47.093" endtime="20250805 14:46:47.132"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${SSR ID DD Approved}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20250805 14:46:47.132" level="INFO">${SSR ID DD Approved} = BKK-2025000303</msg>
+<status status="PASS" starttime="20250805 14:46:47.132" endtime="20250805 14:46:47.132"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>SSR ID DD Approved เลขที่ดึงออกมา: ${SSR ID DD Approved}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20250805 14:46:47.135" level="INFO">SSR ID DD Approved เลขที่ดึงออกมา: BKK-2025000303</msg>
+<status status="PASS" starttime="20250805 14:46:47.132" endtime="20250805 14:46:47.135"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250805 14:46:48.142" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20250805 14:46:47.136" endtime="20250805 14:46:48.142"/>
+</kw>
+<kw name="Write Value To Excel Status" library="Excel_Template">
+<arg>TC_004 DD Submitted</arg>
+<kw name="Open Workbook" library="RPA.Excel.Files">
+<arg>${SOURCE_FILE}</arg>
+<doc>Open an existing Excel workbook.</doc>
+<msg timestamp="20250805 14:46:48.189" level="INFO">Opened workbook: &lt;RPA.Excel.Files.XlsxWorkbook object at 0x000002223B848648&gt;</msg>
+<status status="PASS" starttime="20250805 14:46:48.142" endtime="20250805 14:46:48.189"/>
+</kw>
+<kw name="Set Cell Value" library="RPA.Excel.Files">
+<arg>row=2</arg>
+<arg>column=15</arg>
+<arg>value=${Step}</arg>
+<doc>Set a cell value in the given worksheet.</doc>
+<status status="PASS" starttime="20250805 14:46:48.189" endtime="20250805 14:46:48.189"/>
+</kw>
+<kw name="Save Workbook" library="RPA.Excel.Files">
+<doc>Save the active workbook.</doc>
+<status status="PASS" starttime="20250805 14:46:48.189" endtime="20250805 14:46:48.286"/>
+</kw>
+<kw name="Close Workbook" library="RPA.Excel.Files">
+<doc>Close the active workbook.</doc>
+<msg timestamp="20250805 14:46:48.286" level="INFO">Closing workbook: &lt;RPA.Excel.Files.XlsxWorkbook object at 0x000002223B848648&gt;</msg>
+<status status="PASS" starttime="20250805 14:46:48.286" endtime="20250805 14:46:48.286"/>
+</kw>
+<status status="PASS" starttime="20250805 14:46:48.142" endtime="20250805 14:46:48.286"/>
+</kw>
+<doc>สามารถทำรายการ DD Submitted ได้จนจบขั้นตอน</doc>
+<tag>Standard_Test</tag>
+<status status="PASS" starttime="20250805 14:46:42.665" endtime="20250805 14:46:48.286"/>
+</test>
+<test id="s1-s1-t13" name="[13] สามารถกดออกจากระบบ Transporter ได้" line="206">
+<kw name="Log Out" library="Logout_keywords">
+<kw name="Click Menu List" library="menu_keywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${Menu List}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250805 14:46:48.286" level="INFO">Clicking element 'xpath=//form/div[1]/table/tbody/tr/td[1]/img'.</msg>
+<status status="PASS" starttime="20250805 14:46:48.286" endtime="20250805 14:46:48.335"/>
+</kw>
+<status status="PASS" starttime="20250805 14:46:48.286" endtime="20250805 14:46:48.335"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.getElementById("iconheader:frmMenu:LogOut").click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20250805 14:46:48.336" level="INFO">Executing JavaScript:
+document.getElementById("iconheader:frmMenu:LogOut").click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20250805 14:46:48.335" endtime="20250805 14:46:48.483"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250805 14:46:49.500" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20250805 14:46:48.483" endtime="20250805 14:46:49.500"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Login</arg>
+<arg>10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20250805 14:46:49.500" endtime="20250805 14:46:49.532"/>
+</kw>
+<status status="PASS" starttime="20250805 14:46:48.286" endtime="20250805 14:46:49.532"/>
+</kw>
+<doc>[10] สามารถกดออกจากระบบ Transporter ได้</doc>
+<tag>Standard_Test</tag>
+<status status="PASS" starttime="20250805 14:46:48.286" endtime="20250805 14:46:49.532"/>
+</test>
+<test id="s1-s1-t14" name="[14] สามารถล็อคอินเข้าสู่ระบบ Transporter ได้" line="211">
+<kw name="Transporter_Login" library="login_keywords">
+<arg>${DD Approved USER}</arg>
+<arg>${DD Approved PASS}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=loginForm:username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20250805 14:46:49.548" level="INFO">Typing text 'teerachu' into text field 'id=loginForm:username'.</msg>
+<status status="PASS" starttime="20250805 14:46:49.548" endtime="20250805 14:46:49.667"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=loginForm:password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20250805 14:46:49.667" level="INFO">Typing text '123' into text field 'id=loginForm:password'.</msg>
+<status status="PASS" starttime="20250805 14:46:49.667" endtime="20250805 14:46:49.747"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath=${LOGIN BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20250805 14:46:49.747" level="INFO">Clicking button 'xpath=//*[@id="loginForm:login"]'.</msg>
+<status status="PASS" starttime="20250805 14:46:49.747" endtime="20250805 14:46:50.189"/>
+</kw>
+<status status="PASS" starttime="20250805 14:46:49.548" endtime="20250805 14:46:50.189"/>
+</kw>
+<kw name="Welcome Page Should Be Open" library="login_keywords">
+<arg>${LOGIN TITLE}</arg>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>${Title}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20250805 14:46:50.191" level="INFO">Page title is 'Transporter Web (TPT)'.</msg>
+<status status="PASS" starttime="20250805 14:46:50.191" endtime="20250805 14:46:50.191"/>
+</kw>
+<status status="PASS" starttime="20250805 14:46:50.191" endtime="20250805 14:46:50.191"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250805 14:46:51.206" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20250805 14:46:50.191" endtime="20250805 14:46:51.206"/>
+</kw>
+<doc>สามารถล็อคอินเข้าสู่ระบบ Transporter ได้</doc>
+<tag>Standard_Test</tag>
+<status status="PASS" starttime="20250805 14:46:49.546" endtime="20250805 14:46:51.206"/>
+</test>
+<test id="s1-s1-t15" name="[15] สามารถทำรายการ DD Approved ได้" line="218">
+<kw name="Click Menu List" library="menu_keywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${Menu List}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250805 14:46:51.228" level="INFO">Clicking element 'xpath=//form/div[1]/table/tbody/tr/td[1]/img'.</msg>
+<status status="PASS" starttime="20250805 14:46:51.226" endtime="20250805 14:46:51.337"/>
+</kw>
+<status status="PASS" starttime="20250805 14:46:51.224" endtime="20250805 14:46:51.337"/>
+</kw>
+<kw name="Select Menu" library="menu_keywords">
+<arg>${Todo list Menu ID}</arg>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.getElementById("${Menu}").click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20250805 14:46:51.338" level="INFO">Executing JavaScript:
+document.getElementById("iconheader:frmMenu:TodoList").click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20250805 14:46:51.338" endtime="20250805 14:46:51.531"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250805 14:46:52.534" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20250805 14:46:51.531" endtime="20250805 14:46:52.535"/>
+</kw>
+<status status="PASS" starttime="20250805 14:46:51.337" endtime="20250805 14:46:52.535"/>
+</kw>
+<kw name="To Do List Serach SSR ID" library="menu_to_do_list_keywords">
+<arg>${SSR ID DD Approved}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=${Todo list Search SSR ID}</arg>
+<arg>${SSR ID}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20250805 14:46:52.543" level="INFO">Typing text 'BKK-2025000303' into text field 'xpath=//table/tbody/tr[2]/td[3]/input'.</msg>
+<status status="PASS" starttime="20250805 14:46:52.540" endtime="20250805 14:46:52.745"/>
+</kw>
+<status status="PASS" starttime="20250805 14:46:52.538" endtime="20250805 14:46:52.745"/>
+</kw>
+<kw name="To Do Click Serach SSR ID" library="menu_to_do_list_keywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${Todo list Menu Search Button Query}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250805 14:46:52.746" level="INFO">Clicking element 'xpath=//*[@id="ssrForm:btnQuery"]'.</msg>
+<status status="PASS" starttime="20250805 14:46:52.746" endtime="20250805 14:46:52.796"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${is_visible}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>xpath=${Todo list Menu Select First Row span}</arg>
+<arg>timeout=15s</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=${Todo list Menu Select First Row span}</arg>
+<arg>timeout=15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20250805 14:46:52.797" endtime="20250805 14:46:53.073"/>
+</kw>
+<msg timestamp="20250805 14:46:53.073" level="INFO">${is_visible} = True</msg>
+<status status="PASS" starttime="20250805 14:46:52.796" endtime="20250805 14:46:53.073"/>
+</kw>
+<if>
+<branch type="IF" condition="'${is_visible}' == 'True'">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0, document.body.scrollHeight)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20250805 14:46:53.077" level="INFO">Executing JavaScript:
+window.scrollTo(0, document.body.scrollHeight)
+Without any arguments.</msg>
+<status status="PASS" starttime="20250805 14:46:53.073" endtime="20250805 14:46:53.106"/>
+</kw>
+<status status="PASS" starttime="20250805 14:46:53.073" endtime="20250805 14:46:53.106"/>
+</branch>
+<branch type="ELSE">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${Todo list Menu Search Button Query}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20250805 14:46:53.106" endtime="20250805 14:46:53.106"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=${Todo list Menu Select First Row span}</arg>
+<arg>timeout=15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20250805 14:46:53.106" endtime="20250805 14:46:53.106"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0, document.body.scrollHeight)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="NOT RUN" starttime="20250805 14:46:53.107" endtime="20250805 14:46:53.107"/>
+</kw>
+<status status="NOT RUN" starttime="20250805 14:46:53.106" endtime="20250805 14:46:53.107"/>
+</branch>
+<status status="PASS" starttime="20250805 14:46:53.073" endtime="20250805 14:46:53.107"/>
+</if>
+<status status="PASS" starttime="20250805 14:46:52.745" endtime="20250805 14:46:53.107"/>
+</kw>
+<kw name="Selected SSR ID" library="menu_to_do_list_keywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${Todo list Menu Select First Row span}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250805 14:46:53.109" level="INFO">Clicking element 'xpath=//div[2]/table/tbody/tr/td[2]/span/a'.</msg>
+<status status="PASS" starttime="20250805 14:46:53.109" endtime="20250805 14:46:53.465"/>
+</kw>
+<status status="PASS" starttime="20250805 14:46:53.108" endtime="20250805 14:46:53.466"/>
+</kw>
+<kw name="Page Should Contains" library="result_massage_keywords">
+<arg>${SSR &gt; DD Approved}</arg>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${Text}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20250805 14:46:53.467" endtime="20250805 14:46:53.483"/>
+</kw>
+<status status="PASS" starttime="20250805 14:46:53.466" endtime="20250805 14:46:53.483"/>
+</kw>
+<kw name="DD Approved Route Type" library="DD_Approved_keywords">
+<arg>${Site to Site}</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${DD Approved Click Route Type}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250805 14:46:53.485" level="INFO">Clicking element 'xpath=//table[1]/tbody/tr[2]/td[3]/select'.</msg>
+<status status="PASS" starttime="20250805 14:46:53.484" endtime="20250805 14:46:53.538"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${Route Type}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250805 14:46:53.539" level="INFO">Clicking element 'xpath=//table[1]/tbody/tr[2]/td[3]/select/option[2]'.</msg>
+<status status="PASS" starttime="20250805 14:46:53.538" endtime="20250805 14:46:53.584"/>
+</kw>
+<status status="PASS" starttime="20250805 14:46:53.484" endtime="20250805 14:46:53.584"/>
+</kw>
+<kw name="DD Approved Cable Job Type" library="DD_Approved_keywords">
+<arg>${New}</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${DD Approved Click Cable Job Type}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250805 14:46:53.585" level="INFO">Clicking element 'xpath=//fieldset/table[1]/tbody/tr[2]/td[6]/select'.</msg>
+<status status="PASS" starttime="20250805 14:46:53.585" endtime="20250805 14:46:53.716"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${Cable Job Type}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250805 14:46:53.716" level="INFO">Clicking element 'xpath=//table[1]/tbody/tr[2]/td[6]/select/option[2]'.</msg>
+<status status="PASS" starttime="20250805 14:46:53.716" endtime="20250805 14:46:53.760"/>
+</kw>
+<status status="PASS" starttime="20250805 14:46:53.584" endtime="20250805 14:46:53.760"/>
+</kw>
+<kw name="DD Approved Destination site" library="DD_Approved_keywords">
+<arg>${CWT}</arg>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0, document.body.scrollHeight)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20250805 14:46:53.761" level="INFO">Executing JavaScript:
+window.scrollTo(0, document.body.scrollHeight)
+Without any arguments.</msg>
+<status status="PASS" starttime="20250805 14:46:53.761" endtime="20250805 14:46:53.768"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=${DD Approved Destination site Serach}</arg>
+<arg>timeout=15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20250805 14:46:53.768" endtime="20250805 14:46:54.266"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${DD Approved Destination site Serach}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250805 14:46:54.266" level="INFO">Clicking element 'xpath=//tr[2]/td[4]/fieldset/table/tbody/tr[2]/td[3]/input[2]'.</msg>
+<status status="PASS" starttime="20250805 14:46:54.266" endtime="20250805 14:46:54.325"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=${DD Approved Destination site Zone MC}</arg>
+<arg>timeout=15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20250805 14:46:54.327" endtime="20250805 14:46:54.587"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${DD Approved Destination site Zone MC}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250805 14:46:54.589" level="INFO">Clicking element 'xpath=//tbody/tr[2]/td/div/div/fieldset/table[1]/tbody/tr[2]/td[6]/select'.</msg>
+<status status="PASS" starttime="20250805 14:46:54.589" endtime="20250805 14:46:54.658"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${Zone MC}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250805 14:46:54.659" level="INFO">Clicking element 'xpath=//tbody/tr[2]/td[6]/select/option[11]'.</msg>
+<status status="PASS" starttime="20250805 14:46:54.658" endtime="20250805 14:46:54.689"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${Search Site Search Criteria}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250805 14:46:54.690" level="INFO">Clicking element 'xpath=//fieldset/table[2]/tbody/tr/td/input[1]'.</msg>
+<status status="PASS" starttime="20250805 14:46:54.689" endtime="20250805 14:46:54.746"/>
+</kw>
+<kw name="Random Page Destination" library="DD_Approved_keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=${Click Select page}</arg>
+<arg>timeout=15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20250805 14:46:54.747" endtime="20250805 14:47:02.284"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250805 14:47:03.294" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20250805 14:47:02.284" endtime="20250805 14:47:03.294"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${random_num Page}</var>
+<arg>random.randint(3, 12)</arg>
+<arg>modules=random</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20250805 14:47:03.294" level="INFO">${random_num Page} = 5</msg>
+<status status="PASS" starttime="20250805 14:47:03.294" endtime="20250805 14:47:03.294"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${xpath Random Page Destination}</var>
+<arg>//tr/td[1]/div/table/tbody/tr/td[${random_num Page}]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20250805 14:47:03.294" level="INFO">${xpath Random Page Destination} = //tr/td[1]/div/table/tbody/tr/td[5]</msg>
+<status status="PASS" starttime="20250805 14:47:03.294" endtime="20250805 14:47:03.294"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>XPath Page: ${xpath Random Page Destination}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20250805 14:47:03.294" level="INFO">XPath Page: //tr/td[1]/div/table/tbody/tr/td[5]</msg>
+<status status="PASS" starttime="20250805 14:47:03.294" endtime="20250805 14:47:03.294"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${xpath Random Page Destination}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250805 14:47:03.294" level="INFO">Clicking element 'xpath=//tr/td[1]/div/table/tbody/tr/td[5]'.</msg>
+<status status="PASS" starttime="20250805 14:47:03.294" endtime="20250805 14:47:03.353"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250805 14:47:04.357" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20250805 14:47:03.354" endtime="20250805 14:47:04.357"/>
+</kw>
+<status status="PASS" starttime="20250805 14:46:54.746" endtime="20250805 14:47:04.357"/>
+</kw>
+<kw name="Random Destination site" library="DD_Approved_keywords">
+<var>${Serach Result}</var>
+<kw name="Evaluate" library="BuiltIn">
+<var>${random_num}</var>
+<arg>${site Number} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20250805 14:47:04.364" level="INFO">${random_num} = 1</msg>
+<status status="PASS" starttime="20250805 14:47:04.361" endtime="20250805 14:47:04.364"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${random_num}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20250805 14:47:04.368" level="INFO">${random_num} = 1</msg>
+<status status="PASS" starttime="20250805 14:47:04.364" endtime="20250805 14:47:04.368"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${xpath Random Destination site}</var>
+<arg>//fieldset/span/div[2]/table/tbody/tr[${random_num}]/td[2]/a</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20250805 14:47:04.368" level="INFO">${xpath Random Destination site} = //fieldset/span/div[2]/table/tbody/tr[1]/td[2]/a</msg>
+<status status="PASS" starttime="20250805 14:47:04.368" endtime="20250805 14:47:04.368"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>XPath: ${xpath Random Destination site}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20250805 14:47:04.373" level="INFO">XPath: //fieldset/span/div[2]/table/tbody/tr[1]/td[2]/a</msg>
+<status status="PASS" starttime="20250805 14:47:04.368" endtime="20250805 14:47:04.373"/>
+</kw>
+<msg timestamp="20250805 14:47:04.375" level="INFO">${Serach Result} = //fieldset/span/div[2]/table/tbody/tr[1]/td[2]/a</msg>
+<status status="PASS" starttime="20250805 14:47:04.357" endtime="20250805 14:47:04.375"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<arg>${Serach Result}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" starttime="20250805 14:47:04.375" endtime="20250805 14:47:04.376"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=${Search Criteria Serach Result}</arg>
+<arg>timeout=15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20250805 14:47:04.376" endtime="20250805 14:47:04.405"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${Serach Result}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250805 14:47:04.405" level="INFO">Clicking element 'xpath=//fieldset/span/div[2]/table/tbody/tr[1]/td[2]/a'.</msg>
+<status status="PASS" starttime="20250805 14:47:04.405" endtime="20250805 14:47:04.472"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0, document.body.scrollHeight)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20250805 14:47:04.473" level="INFO">Executing JavaScript:
+window.scrollTo(0, document.body.scrollHeight)
+Without any arguments.</msg>
+<status status="PASS" starttime="20250805 14:47:04.472" endtime="20250805 14:47:04.480"/>
+</kw>
+<status status="PASS" starttime="20250805 14:46:53.760" endtime="20250805 14:47:04.480"/>
+</kw>
+<kw name="DD Approved" library="DD_Approved_keywords">
+<arg>${DD Approved Case}</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${DD Approved click}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250805 14:47:04.481" level="INFO">Clicking element 'xpath=//div[2]/fieldset/table[2]/tbody/tr[2]/td/table/tbody/tr/td[2]/select'.</msg>
+<status status="PASS" starttime="20250805 14:47:04.481" endtime="20250805 14:47:04.692"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${Csae}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250805 14:47:04.692" level="INFO">Clicking element 'xpath=//tr[2]/td/table/tbody/tr/td[2]/select/option[2]'.</msg>
+<status status="PASS" starttime="20250805 14:47:04.692" endtime="20250805 14:47:04.733"/>
+</kw>
+<status status="PASS" starttime="20250805 14:47:04.481" endtime="20250805 14:47:04.733"/>
+</kw>
+<kw name="DD Approved Save" library="DD_Approved_keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=${DD Approved Save Button}</arg>
+<arg>timeout=15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20250805 14:47:04.733" endtime="20250805 14:47:04.756"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250805 14:47:05.772" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20250805 14:47:04.756" endtime="20250805 14:47:05.772"/>
+</kw>
+<kw name="Normalize Path" library="OperatingSystem">
+<var>${Picture Folder path}</var>
+<arg>${Picture Folder}/DD_Approved.png</arg>
+<doc>Normalizes the given path.</doc>
+<msg timestamp="20250805 14:47:05.772" level="INFO">${Picture Folder path} = C:\Users\arnoj885\Robot Framework\Obsolate Transporter\tests\TYPE_Non-Turnkey\FBB OSP for TPT III\Results\20250805\1445\DD_Approved.png</msg>
+<status status="PASS" starttime="20250805 14:47:05.772" endtime="20250805 14:47:05.772"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>${Picture Folder path}</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20250805 14:47:05.956" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="DD_Approved.png"&gt;&lt;img src="DD_Approved.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20250805 14:47:05.772" endtime="20250805 14:47:05.956"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250805 14:47:06.460" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20250805 14:47:05.956" endtime="20250805 14:47:06.460"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${DD Approved Save Button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250805 14:47:06.460" level="INFO">Clicking element 'xpath=//span[2]/table/tbody/tr[1]/td[3]/input[4]'.</msg>
+<status status="PASS" starttime="20250805 14:47:06.460" endtime="20250805 14:47:06.548"/>
+</kw>
+<status status="PASS" starttime="20250805 14:47:04.733" endtime="20250805 14:47:06.548"/>
+</kw>
+<kw name="DD Approved Confirm Route" library="DD_Approved_keywords">
+<kw name="Please Enter Mew Information" library="DD_Approved_keywords">
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${is visible}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${DD Approved Confirm Route}</arg>
+<arg>5</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${DD Approved Confirm Route}</arg>
+<arg>5</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20250805 14:47:11.315" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ProtocolError('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))': /session/e246ebdf62bf8cd9f760bf708653df46/screenshot</msg>
+<errors>
+<msg timestamp="20250805 14:47:11.315" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ProtocolError('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))': /session/e246ebdf62bf8cd9f760bf708653df46/screenshot</msg>
+<msg timestamp="20250805 14:47:15.418" level="ERROR">Execution stopped by user.</msg>
+</errors>
+</robot>
