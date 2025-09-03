@@ -14,7 +14,7 @@ SSR Approval Job Type
     sleep    1 seconds
     Click Element    xpath=${SSR Approved Job Type Select}
     sleep    0.5 seconds
-    Click Element    xpath=${Job Type}
+    Click Element    xpath=//option[text()="${Job Type}"]
 
 SSR Approval Click Save
     sleep    0.5 seconds

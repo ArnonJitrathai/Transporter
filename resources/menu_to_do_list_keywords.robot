@@ -9,13 +9,13 @@ To Do List Serach SSR ID
 To Do Click Serach SSR ID
     Click Element    xpath=${Todo list Menu Search Button Query}
     ${is_visible}=    Run Keyword And Return Status
-    ...     Wait Until Element Is Visible    xpath=${Todo list Menu Select First Row span}     timeout=15s
+    ...     Wait Until Element Is Visible    xpath=${Todo list Menu Select First Row span}     timeout=30s
     
     IF    '${is_visible}' == 'True'
         Execute Javascript    window.scrollTo(0, document.body.scrollHeight)
     ELSE
         Click Element    xpath=${Todo list Menu Search Button Query}
-        Wait Until Element Is Visible    xpath=${Todo list Menu Select First Row span}     timeout=15s
+        Wait Until Element Is Visible    xpath=${Todo list Menu Select First Row span}     timeout=30s
         Execute Javascript    window.scrollTo(0, document.body.scrollHeight)
     END
 

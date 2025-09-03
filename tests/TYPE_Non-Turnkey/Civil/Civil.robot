@@ -19,13 +19,22 @@ Suite Setup       Open Browser To My net-work
     Select Mynetwork Sub Menu               ${Mynetwork Sub Project Management}
     Wait Until Page Contains         Sub Project Management
     sleep    1.5 seconds
-    My network Sub Project Management       ${Civil}            test
+
+    ${Sub Project Management System List}=    Get Column Values By Name File    ${SOURCE_FILE For Civil}     Sub Project Management System     
+    ${Sub Project Management System}=    Set Variable    ${Sub Project Management System List[0]}
+    Log    Sub Project Management System :>>>${Sub Project Management System}
+
+    ${Sub Project Management Sub Project Name List}=    Get Column Values By Name File    ${SOURCE_FILE For Civil}     Sub Project Management Sub Project Name     
+    ${Sub Project Management Sub Project Name}=    Set Variable    ${Sub Project Management Sub Project Name List[0]}
+    Log    Sub Project Management Sub Project Name :>>>${Sub Project Management Sub Project Name}
+
+    My network Sub Project Management       ${Sub Project Management System}            ${Sub Project Management Sub Project Name List}
     My network Search Sub Project Management
     My network Edit Sub Project
 
     ${Add_Site_Template File List}=    Get Column Values By Name File       ${SOURCE_FILE For Civil}        Add_Site_Template_File
 
-    ${Add_Site_Template path}=    Catenate    SEPARATOR=     ${CURDIR}/../../../data file/    ${Add_Site_Template File List[0]}
+    ${Add_Site_Template path}=    Catenate    SEPARATOR=     ${CURDIR}/data file/    ${Add_Site_Template File List[0]}
     Set Test Variable    ${Add_Site_Template path}
     ${Add_Site_Template path}=    Normalize Path    ${Add_Site_Template path}
     Log    ${Add_Site_Template path}
@@ -36,7 +45,7 @@ Suite Setup       Open Browser To My net-work
     
     My network Map Site Code     ${Site Code}
 
-    Map Proforma                 1010001074         #Excel
+    Map Proforma                 1010001075         #Excel
     Map Proculator 
     Map Site Result
     sleep    5 seconds

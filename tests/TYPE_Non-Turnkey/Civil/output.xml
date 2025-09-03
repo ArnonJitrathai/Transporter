@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.7.9 on win32)" generated="20250818 16:55:15.216" rpa="false" schemaversion="3">
+<robot generator="Robot 5.0.1 (Python 3.7.9 on win32)" generated="20250901 09:21:22.490" rpa="false" schemaversion="3">
 <suite id="s1" name="Civil" source="C:\Users\arnoj885\Robot Framework\Obsolate Transporter\tests\TYPE_Non-Turnkey\Civil\Civil.robot">
 <kw name="Open Browser To My net-work" library="login_keywords" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${Mynetwork URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20250818 16:55:16.842" level="INFO">Opening browser 'Chrome' to base url 'https://test-mynetwork.ais.co.th/login'.</msg>
-<status status="PASS" starttime="20250818 16:55:16.842" endtime="20250818 16:55:39.746"/>
+<msg timestamp="20250901 09:21:24.247" level="INFO">Opening browser 'Chrome' to base url 'https://test-mynetwork.ais.co.th/login'.</msg>
+<status status="PASS" starttime="20250901 09:21:24.247" endtime="20250901 09:21:42.034"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20250818 16:55:39.746" endtime="20250818 16:55:39.875"/>
+<status status="PASS" starttime="20250901 09:21:42.035" endtime="20250901 09:21:42.156"/>
 </kw>
 <kw name="Set Selenium Timeout" library="SeleniumLibrary">
 <arg>10 seconds</arg>
 <doc>Sets the timeout that is used by various keywords.</doc>
-<status status="PASS" starttime="20250818 16:55:39.875" endtime="20250818 16:55:39.877"/>
+<status status="PASS" starttime="20250901 09:21:42.159" endtime="20250901 09:21:42.159"/>
 </kw>
-<status status="PASS" starttime="20250818 16:55:16.836" endtime="20250818 16:55:39.877"/>
+<status status="PASS" starttime="20250901 09:21:24.247" endtime="20250901 09:21:42.159"/>
 </kw>
 <test id="s1-t1" name="สามารถล็อคอินเข้าสู่ระบบ My Net-Work Stagging ได้" line="9">
 <kw name="Welcome Page Should Be Open" library="login_keywords">
@@ -26,10 +26,10 @@
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>${Title}</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20250818 16:55:39.894" level="INFO">Page title is 'MY NETWORK SYSTEM'.</msg>
-<status status="PASS" starttime="20250818 16:55:39.883" endtime="20250818 16:55:39.894"/>
+<msg timestamp="20250901 09:21:42.169" level="INFO">Page title is 'MY NETWORK SYSTEM'.</msg>
+<status status="PASS" starttime="20250901 09:21:42.164" endtime="20250901 09:21:42.169"/>
 </kw>
-<status status="PASS" starttime="20250818 16:55:39.883" endtime="20250818 16:55:39.895"/>
+<status status="PASS" starttime="20250901 09:21:42.163" endtime="20250901 09:21:42.172"/>
 </kw>
 <kw name="Login Mynetwork" library="My_network">
 <arg>${Mynetwork Add Site User}</arg>
@@ -38,1068 +38,269 @@
 <arg>xpath=${Mynetwork Input User}</arg>
 <arg>${User}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20250818 16:55:39.898" level="INFO">Typing text 'napatm49' into text field 'xpath=//form/div[1]/div/input'.</msg>
-<status status="PASS" starttime="20250818 16:55:39.897" endtime="20250818 16:55:40.047"/>
+<msg timestamp="20250901 09:21:42.174" level="INFO">Typing text 'napatm49' into text field 'xpath=//form/div[1]/div/input'.</msg>
+<status status="PASS" starttime="20250901 09:21:42.173" endtime="20250901 09:21:42.342"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>xpath=${Mynetwork Input Pass}</arg>
 <arg>${Pass}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20250818 16:55:40.048" level="INFO">Typing text '1' into text field 'xpath=//form/div[2]/div/input'.</msg>
-<status status="PASS" starttime="20250818 16:55:40.048" endtime="20250818 16:55:40.144"/>
+<msg timestamp="20250901 09:21:42.343" level="INFO">Typing text '1' into text field 'xpath=//form/div[2]/div/input'.</msg>
+<status status="PASS" starttime="20250901 09:21:42.342" endtime="20250901 09:21:42.470"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath=${Mynetwork Login Button}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20250818 16:55:40.144" level="INFO">Clicking element 'xpath=//form/div[3]/div/input'.</msg>
-<status status="PASS" starttime="20250818 16:55:40.144" endtime="20250818 16:55:40.200"/>
+<msg timestamp="20250901 09:21:42.472" level="INFO">Clicking element 'xpath=//form/div[3]/div/input'.</msg>
+<status status="PASS" starttime="20250901 09:21:42.472" endtime="20250901 09:21:42.542"/>
 </kw>
-<status status="PASS" starttime="20250818 16:55:39.895" endtime="20250818 16:55:40.200"/>
+<status status="PASS" starttime="20250901 09:21:42.172" endtime="20250901 09:21:42.542"/>
 </kw>
 <doc>สามารถล็อคอิน My Net-Work Stagging ได้</doc>
 <tag>Standard_Test</tag>
-<status status="PASS" starttime="20250818 16:55:39.878" endtime="20250818 16:55:40.202"/>
+<status status="PASS" starttime="20250901 09:21:42.159" endtime="20250901 09:21:42.542"/>
 </test>
 <test id="s1-t2" name="ทำรายการ Add site ได้" line="15">
 <kw name="Sleep" library="BuiltIn">
 <arg>3 seconds</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20250818 16:55:43.212" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20250818 16:55:40.205" endtime="20250818 16:55:43.212"/>
+<msg timestamp="20250901 09:21:45.547" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20250901 09:21:42.542" endtime="20250901 09:21:45.547"/>
 </kw>
 <kw name="Select Mynetwork Menu" library="My_network">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>xpath=${Mynetwork Menu List}</arg>
 <arg>timeout=15s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20250818 16:55:43.212" endtime="20250818 16:55:43.240"/>
+<status status="PASS" starttime="20250901 09:21:45.547" endtime="20250901 09:21:45.598"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>3 seconds</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20250818 16:55:46.256" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20250818 16:55:43.240" endtime="20250818 16:55:46.256"/>
+<msg timestamp="20250901 09:21:48.604" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20250901 09:21:45.599" endtime="20250901 09:21:48.604"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath=${Mynetwork Menu List}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20250818 16:55:46.256" level="INFO">Clicking element 'xpath=//*[@id="btn-toggle-side-menu"]'.</msg>
-<status status="PASS" starttime="20250818 16:55:46.256" endtime="20250818 16:55:46.309"/>
+<msg timestamp="20250901 09:21:48.604" level="INFO">Clicking element 'xpath=//*[@id="btn-toggle-side-menu"]'.</msg>
+<status status="PASS" starttime="20250901 09:21:48.604" endtime="20250901 09:21:48.701"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1 seconds</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20250818 16:55:47.320" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20250818 16:55:46.309" endtime="20250818 16:55:47.320"/>
+<msg timestamp="20250901 09:21:49.713" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20250901 09:21:48.701" endtime="20250901 09:21:49.713"/>
 </kw>
-<status status="PASS" starttime="20250818 16:55:43.212" endtime="20250818 16:55:47.320"/>
+<status status="PASS" starttime="20250901 09:21:45.547" endtime="20250901 09:21:49.713"/>
 </kw>
 <kw name="Select Mynetwork Sub Menu" library="My_network">
 <arg>${Mynetwork Subcontract}</arg>
 <kw name="Sleep" library="BuiltIn">
 <arg>1 seconds</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20250818 16:55:48.336" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20250818 16:55:47.324" endtime="20250818 16:55:48.336"/>
+<msg timestamp="20250901 09:21:50.730" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20250901 09:21:49.720" endtime="20250901 09:21:50.730"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath=${menu}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20250818 16:55:48.340" level="INFO">Clicking element 'xpath=//div[2]/nav/div[2]/div/ais-mynetwork-menu-side/ul/li[1]/a'.</msg>
-<status status="PASS" starttime="20250818 16:55:48.336" endtime="20250818 16:55:48.428"/>
+<msg timestamp="20250901 09:21:50.732" level="INFO">Clicking element 'xpath=//div[2]/nav/div[2]/div/ais-mynetwork-menu-side/ul/li[1]/a'.</msg>
+<status status="PASS" starttime="20250901 09:21:50.730" endtime="20250901 09:21:50.825"/>
 </kw>
-<status status="PASS" starttime="20250818 16:55:47.320" endtime="20250818 16:55:48.430"/>
+<status status="PASS" starttime="20250901 09:21:49.713" endtime="20250901 09:21:50.825"/>
 </kw>
 <kw name="Select Mynetwork Sub Menu" library="My_network">
 <arg>${Mynetwork Sub Project Management}</arg>
 <kw name="Sleep" library="BuiltIn">
 <arg>1 seconds</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20250818 16:55:49.445" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20250818 16:55:48.431" endtime="20250818 16:55:49.445"/>
+<msg timestamp="20250901 09:21:51.839" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20250901 09:21:50.827" endtime="20250901 09:21:51.840"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath=${menu}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20250818 16:55:49.446" level="INFO">Clicking element 'xpath=//div[2]/div/ais-mynetwork-menu-side/ul/li[1]/ul/li[12]/a'.</msg>
-<status status="PASS" starttime="20250818 16:55:49.445" endtime="20250818 16:55:49.503"/>
+<msg timestamp="20250901 09:21:51.842" level="INFO">Clicking element 'xpath=//div[2]/div/ais-mynetwork-menu-side/ul/li[1]/ul/li[12]/a'.</msg>
+<status status="PASS" starttime="20250901 09:21:51.841" endtime="20250901 09:21:51.954"/>
 </kw>
-<status status="PASS" starttime="20250818 16:55:48.430" endtime="20250818 16:55:49.504"/>
+<status status="PASS" starttime="20250901 09:21:50.826" endtime="20250901 09:21:51.954"/>
 </kw>
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <arg>Sub Project Management</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20250818 16:55:49.504" endtime="20250818 16:55:49.520"/>
+<status status="PASS" starttime="20250901 09:21:51.955" endtime="20250901 09:21:51.968"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1.5 seconds</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20250818 16:55:51.031" level="INFO">Slept 1 second 500 milliseconds</msg>
-<status status="PASS" starttime="20250818 16:55:49.520" endtime="20250818 16:55:51.031"/>
-</kw>
-<kw name="My network Sub Project Management" library="My_network_Add_Site">
-<arg>${Civil}</arg>
-<arg>test</arg>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath=${Mynetwork SPM Select System}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20250818 16:55:51.035" level="INFO">Clicking element 'xpath=//div/app-subproject-arena-management/div/div/div[3]/div/div[2]/select'.</msg>
-<status status="PASS" starttime="20250818 16:55:51.034" endtime="20250818 16:55:51.134"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath=${System}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20250818 16:55:51.135" level="INFO">Clicking element 'xpath=//app-subproject-arena-management/div/div/div[3]/div/div[2]/select/option[4]'.</msg>
-<status status="PASS" starttime="20250818 16:55:51.134" endtime="20250818 16:55:51.193"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>xpath=${Mynetwork SPM Sub Project Name}</arg>
-<arg>${Sub Project Name}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20250818 16:55:51.196" level="INFO">Typing text 'test' into text field 'xpath=//app-subproject-arena-management/div/div/div[3]/div/div[3]/input'.</msg>
-<status status="PASS" starttime="20250818 16:55:51.195" endtime="20250818 16:55:51.325"/>
-</kw>
-<status status="PASS" starttime="20250818 16:55:51.033" endtime="20250818 16:55:51.325"/>
-</kw>
-<kw name="My network Search Sub Project Management" library="My_network_Add_Site">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath=${Mynetwork SPM Search}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20250818 16:55:51.326" level="INFO">Clicking element 'xpath=//app-subproject-arena-management/div/div/div[1]/div/div[2]/button[2]'.</msg>
-<status status="PASS" starttime="20250818 16:55:51.326" endtime="20250818 16:55:51.371"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>0.5 seconds</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20250818 16:55:51.880" level="INFO">Slept 500 milliseconds</msg>
-<status status="PASS" starttime="20250818 16:55:51.371" endtime="20250818 16:55:51.880"/>
-</kw>
-<status status="PASS" starttime="20250818 16:55:51.325" endtime="20250818 16:55:51.881"/>
-</kw>
-<kw name="My network Edit Sub Project" library="My_network_Add_Site">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath=${Sub Project Test Interface}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20250818 16:55:51.886" level="INFO">Clicking element 'xpath=//subproject-arena-manage-action/td/span[2]'.</msg>
-<status status="PASS" starttime="20250818 16:55:51.885" endtime="20250818 16:55:51.985"/>
-</kw>
-<kw name="Wait Until Page Contains" library="SeleniumLibrary">
-<arg>Sub Project Detail</arg>
-<doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20250818 16:55:51.986" endtime="20250818 16:55:52.222"/>
-</kw>
-<status status="PASS" starttime="20250818 16:55:51.883" endtime="20250818 16:55:52.222"/>
+<msg timestamp="20250901 09:21:53.477" level="INFO">Slept 1 second 500 milliseconds</msg>
+<status status="PASS" starttime="20250901 09:21:51.969" endtime="20250901 09:21:53.477"/>
 </kw>
 <kw name="Get Column Values By Name File" library="Excel_Temp_New">
-<var>${Add_Site_Template File List}</var>
+<var>${Sub Project Management System List}</var>
 <arg>${SOURCE_FILE For Civil}</arg>
-<arg>Add_Site_Template_File</arg>
+<arg>Sub Project Management System</arg>
 <kw name="Open Workbook" library="RPA.Excel.Files">
 <arg>${SOURCE_FILE}</arg>
 <doc>Open an existing Excel workbook.</doc>
-<msg timestamp="20250818 16:55:52.231" level="INFO">Opened workbook: &lt;RPA.Excel.Files.XlsxWorkbook object at 0x000001EFDAC15F48&gt;</msg>
-<status status="PASS" starttime="20250818 16:55:52.224" endtime="20250818 16:55:52.231"/>
+<msg timestamp="20250901 09:21:53.479" level="FAIL">FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\arnoj885\\Robot Framework\\Obsolate Transporter\\resources\\data file\\Civil_Config.xlsx'</msg>
+<status status="FAIL" starttime="20250901 09:21:53.478" endtime="20250901 09:21:53.497"/>
 </kw>
 <kw name="Read Worksheet As Table" library="RPA.Excel.Files">
 <var>${rows}</var>
 <arg>header=True</arg>
 <doc>Read the contents of a worksheet into a Table container. Allows
 sorting/filtering/manipulating using the ``RPA.Tables`` library.</doc>
-<msg timestamp="20250818 16:55:52.237" level="INFO">Created table: Table(columns=['Test_Case_ID', 'Add_Site_Template_File', 'SSR_Routing_Submitted_Latitude_Start', 'SSR_Routing_Submitted_Latitude_End', 'SSR_Routing_Submitted_Longitude_Start', 'SSR_Routing_Submitted_Longitude_End', 'SSR_Routing_Submitted_Cable_Distance', 'SSR_Routing_Submitted_Upload_File', 'DD_Submitted_Upload_file', 'Permission_Start_Submitted_Upload_file', 'PAT_BOQ_Submitted_Upload_file', 'FAT_Permission_iGIS_Submitted_Upload_file', 'Date Running', 'Run_Status', 'Reference_Site_Code', 'SSR_ID', 'Pre-PR', 'PO', 'Result'], rows=2)</msg>
-<msg timestamp="20250818 16:55:52.237" level="INFO">${rows} = Table(columns=['Test_Case_ID', 'Add_Site_Template_File', 'SSR_Routing_Submitted_Latitude_Start', 'SSR_Routing_Submitted_Latitude_End', 'SSR_Routing_Submitted_Longitude_Start', 'SSR_Routing_Submitted_L...</msg>
-<status status="PASS" starttime="20250818 16:55:52.231" endtime="20250818 16:55:52.237"/>
+<status status="NOT RUN" starttime="20250901 09:21:53.497" endtime="20250901 09:21:53.497"/>
 </kw>
 <kw name="Create List" library="BuiltIn">
 <var>${values}</var>
 <doc>Returns a list containing given items.</doc>
-<msg timestamp="20250818 16:55:52.237" level="INFO">${values} = []</msg>
-<status status="PASS" starttime="20250818 16:55:52.237" endtime="20250818 16:55:52.237"/>
+<status status="NOT RUN" starttime="20250901 09:21:53.497" endtime="20250901 09:21:53.497"/>
 </kw>
 <for flavor="IN">
 <var>${row}</var>
 <value>@{rows}</value>
 <iter>
-<var name="${row}">{'Test_Case_ID': '001', 'Add_Site_Template_File': 'site_vendor_template.xlsx', 'SSR_Routing_Submitted_Latitude_Start': 4.12345, 'SSR_Routing_Submitted_Latitude_End': 5.67897, 'SSR_Routing_Submitted_Lo...</var>
+<var name="${row}"/>
 <kw name="Get From Dictionary" library="Collections">
 <var>${value}</var>
 <arg>${row}</arg>
 <arg>${column_name}</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<msg timestamp="20250818 16:55:52.239" level="INFO">${value} = site_vendor_template.xlsx</msg>
-<status status="PASS" starttime="20250818 16:55:52.239" endtime="20250818 16:55:52.239"/>
+<status status="NOT RUN" starttime="20250901 09:21:53.497" endtime="20250901 09:21:53.497"/>
 </kw>
 <kw name="Append To List" library="Collections">
 <arg>${values}</arg>
 <arg>${value}</arg>
 <doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" starttime="20250818 16:55:52.239" endtime="20250818 16:55:52.239"/>
+<status status="NOT RUN" starttime="20250901 09:21:53.500" endtime="20250901 09:21:53.500"/>
 </kw>
-<status status="PASS" starttime="20250818 16:55:52.239" endtime="20250818 16:55:52.239"/>
+<status status="NOT RUN" starttime="20250901 09:21:53.497" endtime="20250901 09:21:53.500"/>
 </iter>
-<iter>
-<var name="${row}">{'Test_Case_ID': 1, 'Add_Site_Template_File': 2, 'SSR_Routing_Submitted_Latitude_Start': 3, 'SSR_Routing_Submitted_Latitude_End': 4, 'SSR_Routing_Submitted_Longitude_Start': 5, 'SSR_Routing_Submitted_...</var>
-<kw name="Get From Dictionary" library="Collections">
-<var>${value}</var>
-<arg>${row}</arg>
-<arg>${column_name}</arg>
-<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<msg timestamp="20250818 16:55:52.239" level="INFO">${value} = 2</msg>
-<status status="PASS" starttime="20250818 16:55:52.239" endtime="20250818 16:55:52.239"/>
-</kw>
-<kw name="Append To List" library="Collections">
-<arg>${values}</arg>
-<arg>${value}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" starttime="20250818 16:55:52.242" endtime="20250818 16:55:52.242"/>
-</kw>
-<status status="PASS" starttime="20250818 16:55:52.239" endtime="20250818 16:55:52.242"/>
-</iter>
-<status status="PASS" starttime="20250818 16:55:52.239" endtime="20250818 16:55:52.242"/>
+<status status="NOT RUN" starttime="20250901 09:21:53.497" endtime="20250901 09:21:53.500"/>
 </for>
 <kw name="Close Workbook" library="RPA.Excel.Files">
 <doc>Close the active workbook.</doc>
-<msg timestamp="20250818 16:55:52.242" level="INFO">Closing workbook: &lt;RPA.Excel.Files.XlsxWorkbook object at 0x000001EFDAC15F48&gt;</msg>
-<status status="PASS" starttime="20250818 16:55:52.242" endtime="20250818 16:55:52.242"/>
+<status status="NOT RUN" starttime="20250901 09:21:53.500" endtime="20250901 09:21:53.500"/>
 </kw>
-<msg timestamp="20250818 16:55:52.242" level="INFO">${Add_Site_Template File List} = ['site_vendor_template.xlsx', 2]</msg>
-<status status="PASS" starttime="20250818 16:55:52.222" endtime="20250818 16:55:52.242"/>
+<status status="FAIL" starttime="20250901 09:21:53.477" endtime="20250901 09:21:53.500"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${Sub Project Management System}</var>
+<arg>${Sub Project Management System List[0]}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20250901 09:21:53.501" endtime="20250901 09:21:53.501"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Sub Project Management System :&gt;&gt;&gt;${Sub Project Management System}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20250901 09:21:53.501" endtime="20250901 09:21:53.501"/>
+</kw>
+<kw name="Get Column Values By Name File" library="Excel_Temp_New">
+<var>${Sub Project Management Sub Project Name List}</var>
+<arg>${SOURCE_FILE For Civil}</arg>
+<arg>Sub Project Management Sub Project Name</arg>
+<status status="NOT RUN" starttime="20250901 09:21:53.501" endtime="20250901 09:21:53.501"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${Sub Project Management Sub Project Name}</var>
+<arg>${Sub Project Management Sub Project Name List[0]}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20250901 09:21:53.501" endtime="20250901 09:21:53.501"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Sub Project Management Sub Project Name :&gt;&gt;&gt;${Sub Project Management Sub Project Name}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20250901 09:21:53.501" endtime="20250901 09:21:53.501"/>
+</kw>
+<kw name="My network Sub Project Management" library="My_network_Add_Site">
+<arg>${Sub Project Management System}</arg>
+<arg>${Sub Project Management Sub Project Name List}</arg>
+<status status="NOT RUN" starttime="20250901 09:21:53.501" endtime="20250901 09:21:53.501"/>
+</kw>
+<kw name="My network Search Sub Project Management" library="My_network_Add_Site">
+<status status="NOT RUN" starttime="20250901 09:21:53.501" endtime="20250901 09:21:53.501"/>
+</kw>
+<kw name="My network Edit Sub Project" library="My_network_Add_Site">
+<status status="NOT RUN" starttime="20250901 09:21:53.501" endtime="20250901 09:21:53.501"/>
+</kw>
+<kw name="Get Column Values By Name File" library="Excel_Temp_New">
+<var>${Add_Site_Template File List}</var>
+<arg>${SOURCE_FILE For Civil}</arg>
+<arg>Add_Site_Template_File</arg>
+<status status="NOT RUN" starttime="20250901 09:21:53.501" endtime="20250901 09:21:53.501"/>
 </kw>
 <kw name="Catenate" library="BuiltIn">
 <var>${Add_Site_Template path}</var>
 <arg>SEPARATOR=</arg>
-<arg>C:\\Users\\arnoj885\\Robot Framework\\Obsolate Transporter\\tests\\TYPE_Non-Turnkey\\Civil/../../../data file/</arg>
+<arg>C:\\Users\\arnoj885\\Robot Framework\\Obsolate Transporter\\tests\\TYPE_Non-Turnkey\\Civil/data file/</arg>
 <arg>${Add_Site_Template File List[0]}</arg>
 <doc>Catenates the given items together and returns the resulted string.</doc>
-<msg timestamp="20250818 16:55:52.246" level="INFO">${Add_Site_Template path} = C:\Users\arnoj885\Robot Framework\Obsolate Transporter\tests\TYPE_Non-Turnkey\Civil/../../../data file/site_vendor_template.xlsx</msg>
-<status status="PASS" starttime="20250818 16:55:52.242" endtime="20250818 16:55:52.246"/>
+<status status="NOT RUN" starttime="20250901 09:21:53.507" endtime="20250901 09:21:53.507"/>
 </kw>
 <kw name="Set Test Variable" library="BuiltIn">
 <arg>${Add_Site_Template path}</arg>
 <doc>Makes a variable available everywhere within the scope of the current test.</doc>
-<msg timestamp="20250818 16:55:52.246" level="INFO">${Add_Site_Template path} = C:\Users\arnoj885\Robot Framework\Obsolate Transporter\tests\TYPE_Non-Turnkey\Civil/../../../data file/site_vendor_template.xlsx</msg>
-<status status="PASS" starttime="20250818 16:55:52.246" endtime="20250818 16:55:52.246"/>
+<status status="NOT RUN" starttime="20250901 09:21:53.508" endtime="20250901 09:21:53.508"/>
 </kw>
 <kw name="Normalize Path" library="OperatingSystem">
 <var>${Add_Site_Template path}</var>
 <arg>${Add_Site_Template path}</arg>
 <doc>Normalizes the given path.</doc>
-<msg timestamp="20250818 16:55:52.246" level="INFO">${Add_Site_Template path} = C:\Users\arnoj885\Robot Framework\Obsolate Transporter\data file\site_vendor_template.xlsx</msg>
-<status status="PASS" starttime="20250818 16:55:52.246" endtime="20250818 16:55:52.246"/>
+<status status="NOT RUN" starttime="20250901 09:21:53.509" endtime="20250901 09:21:53.509"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>${Add_Site_Template path}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20250818 16:55:52.246" level="INFO">C:\Users\arnoj885\Robot Framework\Obsolate Transporter\data file\site_vendor_template.xlsx</msg>
-<status status="PASS" starttime="20250818 16:55:52.246" endtime="20250818 16:55:52.246"/>
+<status status="NOT RUN" starttime="20250901 09:21:53.509" endtime="20250901 09:21:53.509"/>
 </kw>
 <kw name="My network Add Site" library="My_network_Add_Site">
 <arg>${Add_Site_Template path}</arg>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>xpath=${Mynetwork Add Site}</arg>
-<arg>timeout=15s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20250818 16:55:52.246" endtime="20250818 16:55:52.287"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath=${Mynetwork Add Site}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20250818 16:55:52.295" level="INFO">Clicking element 'xpath=//app-subproject-arena-detail/div/div/div[1]/div/div[2]/button[1]'.</msg>
-<status status="PASS" starttime="20250818 16:55:52.294" endtime="20250818 16:55:52.837"/>
-</kw>
-<kw name="Wait Until Page Contains" library="SeleniumLibrary">
-<arg>Add Site</arg>
-<doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20250818 16:55:52.837" endtime="20250818 16:55:53.129"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>0.5 seconds</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20250818 16:55:53.643" level="INFO">Slept 500 milliseconds</msg>
-<status status="PASS" starttime="20250818 16:55:53.129" endtime="20250818 16:55:53.643"/>
-</kw>
-<kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>window.scrollTo(0, document.body.scrollHeight)</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20250818 16:55:53.644" level="INFO">Executing JavaScript:
-window.scrollTo(0, document.body.scrollHeight)
-Without any arguments.</msg>
-<status status="PASS" starttime="20250818 16:55:53.643" endtime="20250818 16:55:53.648"/>
-</kw>
-<kw name="Choose File" library="SeleniumLibrary">
-<arg>xpath=${Mynetwork Browse File}</arg>
-<arg>${site_vendor_template}</arg>
-<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
-<msg timestamp="20250818 16:55:53.650" level="INFO">Sending C:\Users\arnoj885\Robot Framework\Obsolate Transporter\data file\site_vendor_template.xlsx to browser.</msg>
-<status status="PASS" starttime="20250818 16:55:53.650" endtime="20250818 16:55:53.712"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>0.5 seconds</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20250818 16:55:54.228" level="INFO">Slept 500 milliseconds</msg>
-<status status="PASS" starttime="20250818 16:55:53.712" endtime="20250818 16:55:54.229"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath=${Mynetwork Upload File}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20250818 16:55:54.232" level="INFO">Clicking element 'xpath=//app-subproject-import-vendor-site/div[4]/div[1]/div[2]/div/button'.</msg>
-<status status="PASS" starttime="20250818 16:55:54.230" endtime="20250818 16:55:54.330"/>
-</kw>
-<status status="PASS" starttime="20250818 16:55:52.246" endtime="20250818 16:55:54.330"/>
+<status status="NOT RUN" starttime="20250901 09:21:53.510" endtime="20250901 09:21:53.510"/>
 </kw>
 <kw name="My network Add Site Result" library="My_network_Add_Site">
 <var>${Site Code}</var>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>xpath=${Mynetwork Upload File Result Table}</arg>
-<arg>timeout=15s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20250818 16:55:54.332" endtime="20250818 16:55:56.258"/>
-</kw>
-<kw name="Scroll Element Into View" library="SeleniumLibrary">
-<arg>${Mynetwork Upload File Result Table}</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" starttime="20250818 16:55:56.258" endtime="20250818 16:55:56.591"/>
-</kw>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${Mynetwork Site Code Result}</var>
-<arg>xpath=${Mynetwork Site Code Text}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20250818 16:55:56.661" level="INFO">${Mynetwork Site Code Result} = A014A</msg>
-<status status="PASS" starttime="20250818 16:55:56.592" endtime="20250818 16:55:56.661"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>${Mynetwork Site Code Result}</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20250818 16:55:56.661" level="INFO">A014A</msg>
-<status status="PASS" starttime="20250818 16:55:56.661" endtime="20250818 16:55:56.661"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>1 seconds</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20250818 16:55:57.674" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20250818 16:55:56.661" endtime="20250818 16:55:57.674"/>
-</kw>
-<kw name="Normalize Path" library="OperatingSystem">
-<var>${Picture Folder path}</var>
-<arg>${Picture Folder}/Add_Site_Result.png</arg>
-<doc>Normalizes the given path.</doc>
-<msg timestamp="20250818 16:55:57.674" level="INFO">${Picture Folder path} = C:\Users\arnoj885\Robot Framework\Obsolate Transporter\tests\TYPE_Non-Turnkey\Civil\Add_Site_Result.png</msg>
-<status status="PASS" starttime="20250818 16:55:57.674" endtime="20250818 16:55:57.674"/>
-</kw>
-<kw name="Capture Page Screenshot" library="SeleniumLibrary">
-<arg>${Picture Folder path}</arg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20250818 16:55:57.833" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Add_Site_Result.png"&gt;&lt;img src="Add_Site_Result.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20250818 16:55:57.674" endtime="20250818 16:55:57.833"/>
-</kw>
-<kw name="Scroll Element Into View" library="SeleniumLibrary">
-<arg>${Mynetwork Add Site Black BT}</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" starttime="20250818 16:55:57.833" endtime="20250818 16:55:58.116"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>1 seconds</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20250818 16:55:59.117" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20250818 16:55:58.116" endtime="20250818 16:55:59.117"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath=${Mynetwork Add Site Black}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20250818 16:55:59.120" level="INFO">Clicking element 'xpath=//app-subproject-import-vendor-site/div[1]/div/div[1]/button'.</msg>
-<status status="PASS" starttime="20250818 16:55:59.118" endtime="20250818 16:55:59.233"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>xpath=${Mynetwork List vendor company}</arg>
-<arg>timeout=15s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20250818 16:55:59.233" endtime="20250818 16:55:59.481"/>
-</kw>
-<kw name="Scroll Element Into View" library="SeleniumLibrary">
-<arg>${Mynetwork List vendor company}</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" starttime="20250818 16:55:59.481" endtime="20250818 16:55:59.780"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>1 seconds</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20250818 16:56:00.788" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20250818 16:55:59.781" endtime="20250818 16:56:00.788"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath=${Mynetwork Edit vendor company}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20250818 16:56:00.791" level="INFO">Clicking element 'xpath=//subproject-arena-detail-action/td/span[1]'.</msg>
-<status status="PASS" starttime="20250818 16:56:00.788" endtime="20250818 16:56:00.897"/>
-</kw>
-<kw name="Wait Until Page Contains" library="SeleniumLibrary">
-<arg>Vendor Company Detail</arg>
-<arg>timeout=15s</arg>
-<doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20250818 16:56:00.897" endtime="20250818 16:56:01.136"/>
-</kw>
-<msg timestamp="20250818 16:56:01.136" level="INFO">${Site Code} = A014A</msg>
-<status status="PASS" starttime="20250818 16:55:54.330" endtime="20250818 16:56:01.136"/>
+<status status="NOT RUN" starttime="20250901 09:21:53.510" endtime="20250901 09:21:53.510"/>
 </kw>
 <kw name="Set Global Variable" library="BuiltIn">
 <arg>${Site Code}</arg>
 <doc>Makes a variable available globally in all tests and suites.</doc>
-<msg timestamp="20250818 16:56:01.137" level="INFO">${Site Code} = A014A</msg>
-<status status="PASS" starttime="20250818 16:56:01.137" endtime="20250818 16:56:01.137"/>
+<status status="NOT RUN" starttime="20250901 09:21:53.510" endtime="20250901 09:21:53.510"/>
 </kw>
 <kw name="My network Map Site Code" library="My_network_Map_Site">
 <arg>${Site Code}</arg>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>xpath=${Mynetwork Map Site Button}</arg>
-<arg>timeout=15s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20250818 16:56:01.140" endtime="20250818 16:56:01.170"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>1 seconds</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20250818 16:56:02.188" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20250818 16:56:01.171" endtime="20250818 16:56:02.189"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath=${Mynetwork Map Site Button}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20250818 16:56:02.190" level="INFO">Clicking element 'xpath=//app-subproject-view-vendor-site/div/div/div[4]/div/div[2]/button'.</msg>
-<status status="PASS" starttime="20250818 16:56:02.190" endtime="20250818 16:56:02.314"/>
-</kw>
-<for flavor="IN RANGE">
-<var>${INDEX}</var>
-<value>${START}</value>
-<value>${END}</value>
-<iter>
-<var name="${INDEX}">1</var>
-<kw name="Set Variable" library="BuiltIn">
-<var>${current_xpath}</var>
-<arg>//div[3]/div/app-data-table2/div/div[2]/table/tbody/tr[${INDEX}]/td[2]</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20250818 16:56:02.315" level="INFO">${current_xpath} = //div[3]/div/app-data-table2/div/div[2]/table/tbody/tr[1]/td[2]</msg>
-<status status="PASS" starttime="20250818 16:56:02.314" endtime="20250818 16:56:02.315"/>
-</kw>
-<kw name="Run Keyword And Ignore Error" library="BuiltIn">
-<arg>Wait Until Element Is Visible</arg>
-<arg>xpath=${current_xpath}</arg>
-<arg>3 seconds</arg>
-<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>xpath=${current_xpath}</arg>
-<arg>3 seconds</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20250818 16:56:02.315" endtime="20250818 16:56:02.605"/>
-</kw>
-<status status="PASS" starttime="20250818 16:56:02.315" endtime="20250818 16:56:02.605"/>
-</kw>
-<kw name="Run Keyword And Return Status" library="BuiltIn">
-<var>${exists}</var>
-<arg>Element Should Be Visible</arg>
-<arg>xpath=${current_xpath}</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>xpath=${current_xpath}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20250818 16:56:02.633" level="INFO">Element 'xpath=//div[3]/div/app-data-table2/div/div[2]/table/tbody/tr[1]/td[2]' is displayed.</msg>
-<status status="PASS" starttime="20250818 16:56:02.606" endtime="20250818 16:56:02.633"/>
-</kw>
-<msg timestamp="20250818 16:56:02.634" level="INFO">${exists} = True</msg>
-<status status="PASS" starttime="20250818 16:56:02.605" endtime="20250818 16:56:02.634"/>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>not ${exists}</arg>
-<arg>Exit For Loop</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" starttime="20250818 16:56:02.634" endtime="20250818 16:56:02.634"/>
-</kw>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${text}</var>
-<arg>xpath=${current_xpath}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20250818 16:56:02.657" level="INFO">${text} = A014A</msg>
-<status status="PASS" starttime="20250818 16:56:02.635" endtime="20250818 16:56:02.657"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>Checking row ${INDEX}: ${text}</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20250818 16:56:02.657" level="INFO">Checking row 1: A014A</msg>
-<status status="PASS" starttime="20250818 16:56:02.657" endtime="20250818 16:56:02.658"/>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>'${text}' == '${Site Name}'</arg>
-<arg>Run Keywords</arg>
-<arg>Log</arg>
-<arg>Found "${Site Name}" at row ${INDEX}</arg>
-<arg>AND</arg>
-<arg>Click Button In Row</arg>
-<arg>${INDEX}</arg>
-<arg>AND</arg>
-<arg>Exit For Loop</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<kw name="Run Keywords" library="BuiltIn">
-<arg>Log</arg>
-<arg>Found "${Site Name}" at row ${INDEX}</arg>
-<arg>AND</arg>
-<arg>Click Button In Row</arg>
-<arg>${INDEX}</arg>
-<arg>AND</arg>
-<arg>Exit For Loop</arg>
-<doc>Executes all the given keywords in a sequence.</doc>
-<kw name="Log" library="BuiltIn">
-<arg>Found "${Site Name}" at row ${INDEX}</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20250818 16:56:02.658" level="INFO">Found "A014A" at row 1</msg>
-<status status="PASS" starttime="20250818 16:56:02.658" endtime="20250818 16:56:02.658"/>
-</kw>
-<kw name="Click Button In Row" library="My_network_Map_Site">
-<arg>${INDEX}</arg>
-<kw name="Set Variable" library="BuiltIn">
-<var>${button_xpath}</var>
-<arg>//tr[${row_index}]/td[1]/subproject-vendor-map-site-action/td/input[1]</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20250818 16:56:02.658" level="INFO">${button_xpath} = //tr[1]/td[1]/subproject-vendor-map-site-action/td/input[1]</msg>
-<status status="PASS" starttime="20250818 16:56:02.658" endtime="20250818 16:56:02.658"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>xpath=${button_xpath}</arg>
-<arg>5 seconds</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20250818 16:56:02.658" endtime="20250818 16:56:02.683"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath=${button_xpath}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20250818 16:56:02.683" level="INFO">Clicking element 'xpath=//tr[1]/td[1]/subproject-vendor-map-site-action/td/input[1]'.</msg>
-<status status="PASS" starttime="20250818 16:56:02.683" endtime="20250818 16:56:02.957"/>
-</kw>
-<status status="PASS" starttime="20250818 16:56:02.658" endtime="20250818 16:56:02.958"/>
-</kw>
-<kw name="Exit For Loop" library="BuiltIn">
-<doc>Stops executing the enclosing FOR loop.</doc>
-<msg timestamp="20250818 16:56:02.958" level="INFO">Exiting for loop altogether.</msg>
-<status status="PASS" starttime="20250818 16:56:02.958" endtime="20250818 16:56:02.959"/>
-</kw>
-<status status="PASS" starttime="20250818 16:56:02.658" endtime="20250818 16:56:02.960"/>
-</kw>
-<status status="PASS" starttime="20250818 16:56:02.658" endtime="20250818 16:56:02.960"/>
-</kw>
-<status status="PASS" starttime="20250818 16:56:02.314" endtime="20250818 16:56:02.960"/>
-</iter>
-<status status="PASS" starttime="20250818 16:56:02.314" endtime="20250818 16:56:02.960"/>
-</for>
-<status status="PASS" starttime="20250818 16:56:01.139" endtime="20250818 16:56:02.960"/>
+<status status="NOT RUN" starttime="20250901 09:21:53.510" endtime="20250901 09:21:53.510"/>
 </kw>
 <kw name="Map Proforma" library="My_network_Map_Site">
-<arg>1010001074</arg>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath=${Mynetwork Map Proforma Button}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20250818 16:56:02.963" level="INFO">Clicking element 'xpath=//app-subproject-vendor-map-site-management-dialog/div[1]/div/div[2]/button[1]'.</msg>
-<status status="PASS" starttime="20250818 16:56:02.962" endtime="20250818 16:56:03.029"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>xpath=${Mynetwork Map Proforma Text}</arg>
-<arg>timeout=15s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20250818 16:56:03.030" endtime="20250818 16:56:03.052"/>
-</kw>
-<for flavor="IN RANGE">
-<var>${INDEX}</var>
-<value>${START}</value>
-<value>${END}</value>
-<iter>
-<var name="${INDEX}">1</var>
-<kw name="Set Variable" library="BuiltIn">
-<var>${current_xpath}</var>
-<arg>//app-data-table2/div/div[2]/table/tbody/tr[${INDEX}]/td[1]/span</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20250818 16:56:03.053" level="INFO">${current_xpath} = //app-data-table2/div/div[2]/table/tbody/tr[1]/td[1]/span</msg>
-<status status="PASS" starttime="20250818 16:56:03.053" endtime="20250818 16:56:03.053"/>
-</kw>
-<kw name="Run Keyword And Ignore Error" library="BuiltIn">
-<arg>Wait Until Element Is Visible</arg>
-<arg>xpath=${current_xpath}</arg>
-<arg>3 seconds</arg>
-<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>xpath=${current_xpath}</arg>
-<arg>3 seconds</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20250818 16:56:03.054" endtime="20250818 16:56:03.566"/>
-</kw>
-<status status="PASS" starttime="20250818 16:56:03.053" endtime="20250818 16:56:03.567"/>
-</kw>
-<kw name="Run Keyword And Return Status" library="BuiltIn">
-<var>${exists}</var>
-<arg>Element Should Be Visible</arg>
-<arg>xpath=${current_xpath}</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>xpath=${current_xpath}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20250818 16:56:03.609" level="INFO">Element 'xpath=//app-data-table2/div/div[2]/table/tbody/tr[1]/td[1]/span' is displayed.</msg>
-<status status="PASS" starttime="20250818 16:56:03.568" endtime="20250818 16:56:03.609"/>
-</kw>
-<msg timestamp="20250818 16:56:03.609" level="INFO">${exists} = True</msg>
-<status status="PASS" starttime="20250818 16:56:03.567" endtime="20250818 16:56:03.609"/>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>not ${exists}</arg>
-<arg>Exit For Loop</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" starttime="20250818 16:56:03.609" endtime="20250818 16:56:03.609"/>
-</kw>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${text}</var>
-<arg>xpath=${current_xpath}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20250818 16:56:03.629" level="INFO">${text} = 1010001086</msg>
-<status status="PASS" starttime="20250818 16:56:03.609" endtime="20250818 16:56:03.629"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>Checking row ${INDEX}: ${text}</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20250818 16:56:03.629" level="INFO">Checking row 1: 1010001086</msg>
-<status status="PASS" starttime="20250818 16:56:03.629" endtime="20250818 16:56:03.629"/>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>'${text}' == '${Proforma}'</arg>
-<arg>Run Keywords</arg>
-<arg>Click Element</arg>
-<arg>xpath=//app-data-table2/div/div[2]/table/tbody/tr[${INDEX}]/td[1]/span</arg>
-<arg>AND</arg>
-<arg>Exit For Loop</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" starttime="20250818 16:56:03.629" endtime="20250818 16:56:03.629"/>
-</kw>
-<status status="PASS" starttime="20250818 16:56:03.052" endtime="20250818 16:56:03.629"/>
-</iter>
-<iter>
-<var name="${INDEX}">2</var>
-<kw name="Set Variable" library="BuiltIn">
-<var>${current_xpath}</var>
-<arg>//app-data-table2/div/div[2]/table/tbody/tr[${INDEX}]/td[1]/span</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20250818 16:56:03.629" level="INFO">${current_xpath} = //app-data-table2/div/div[2]/table/tbody/tr[2]/td[1]/span</msg>
-<status status="PASS" starttime="20250818 16:56:03.629" endtime="20250818 16:56:03.629"/>
-</kw>
-<kw name="Run Keyword And Ignore Error" library="BuiltIn">
-<arg>Wait Until Element Is Visible</arg>
-<arg>xpath=${current_xpath}</arg>
-<arg>3 seconds</arg>
-<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>xpath=${current_xpath}</arg>
-<arg>3 seconds</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20250818 16:56:03.629" endtime="20250818 16:56:03.660"/>
-</kw>
-<status status="PASS" starttime="20250818 16:56:03.629" endtime="20250818 16:56:03.660"/>
-</kw>
-<kw name="Run Keyword And Return Status" library="BuiltIn">
-<var>${exists}</var>
-<arg>Element Should Be Visible</arg>
-<arg>xpath=${current_xpath}</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>xpath=${current_xpath}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20250818 16:56:03.680" level="INFO">Element 'xpath=//app-data-table2/div/div[2]/table/tbody/tr[2]/td[1]/span' is displayed.</msg>
-<status status="PASS" starttime="20250818 16:56:03.660" endtime="20250818 16:56:03.680"/>
-</kw>
-<msg timestamp="20250818 16:56:03.680" level="INFO">${exists} = True</msg>
-<status status="PASS" starttime="20250818 16:56:03.660" endtime="20250818 16:56:03.680"/>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>not ${exists}</arg>
-<arg>Exit For Loop</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" starttime="20250818 16:56:03.680" endtime="20250818 16:56:03.680"/>
-</kw>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${text}</var>
-<arg>xpath=${current_xpath}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20250818 16:56:03.696" level="INFO">${text} = 1010001082</msg>
-<status status="PASS" starttime="20250818 16:56:03.680" endtime="20250818 16:56:03.696"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>Checking row ${INDEX}: ${text}</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20250818 16:56:03.697" level="INFO">Checking row 2: 1010001082</msg>
-<status status="PASS" starttime="20250818 16:56:03.697" endtime="20250818 16:56:03.697"/>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>'${text}' == '${Proforma}'</arg>
-<arg>Run Keywords</arg>
-<arg>Click Element</arg>
-<arg>xpath=//app-data-table2/div/div[2]/table/tbody/tr[${INDEX}]/td[1]/span</arg>
-<arg>AND</arg>
-<arg>Exit For Loop</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" starttime="20250818 16:56:03.697" endtime="20250818 16:56:03.698"/>
-</kw>
-<status status="PASS" starttime="20250818 16:56:03.629" endtime="20250818 16:56:03.698"/>
-</iter>
-<iter>
-<var name="${INDEX}">3</var>
-<kw name="Set Variable" library="BuiltIn">
-<var>${current_xpath}</var>
-<arg>//app-data-table2/div/div[2]/table/tbody/tr[${INDEX}]/td[1]/span</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20250818 16:56:03.698" level="INFO">${current_xpath} = //app-data-table2/div/div[2]/table/tbody/tr[3]/td[1]/span</msg>
-<status status="PASS" starttime="20250818 16:56:03.698" endtime="20250818 16:56:03.698"/>
-</kw>
-<kw name="Run Keyword And Ignore Error" library="BuiltIn">
-<arg>Wait Until Element Is Visible</arg>
-<arg>xpath=${current_xpath}</arg>
-<arg>3 seconds</arg>
-<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>xpath=${current_xpath}</arg>
-<arg>3 seconds</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20250818 16:56:03.699" endtime="20250818 16:56:03.715"/>
-</kw>
-<status status="PASS" starttime="20250818 16:56:03.698" endtime="20250818 16:56:03.715"/>
-</kw>
-<kw name="Run Keyword And Return Status" library="BuiltIn">
-<var>${exists}</var>
-<arg>Element Should Be Visible</arg>
-<arg>xpath=${current_xpath}</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>xpath=${current_xpath}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20250818 16:56:03.730" level="INFO">Element 'xpath=//app-data-table2/div/div[2]/table/tbody/tr[3]/td[1]/span' is displayed.</msg>
-<status status="PASS" starttime="20250818 16:56:03.715" endtime="20250818 16:56:03.730"/>
-</kw>
-<msg timestamp="20250818 16:56:03.730" level="INFO">${exists} = True</msg>
-<status status="PASS" starttime="20250818 16:56:03.715" endtime="20250818 16:56:03.730"/>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>not ${exists}</arg>
-<arg>Exit For Loop</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" starttime="20250818 16:56:03.730" endtime="20250818 16:56:03.730"/>
-</kw>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${text}</var>
-<arg>xpath=${current_xpath}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20250818 16:56:03.752" level="INFO">${text} = 1010001079</msg>
-<status status="PASS" starttime="20250818 16:56:03.730" endtime="20250818 16:56:03.752"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>Checking row ${INDEX}: ${text}</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20250818 16:56:03.752" level="INFO">Checking row 3: 1010001079</msg>
-<status status="PASS" starttime="20250818 16:56:03.752" endtime="20250818 16:56:03.752"/>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>'${text}' == '${Proforma}'</arg>
-<arg>Run Keywords</arg>
-<arg>Click Element</arg>
-<arg>xpath=//app-data-table2/div/div[2]/table/tbody/tr[${INDEX}]/td[1]/span</arg>
-<arg>AND</arg>
-<arg>Exit For Loop</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" starttime="20250818 16:56:03.752" endtime="20250818 16:56:03.753"/>
-</kw>
-<status status="PASS" starttime="20250818 16:56:03.698" endtime="20250818 16:56:03.753"/>
-</iter>
-<iter>
-<var name="${INDEX}">4</var>
-<kw name="Set Variable" library="BuiltIn">
-<var>${current_xpath}</var>
-<arg>//app-data-table2/div/div[2]/table/tbody/tr[${INDEX}]/td[1]/span</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20250818 16:56:03.753" level="INFO">${current_xpath} = //app-data-table2/div/div[2]/table/tbody/tr[4]/td[1]/span</msg>
-<status status="PASS" starttime="20250818 16:56:03.753" endtime="20250818 16:56:03.753"/>
-</kw>
-<kw name="Run Keyword And Ignore Error" library="BuiltIn">
-<arg>Wait Until Element Is Visible</arg>
-<arg>xpath=${current_xpath}</arg>
-<arg>3 seconds</arg>
-<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>xpath=${current_xpath}</arg>
-<arg>3 seconds</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20250818 16:56:03.754" endtime="20250818 16:56:03.774"/>
-</kw>
-<status status="PASS" starttime="20250818 16:56:03.753" endtime="20250818 16:56:03.774"/>
-</kw>
-<kw name="Run Keyword And Return Status" library="BuiltIn">
-<var>${exists}</var>
-<arg>Element Should Be Visible</arg>
-<arg>xpath=${current_xpath}</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>xpath=${current_xpath}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20250818 16:56:03.814" level="INFO">Element 'xpath=//app-data-table2/div/div[2]/table/tbody/tr[4]/td[1]/span' is displayed.</msg>
-<status status="PASS" starttime="20250818 16:56:03.774" endtime="20250818 16:56:03.814"/>
-</kw>
-<msg timestamp="20250818 16:56:03.814" level="INFO">${exists} = True</msg>
-<status status="PASS" starttime="20250818 16:56:03.774" endtime="20250818 16:56:03.814"/>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>not ${exists}</arg>
-<arg>Exit For Loop</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" starttime="20250818 16:56:03.814" endtime="20250818 16:56:03.814"/>
-</kw>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${text}</var>
-<arg>xpath=${current_xpath}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20250818 16:56:03.830" level="INFO">${text} = 1010001075</msg>
-<status status="PASS" starttime="20250818 16:56:03.814" endtime="20250818 16:56:03.830"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>Checking row ${INDEX}: ${text}</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20250818 16:56:03.830" level="INFO">Checking row 4: 1010001075</msg>
-<status status="PASS" starttime="20250818 16:56:03.830" endtime="20250818 16:56:03.830"/>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>'${text}' == '${Proforma}'</arg>
-<arg>Run Keywords</arg>
-<arg>Click Element</arg>
-<arg>xpath=//app-data-table2/div/div[2]/table/tbody/tr[${INDEX}]/td[1]/span</arg>
-<arg>AND</arg>
-<arg>Exit For Loop</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" starttime="20250818 16:56:03.830" endtime="20250818 16:56:03.830"/>
-</kw>
-<status status="PASS" starttime="20250818 16:56:03.753" endtime="20250818 16:56:03.830"/>
-</iter>
-<iter>
-<var name="${INDEX}">5</var>
-<kw name="Set Variable" library="BuiltIn">
-<var>${current_xpath}</var>
-<arg>//app-data-table2/div/div[2]/table/tbody/tr[${INDEX}]/td[1]/span</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20250818 16:56:03.830" level="INFO">${current_xpath} = //app-data-table2/div/div[2]/table/tbody/tr[5]/td[1]/span</msg>
-<status status="PASS" starttime="20250818 16:56:03.830" endtime="20250818 16:56:03.830"/>
-</kw>
-<kw name="Run Keyword And Ignore Error" library="BuiltIn">
-<arg>Wait Until Element Is Visible</arg>
-<arg>xpath=${current_xpath}</arg>
-<arg>3 seconds</arg>
-<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>xpath=${current_xpath}</arg>
-<arg>3 seconds</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20250818 16:56:03.830" endtime="20250818 16:56:03.853"/>
-</kw>
-<status status="PASS" starttime="20250818 16:56:03.830" endtime="20250818 16:56:03.855"/>
-</kw>
-<kw name="Run Keyword And Return Status" library="BuiltIn">
-<var>${exists}</var>
-<arg>Element Should Be Visible</arg>
-<arg>xpath=${current_xpath}</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>xpath=${current_xpath}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20250818 16:56:03.863" level="INFO">Element 'xpath=//app-data-table2/div/div[2]/table/tbody/tr[5]/td[1]/span' is displayed.</msg>
-<status status="PASS" starttime="20250818 16:56:03.855" endtime="20250818 16:56:03.863"/>
-</kw>
-<msg timestamp="20250818 16:56:03.863" level="INFO">${exists} = True</msg>
-<status status="PASS" starttime="20250818 16:56:03.855" endtime="20250818 16:56:03.863"/>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>not ${exists}</arg>
-<arg>Exit For Loop</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" starttime="20250818 16:56:03.863" endtime="20250818 16:56:03.863"/>
-</kw>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${text}</var>
-<arg>xpath=${current_xpath}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20250818 16:56:03.887" level="INFO">${text} = 1010001075</msg>
-<status status="PASS" starttime="20250818 16:56:03.863" endtime="20250818 16:56:03.887"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>Checking row ${INDEX}: ${text}</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20250818 16:56:03.887" level="INFO">Checking row 5: 1010001075</msg>
-<status status="PASS" starttime="20250818 16:56:03.887" endtime="20250818 16:56:03.887"/>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>'${text}' == '${Proforma}'</arg>
-<arg>Run Keywords</arg>
-<arg>Click Element</arg>
-<arg>xpath=//app-data-table2/div/div[2]/table/tbody/tr[${INDEX}]/td[1]/span</arg>
-<arg>AND</arg>
-<arg>Exit For Loop</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" starttime="20250818 16:56:03.887" endtime="20250818 16:56:03.887"/>
-</kw>
-<status status="PASS" starttime="20250818 16:56:03.830" endtime="20250818 16:56:03.887"/>
-</iter>
-<iter>
-<var name="${INDEX}">6</var>
-<kw name="Set Variable" library="BuiltIn">
-<var>${current_xpath}</var>
-<arg>//app-data-table2/div/div[2]/table/tbody/tr[${INDEX}]/td[1]/span</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20250818 16:56:03.890" level="INFO">${current_xpath} = //app-data-table2/div/div[2]/table/tbody/tr[6]/td[1]/span</msg>
-<status status="PASS" starttime="20250818 16:56:03.887" endtime="20250818 16:56:03.890"/>
-</kw>
-<kw name="Run Keyword And Ignore Error" library="BuiltIn">
-<arg>Wait Until Element Is Visible</arg>
-<arg>xpath=${current_xpath}</arg>
-<arg>3 seconds</arg>
-<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>xpath=${current_xpath}</arg>
-<arg>3 seconds</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20250818 16:56:03.890" endtime="20250818 16:56:03.908"/>
-</kw>
-<status status="PASS" starttime="20250818 16:56:03.890" endtime="20250818 16:56:03.908"/>
-</kw>
-<kw name="Run Keyword And Return Status" library="BuiltIn">
-<var>${exists}</var>
-<arg>Element Should Be Visible</arg>
-<arg>xpath=${current_xpath}</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>xpath=${current_xpath}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20250818 16:56:03.929" level="INFO">Element 'xpath=//app-data-table2/div/div[2]/table/tbody/tr[6]/td[1]/span' is displayed.</msg>
-<status status="PASS" starttime="20250818 16:56:03.908" endtime="20250818 16:56:03.929"/>
-</kw>
-<msg timestamp="20250818 16:56:03.929" level="INFO">${exists} = True</msg>
-<status status="PASS" starttime="20250818 16:56:03.908" endtime="20250818 16:56:03.929"/>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>not ${exists}</arg>
-<arg>Exit For Loop</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" starttime="20250818 16:56:03.929" endtime="20250818 16:56:03.930"/>
-</kw>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${text}</var>
-<arg>xpath=${current_xpath}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20250818 16:56:03.946" level="INFO">${text} = 1010001074</msg>
-<status status="PASS" starttime="20250818 16:56:03.930" endtime="20250818 16:56:03.947"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>Checking row ${INDEX}: ${text}</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20250818 16:56:03.947" level="INFO">Checking row 6: 1010001074</msg>
-<status status="PASS" starttime="20250818 16:56:03.947" endtime="20250818 16:56:03.947"/>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>'${text}' == '${Proforma}'</arg>
-<arg>Run Keywords</arg>
-<arg>Click Element</arg>
-<arg>xpath=//app-data-table2/div/div[2]/table/tbody/tr[${INDEX}]/td[1]/span</arg>
-<arg>AND</arg>
-<arg>Exit For Loop</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<kw name="Run Keywords" library="BuiltIn">
-<arg>Click Element</arg>
-<arg>xpath=//app-data-table2/div/div[2]/table/tbody/tr[${INDEX}]/td[1]/span</arg>
-<arg>AND</arg>
-<arg>Exit For Loop</arg>
-<doc>Executes all the given keywords in a sequence.</doc>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath=//app-data-table2/div/div[2]/table/tbody/tr[${INDEX}]/td[1]/span</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20250818 16:56:03.948" level="INFO">Clicking element 'xpath=//app-data-table2/div/div[2]/table/tbody/tr[6]/td[1]/span'.</msg>
-<status status="PASS" starttime="20250818 16:56:03.948" endtime="20250818 16:56:03.989"/>
-</kw>
-<kw name="Exit For Loop" library="BuiltIn">
-<doc>Stops executing the enclosing FOR loop.</doc>
-<msg timestamp="20250818 16:56:03.989" level="INFO">Exiting for loop altogether.</msg>
-<status status="PASS" starttime="20250818 16:56:03.989" endtime="20250818 16:56:03.990"/>
-</kw>
-<status status="PASS" starttime="20250818 16:56:03.948" endtime="20250818 16:56:03.990"/>
-</kw>
-<status status="PASS" starttime="20250818 16:56:03.947" endtime="20250818 16:56:03.990"/>
-</kw>
-<status status="PASS" starttime="20250818 16:56:03.887" endtime="20250818 16:56:03.990"/>
-</iter>
-<status status="PASS" starttime="20250818 16:56:03.052" endtime="20250818 16:56:03.990"/>
-</for>
-<status status="PASS" starttime="20250818 16:56:02.961" endtime="20250818 16:56:03.990"/>
+<arg>1010001075</arg>
+<status status="NOT RUN" starttime="20250901 09:21:53.510" endtime="20250901 09:21:53.510"/>
 </kw>
 <kw name="Map Proculator" library="My_network_Map_Site">
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>xpath=${Mynetwork Map Proculator Button}</arg>
-<arg>timeout=15s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20250818 16:56:03.991" endtime="20250818 16:56:04.015"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath=${Mynetwork Map Proculator Button}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20250818 16:56:04.016" level="INFO">Clicking element 'xpath=//app-subproject-vendor-map-site-management-dialog/div[1]/div/div[2]/button[2]'.</msg>
-<status status="PASS" starttime="20250818 16:56:04.015" endtime="20250818 16:56:04.104"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>xpath=${Mynetwork Map Proculator Workflow Type}</arg>
-<arg>timeout=15s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20250818 16:56:04.104" endtime="20250818 16:56:04.375"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath=${Mynetwork Map Proculator Workflow Type}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20250818 16:56:04.376" level="INFO">Clicking element 'xpath=//div[2]/div/app-data-table2/div/div[2]/table/tbody/tr/td[4]/span'.</msg>
-<status status="PASS" starttime="20250818 16:56:04.376" endtime="20250818 16:56:04.751"/>
-</kw>
-<status status="PASS" starttime="20250818 16:56:03.991" endtime="20250818 16:56:04.751"/>
+<status status="NOT RUN" starttime="20250901 09:21:53.514" endtime="20250901 09:21:53.514"/>
 </kw>
 <kw name="Map Site Result" library="My_network_Map_Site">
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>xpath=${Mynetwork Map Site Text}</arg>
-<arg>timeout=15s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20250818 16:56:04.753" endtime="20250818 16:56:04.782"/>
-</kw>
-<kw name="Normalize Path" library="OperatingSystem">
-<var>${Picture Folder path}</var>
-<arg>${Picture Folder}/Map_Site_Result.png</arg>
-<doc>Normalizes the given path.</doc>
-<msg timestamp="20250818 16:56:04.791" level="INFO">${Picture Folder path} = C:\Users\arnoj885\Robot Framework\Obsolate Transporter\tests\TYPE_Non-Turnkey\Civil\Map_Site_Result.png</msg>
-<status status="PASS" starttime="20250818 16:56:04.790" endtime="20250818 16:56:04.791"/>
-</kw>
-<kw name="Capture Page Screenshot" library="SeleniumLibrary">
-<arg>${Picture Folder path}</arg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20250818 16:56:04.929" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Map_Site_Result.png"&gt;&lt;img src="Map_Site_Result.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20250818 16:56:04.791" endtime="20250818 16:56:04.929"/>
-</kw>
-<status status="PASS" starttime="20250818 16:56:04.752" endtime="20250818 16:56:04.929"/>
+<status status="NOT RUN" starttime="20250901 09:21:53.514" endtime="20250901 09:21:53.514"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>5 seconds</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20250818 16:56:09.953" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20250818 16:56:04.945" endtime="20250818 16:56:09.953"/>
+<status status="NOT RUN" starttime="20250901 09:21:53.514" endtime="20250901 09:21:53.514"/>
 </kw>
-<status status="PASS" starttime="20250818 16:55:40.202" endtime="20250818 16:56:09.954"/>
+<status status="FAIL" starttime="20250901 09:21:42.542" endtime="20250901 09:21:53.514">FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\arnoj885\\Robot Framework\\Obsolate Transporter\\resources\\data file\\Civil_Config.xlsx'</status>
 </test>
-<status status="PASS" starttime="20250818 16:55:15.225" endtime="20250818 16:56:09.957"/>
+<status status="FAIL" starttime="20250901 09:21:22.501" endtime="20250901 09:21:53.514"/>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="0" skip="0">All Tests</stat>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 <stat pass="1" fail="0" skip="0">Standard_Test</stat>
 </tag>
 <suite>
-<stat pass="2" fail="0" skip="0" id="s1" name="Civil">Civil</stat>
+<stat pass="1" fail="1" skip="0" id="s1" name="Civil">Civil</stat>
 </suite>
 </statistics>
 <errors>

@@ -8,10 +8,12 @@ Resource          ${CURDIR}/../../../resources/resources.robot
 ทดสอบระบบการทำงานของ Transporter : Type Non Turnkey [Small Cell for TPT III]
     [Documentation]     สามารถทำงาน Transporter : Type Non Turnkey [Small Cell for TPT III] ได้
     [Tags]      Standard_Test
+    Set Test Message    === เริ่มการทำงาน Test Case ID :  ===
     Log      เริ่มการทำงาน Transporter : Type Non Turnkey [Small Cell for TPT III]
     Open Workbook    ${SOURCE_FILE For Small Cell}
     ${table}=    Read Worksheet As Table    name=${SHEET_NAME}    header=True
     ${row_count}=    Get Length    ${table}
+
     FOR    ${i}    IN RANGE    1    ${row_count + 1}
         Open Browser To Login Page
         TRY
@@ -26,7 +28,7 @@ Resource          ${CURDIR}/../../../resources/resources.robot
             Write Value Running Date File           ${SOURCE_FILE For Small Cell}      ${i + 1}
             Write Value From Column Name            ${SOURCE_FILE For Small Cell}      ${i + 1}       Result                 Fail
             # Write Value From Column Name            ${SOURCE_FILE For Small Cell}      ${i + 1}       Run_Status             ${i}
-            
+
             #Login SSR Create
             Your connection is not private
             Transporter_Login       ${SSR Create Code USER}      ${SSR Create Code PASS}
@@ -43,7 +45,7 @@ Resource          ${CURDIR}/../../../resources/resources.robot
             ${Proferma No List}=    Get Column Values By Name File    ${SOURCE_FILE For Small Cell}     Proferma_No       
             ${Proferma No}=    Set Variable    ${Proferma No List[${i - 1}]}
             Log    Proferma No :>>>${Proferma No}
-            
+
             Search Proforma No              ${Proferma No}
             Click Budget Check List
 
@@ -210,11 +212,28 @@ Resource          ${CURDIR}/../../../resources/resources.robot
             # To Do List Serach SSR ID                ${BOQ And Document By Pass}
             To Do List Serach SSR ID                ${BOQ And Document}
             To Do Click Serach SSR ID
-            Selected SSR ID
+            Selected SSR ID 
 
-            BOQ & Document Select Sub Project       ${Test Interface Send/Approve/Cancel PR}
-            BOQ & Document Search Standard Price    ${BOQ And Document Table 1}         ${BOQ And Document Table 3}
-            BOQ & Document Standard Price           1           1       ${BASE STATION->ANTENNA}
+            ${BOQ Document Sub Project List}=    Get Column Values By Name File    ${SOURCE_FILE For Small Cell}     BOQ Document Sub Project     
+            ${BOQ Document Sub Project}=    Set Variable    ${BOQ Document Sub Project List[${i - 1}]}
+            Log    BOQ Document Sub Project :>>>${BOQ Document Sub Project}            
+
+            BOQ & Document Select Sub Project       ${BOQ Document Sub Project}
+
+            ${BOQ Standard Price Description List}=    Get Column Values By Name File    ${SOURCE_FILE For Small Cell}     BOQ Standard Price Description     
+            ${BOQ Standard Price Description}=    Set Variable    ${BOQ Standard Price Description List[${i - 1}]}
+            Log    BOQ Standard Price Description :>>>${BOQ Standard Price Description}      
+
+            ${BOQ Vendor QTY List}=    Get Column Values By Name File    ${SOURCE_FILE For Small Cell}     BOQ Vendor QTY     
+            ${BOQ Vendor QTY}=    Set Variable    ${BOQ Vendor QTY List[${i - 1}]}
+            Log    BOQ Vendor QTY :>>>${BOQ Vendor QTY}
+        
+            ${BOQ Average Article Group List}=    Get Column Values By Name File    ${SOURCE_FILE For Small Cell}     BOQ Average Article Group     
+            ${BOQ Average Article Group}=    Set Variable    ${BOQ Average Article Group List[${i - 1}]}
+            Log    BOQ Average Article Group :>>>${BOQ Average Article Group} 
+
+            BOQ & Document Search Standard Price   ${BOQ Standard Price Description}    
+            BOQ & Document Standard Price     ${BOQ Standard Price Description}      ${BOQ Vendor QTY}       ${BOQ Average Article Group}
 
             ${BOQ_Document List}=    Get Column Values By Name File        ${SOURCE_FILE For Small Cell}       BOQ_Document_Upload_File
             ${BOQ_Document Picture}=    Catenate    SEPARATOR=     ${CURDIR}/data file/    ${BOQ_Document List[${i - 1}]}

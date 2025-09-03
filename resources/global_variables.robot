@@ -85,6 +85,7 @@ ${SSR Create Menu}                      //*[@id="iconheader:frmMenu:SSRCreate"]
 ${SSR Create Menu ID}                   iconheader:frmMenu:SSRCreate
 
 
+
 #Static Value
 ${Project Name}                         Test Interface Send/Approve/Cancel PR [Y]
 ${SSR Reference Site Code By Pass}      BKK_BMKSM_VAS_202500036
@@ -100,7 +101,7 @@ ${Import Site File}                     //fieldset[2]/table/tbody/tr/td[2]/input
 ${Button Upload}                        //tr/td/form/table[3]/tbody/tr/td/span/input
 ${Reference Site Code}                  //tr/td/form/fieldset[2]/div[2]/table/thead/tr/th[4]/div/span/span
 ${Reference Site Code Path}             //form/fieldset[2]/div[2]/table/tbody/tr/td[4]/div
-${SSR ID Reference Site Code By Pass}          	BSIF_202508061639
+${SSR ID Reference Site Code By Pass}          	BSIF_202509031012
 
 #To do list
 ${Todo list Menu Search Button}         //*[@id="ssrForm:btnSearch"]
@@ -155,17 +156,17 @@ ${Serach Budget Check List}             //tbody/tr/td/form/fieldset[2]/table/tbo
 ${Purchase Cat Group}                   //div[2]/div[2]/div/div[2]/table/tbody/tr[2]/td/form/div[1]/div/fieldset/table[1]/tbody/tr[3]/td[3]/select
 ${Select Purchase Cat Group}            //div[2]/div[2]/div/div[2]/table/tbody/tr[2]/td/form/div[1]/div/fieldset/table[1]/tbody/tr[3]/td[3]/select/option[6]        #Telecom-Radio
 ${Purchase Cat}                         //div[2]/div[2]/div/div[2]/table/tbody/tr[2]/td/form/div[1]/div/fieldset/table[1]/tbody/tr[3]/td[6]/select
-${Service Management Fee}               //tr[2]/td/form/div[1]/div/fieldset/table[1]/tbody/tr[3]/td[6]/select/option[2]                                             #Service/Management Fee        
+# ${Service Management Fee}               //tr[2]/td/form/div[1]/div/fieldset/table[1]/tbody/tr[3]/td[6]/select/option[2]                                             #Service/Management Fee        
 ${Action Type}                          //div[2]/div[2]/div/div[2]/table/tbody/tr[2]/td/form/div[1]/div/fieldset/table[1]/tbody/tr[4]/td[3]/select
 ${Select Action Type}                   //div[2]/div[2]/div/div[2]/table/tbody/tr[2]/td/form/div[1]/div/fieldset/table[1]/tbody/tr[4]/td[3]/select/option[2]        #Installation/Upgrade/Optimization    
 ${System Type}                          //div[2]/div[2]/div/div[2]/table/tbody/tr[2]/td/form/div[1]/div/fieldset/table[1]/tbody/tr[4]/td[6]/select
-${4G}                                   //div[2]/div[2]/div/div[2]/table/tbody/tr[2]/td/form/div[1]/div/fieldset/table[1]/tbody/tr[4]/td[6]/select/option[4]        #4G    
+# ${4G}                                   //div[2]/div[2]/div/div[2]/table/tbody/tr[2]/td/form/div[1]/div/fieldset/table[1]/tbody/tr[4]/td[6]/select/option[4]        #4G    
 # ${Telecom-Radio}                        //*[@id="purchasePopupId:popupPurchasefrom:purchaseCatGroupId"]/option[6]
-${Installation Upgrade Optimization}    //*[@id="purchasePopupId:popupPurchasefrom:actionTypeId"]/option[2]
+# ${Installation Upgrade Optimization}    //*[@id="purchasePopupId:popupPurchasefrom:actionTypeId"]/option[2]
 ${Service Code}                         //div[2]/div[2]/div/div[2]/table/tbody/tr[2]/td/form/div[1]/div/fieldset/table[1]/tbody/tr[5]/td[3]/select
-${Telecom}                              //table/tbody/tr[2]/td/form/div[1]/div/fieldset/table[1]/tbody/tr[5]/td[3]/select/option[2]                                 #Telecom
+# ${Telecom}                              //table/tbody/tr[2]/td/form/div[1]/div/fieldset/table[1]/tbody/tr[5]/td[3]/select/option[2]                                 #Telecom
 ${Company Code}                         //div[2]/div[2]/div/div[2]/table/tbody/tr[2]/td/form/div[1]/div/fieldset/table[1]/tbody/tr[5]/td[6]/select
-${AWN}                                  //table/tbody/tr[2]/td/form/div[1]/div/fieldset/table[1]/tbody/tr[5]/td[6]/select/option[2]                                 #AWN      
+# ${AWN}                                  //table/tbody/tr[2]/td/form/div[1]/div/fieldset/table[1]/tbody/tr[5]/td[6]/select/option[2]                                 #AWN      
 ${Purchase Serach}                      //div[2]/div[2]/div/div[2]/table/tbody/tr[2]/td/form/div[1]/div/fieldset/table[2]/tbody/tr[1]/td/input[1]
 ${First Purchase Row Select}            //div[2]/div[2]/div/div[2]/table/tbody/tr[2]/td/form/div[1]/div/span/fieldset/span/div[2]/table/tbody/tr[1]/td[2]/div/a
 ${Click Search Procurator Button}       //tbody/tr/td/form/fieldset[2]/table/tbody/tr[10]/td[4]/input
@@ -202,10 +203,12 @@ ${EXCEL_FILE}                           C:/Users/arnoj885/Robot Framework/Obsola
 ${SHEET_NAME}                           Input_Data
 ${Excel SEARCH_TEXT}                    SSR Create
 ${SOURCE_FILE}                         C:/Users/arnoj885/Robot Framework/Obsolate Transporter/data file/FBB_OSP_Config.xlsx
+${SOURCE_FILE For FBB OSP III}         ${CURDIR}\\..\\tests\\TYPE_Non-Turnkey\\FBB OSP for TPT III\\data file\\FBB_OSP_Config.xlsx
 ${SOURCE_FILE For Small Cell}          ${CURDIR}\\..\\tests\\TYPE_Non-Turnkey\\Small Cell for TPT III\\data file\\Small_Cell_for_TPT_III_Config.xlsx
-${SOURCE_FILE For Civil}               ${CURDIR}\\..\\data file\\Civil_Config.xlsx
+${SOURCE_FILE For Civil}               ${CURDIR}\\..\\tests\\TYPE_Non-Turnkey\\Civil\\data file\\Civil_Config.xlsx
 ${DESTINATION_FILE}                    C:/Users/arnoj885/Robot Framework/Obsolate Transporter/data file/Import_Site_Template_Proforma OSP.xls
 ${DESTINATION_FILE For Small Cell}     ${CURDIR}\\..\\tests\\TYPE_Non-Turnkey\\Small Cell for TPT III\\data file\\Import_Site_Template_Proforma Small Cell for TPT III.xls
+${DESTINATION_FILE For FBB OSP III}    ${CURDIR}\\..\\tests\\TYPE_Non-Turnkey\\FBB OSP for TPT III\\data file\\Import_Site_Template_Proforma OSP.xls
 ${SOURCE_SHEET}                        Import_Site_Template_Proforma
 ${DEST_SHEET}                          Site_Tmp
 ${HEADER_ROW}                          2
@@ -275,7 +278,7 @@ ${SSR > FAT Submitted}                  SSR > FAT Submitted
 ${SSR > FAT Approved}                   SSR > FAT Approved
 
 #DD Submitted
-${DD Submitted By Pass}                 BKK-2025000278
+${DD Submitted By Pass}                 BKK-2025011983
 ${DD Submitted Add Picture}             //tr/td/div[1]/div/div[2]/input
 ${DD Submitted Upload Picture}          //div/div/table/tbody/tr/td/div[2]/div
 ${DD Submitted Save}                    //table/tbody/tr[1]/td[3]/input[4]
@@ -283,7 +286,7 @@ ${DD Submitted Result Massage}          //tr/td/form/fieldset/table/tbody/tr[2]/
 
 
 #DD Approved
-${SSR ID DD Approved By Pass}           BKK-2025000304
+${SSR ID DD Approved By Pass}           BKK-2025011983
 ${DD Approved Click Route Type}         //table[1]/tbody/tr[2]/td[3]/select
 ${Site to Site}                         //table[1]/tbody/tr[2]/td[3]/select/option[2]
 ${DD Approved Click Cable Job Type}     //fieldset/table[1]/tbody/tr[2]/td[6]/select
@@ -305,7 +308,7 @@ ${DD Approved Result Massage}           //tr/td/form/fieldset/table/tbody/tr[2]/
 ${Duplicate entry in the system}        //tr[1]/td/table/tbody/tr/td/ul/li
 ${DD Approved Confirm New Information}     //tr[2]/td/form/table/tbody/tr[2]/td/table/tbody/tr/td/input
 #Permission Start Submitted
-${SSR ID Permission Start Submitted By Pass}        BKK-2025000262
+${SSR ID Permission Start Submitted By Pass}        BKK-2025011983
 ${Permission Start Submitted Add Picture}           //tbody/tr/td/div[1]/div/div[2]/input
 ${Permission Start Submitted Upload Picture}        //tbody/tr/td/div[2]/div
 ${Permission Start Submitted Download}              //tr/td[3]/a[1]/img
@@ -313,7 +316,7 @@ ${Permission Start Submitted Result Massage}        //fieldset/table/tbody/tr[2]
 ${Permission Start Submitted Save}                  //tbody/tr[1]/td[3]/input[4]
 
 #Permission Start Approve
-${SSR ID Permission Start Approve By Pass}          BKK-2025000263
+${SSR ID Permission Start Approve By Pass}          BKK-2025011983
 ${Permission Start Approve Click}                   //tr[2]/td/table/tbody/tr/td[2]/select
 ${Permission Start Approve Case}                    //tr[2]/td/table/tbody/tr/td[2]/select/option[2]
 ${Permission Start Approve Save}                    //tr[1]/td[3]/input[4]
@@ -321,7 +324,7 @@ ${Permission Start Approve Result Massage}          //fieldset/table/tbody/tr[2]
 
 
 #PAT BOQ Submitted
-${SSR ID PAT BOQ Submitted By Pass}                 BKK-2025000263
+${SSR ID PAT BOQ Submitted By Pass}                 BKK-2025011983
 ${PAT BOQ Submitted Sub Project}                    //tbody/tr[3]/td[3]/select
 ${Test Interface Send/Approve/Cancel PR PF}         //tr[3]/td[3]/select/option[3]
 ${PAT BOQ Submitted Sub Project Serach}             //tr[4]/td/table/tbody/tr/td[3]/input
@@ -494,7 +497,7 @@ ${Drawing Approved Save}                    //span[2]/table/tbody/tr[1]/td[3]/in
 ${Drawing Approved Result Massage}          //tr/td/form/fieldset/table/tbody/tr[2]/td
 
 #BOQ And Document
-${BOQ And Document By Pass}                 BKK-2025000316
+${BOQ And Document By Pass}                 BKK-2025011973
 ${BOQ And Document Select Sub Project}      //span[55]/span/div/div[2]/fieldset/table/tbody/tr[3]/td[3]/select
 ${Test Interface Send/Approve/Cancel PR}    //tbody/tr[3]/td[3]/select/option[2]
 ${BOQ And Document Search}                  //tr[4]/td/table/tbody/tr/td[3]/input
@@ -514,6 +517,9 @@ ${BOQ And Document Download}                //tr/td[3]/a[1]/img
 ${BOQ And Document Save}                    //table/tbody/tr[1]/td[3]/input[4]
 ${BOQ And Document Result Massage}          //tr/td/form/fieldset/table/tbody/tr[2]/td
 
+${BOQ And Document Calculate Content}       //fieldset/table/tbody/tr[9]/td/div/span/div
+${BOQ And Document Scroll Text}             //td/span/div/table/tbody/tr[1]/td/table/tbody/tr/td[1]/span
+
 #BOQ Verified
 ${BOQ Verified By Pass}                     BKK-2025000319
 ${BOQ Verified Pass Fail}                   //table/tbody/tr[2]/td/table/tbody/tr/td[2]/select
@@ -521,6 +527,6 @@ ${BOQ Verified Pass Case}                   //tr[2]/td/table/tbody/tr/td[2]/sele
 ${BOQ Verified Save}                        //tbody/tr[1]/td[3]/input[4]
 
 #BOQ Approved
-${BOQ Approved Approved Rejected}           //tr[2]/td/table/tbody/tr/td[2]/select
-${BOQ Approved Approved Case}               //tr/td[2]/select/option[2]
+${BOQ Approved Approved Rejected}           //tr[4]/td/table/tbody/tr/td[2]/select
+# ${BOQ Approved Approved Case}               //tr/td[2]/select/option[2]
 ${BOQ Approved Save}                        //tr[1]/td[3]/input[4]

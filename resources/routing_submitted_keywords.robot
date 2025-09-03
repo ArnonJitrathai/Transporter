@@ -35,14 +35,14 @@ Cable Type Information
     Execute Javascript    window.scrollTo(0, 200)
     sleep    1 seconds
     Click Element    xpath=${Click Cable Type}
-    Click Element    xpath=${Cable Type}
+    Click Element    xpath=//option[text()="${Cable Type}"]
     sleep    0.5 seconds
     Click Element    xpath=${Click Cable Type Core}
-    Click Element    xpath=${Cable Core No}
+    Click Element    xpath=//option[text()="${Cable Core No}"]
     sleep    0.5 seconds
     Input Text    xpath=${Cable Distance Input}    ${Cable Distance}
 
-Routing Submitted Upload File
+Routing Submitted Upload File 📷✅
     [Arguments]    ${Picture}
     Choose File      xpath=${Routing Submitted Add}         ${Picture}
     sleep    0.5 seconds

@@ -25,6 +25,6 @@ REM สร้างโฟลเดอร์ (ทั้งสองชั้น)
 mkdir "%OUTPUT_DIR%"
 
 REM รัน robot พร้อมส่งตัวแปรและกำหนด outputdir
-robot --include Standard_Test1 --outputdir "%OUTPUT_DIR%" --variable OUTPUT_DIR:"%OUTPUT_DIR%" --variable TIMESTAMP:"%DISPLAY_TIMESTAMP%" --variable FULL_TIMESTAMP:"%FULL_TIMESTAMP%" "%BASE_PATH%"
+robot --include Standard_Test --outputdir "%OUTPUT_DIR%" --variable OUTPUT_DIR:"%OUTPUT_DIR%" --variable TIMESTAMP:"%DISPLAY_TIMESTAMP%" --variable FULL_TIMESTAMP:"%FULL_TIMESTAMP%" "%BASE_PATH%"
 
 pause

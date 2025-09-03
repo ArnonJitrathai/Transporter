@@ -9,12 +9,12 @@ Library    SeleniumLibrary
 DD Approved Route Type
     [Arguments]      ${Route Type}
     Click Element    xpath=${DD Approved Click Route Type}
-    Click Element    xpath=${Route Type}
+    Click Element    xpath=//option[text()="${Route Type}"]
 
 DD Approved Cable Job Type
     [Arguments]      ${Cable Job Type}
     Click Element    xpath=${DD Approved Click Cable Job Type}
-    Click Element    xpath=${Cable Job Type}
+    Click Element    xpath=//option[text()="${Cable Job Type}"]
 
 Random Page Destination
     Wait Until Element Is Visible    xpath=${Click Select page}      timeout=15s
@@ -46,7 +46,7 @@ Random Point source site
     [Return]        ${xpath Random Point source site}
 
 DD Approved Point source site
-    [Arguments]      ${Zone MC}       #${Serach Result}  
+    [Arguments]      ${Zone MC}
     Execute JavaScript    window.scrollTo(0, document.body.scrollHeight)
     Wait Until Element Is Visible    xpath=${DD Approved Point source Serach}      timeout=15s
     Click Element    xpath=${DD Approved Point source Serach}

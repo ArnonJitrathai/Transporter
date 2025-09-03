@@ -5,7 +5,7 @@ Library    SeleniumLibrary
 My network Sub Project Management
     [Arguments]     ${System}           ${Sub Project Name}
     Click Element    xpath=${Mynetwork SPM Select System}
-    Click Element    xpath=${System}
+    Click Element    xpath=//option[text()="${System}"]
     Input Text       xpath=${Mynetwork SPM Sub Project Name}      ${Sub Project Name}
 
 My network Search Sub Project Management

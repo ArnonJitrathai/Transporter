@@ -1,0 +1,1358 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.7.9 on win32)" generated="20250828 10:04:50.247" rpa="false" schemaversion="3">
+<suite id="s1" name="Small Cell for TPT III" source="C:\Users\arnoj885\Robot Framework\Obsolate Transporter\tests\TYPE_Non-Turnkey\Small Cell for TPT III">
+<suite id="s1-s1" name="Small Cell for TPT III" source="C:\Users\arnoj885\Robot Framework\Obsolate Transporter\tests\TYPE_Non-Turnkey\Small Cell for TPT III\Small_Cell_for_TPT_III.robot">
+<test id="s1-s1-t1" name="ทดสอบระบบการทำงานของ Transporter : Type Non Turnkey [Small Cell for TPT III]" line="8">
+<kw name="Set Test Message" library="BuiltIn">
+<arg>=== เริ่มการทำงาน Test Case ID :</arg>
+<arg>===</arg>
+<doc>Sets message for the current test case.</doc>
+<msg timestamp="20250828 10:04:53.701" level="INFO">Set test message to:
+=== เริ่มการทำงาน Test Case ID :</msg>
+<status status="PASS" starttime="20250828 10:04:53.700" endtime="20250828 10:04:53.701"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>เริ่มการทำงาน Transporter : Type Non Turnkey [Small Cell for TPT III]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20250828 10:04:53.704" level="INFO">เริ่มการทำงาน Transporter : Type Non Turnkey [Small Cell for TPT III]</msg>
+<status status="PASS" starttime="20250828 10:04:53.703" endtime="20250828 10:04:53.704"/>
+</kw>
+<kw name="Open Workbook" library="RPA.Excel.Files">
+<arg>${SOURCE_FILE For Small Cell}</arg>
+<doc>Open an existing Excel workbook.</doc>
+<msg timestamp="20250828 10:04:53.708" level="INFO">Failed to open as Office Open XML (.xlsx) format: File is not a zip file</msg>
+<msg timestamp="20250828 10:04:53.712" level="INFO">Failed to open as Excel Binary Format (.xls): File is not a zip file</msg>
+<msg timestamp="20250828 10:04:53.714" level="FAIL">ValueError: Failed to open Excel file (C:\Users\arnoj885\Robot Framework\Obsolate Transporter\tests\TYPE_Non-Turnkey\Small Cell for TPT III\data file\Small_Cell_for_TPT_III_Config.xlsx), verify that the path and extension are correct</msg>
+<status status="FAIL" starttime="20250828 10:04:53.705" endtime="20250828 10:04:53.726"/>
+</kw>
+<kw name="Read Worksheet As Table" library="RPA.Excel.Files">
+<var>${table}</var>
+<arg>name=${SHEET_NAME}</arg>
+<arg>header=True</arg>
+<doc>Read the contents of a worksheet into a Table container. Allows
+sorting/filtering/manipulating using the ``RPA.Tables`` library.</doc>
+<status status="NOT RUN" starttime="20250828 10:04:53.727" endtime="20250828 10:04:53.727"/>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<var>${row_count}</var>
+<arg>${table}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<status status="NOT RUN" starttime="20250828 10:04:53.728" endtime="20250828 10:04:53.728"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${i}</var>
+<value>1</value>
+<value>${row_count + 1}</value>
+<iter>
+<var name="${i}"/>
+<kw name="Open Browser To Login Page" library="login_keywords">
+<status status="NOT RUN" starttime="20250828 10:04:53.729" endtime="20250828 10:04:53.729"/>
+</kw>
+<try>
+<branch type="TRY">
+<kw name="Get Column Values By Name File" library="Excel_Temp_New">
+<var>${Test_Case_ID List}</var>
+<arg>${SOURCE_FILE For Small Cell}</arg>
+<arg>Test_Case_ID</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.729" endtime="20250828 10:04:53.730"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${Test_Case_ID}</var>
+<arg>${Test_Case_ID List[${i - 1}]}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20250828 10:04:53.730" endtime="20250828 10:04:53.730"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>=== เริ่มการทำงาน Test Case ID : ${Test_Case_ID} ===</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20250828 10:04:53.730" endtime="20250828 10:04:53.730"/>
+</kw>
+<kw name="Clear Excel Value File" library="Excel_Temp_New">
+<arg>${SOURCE_FILE For Small Cell}</arg>
+<arg>${i + 1}</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.730" endtime="20250828 10:04:53.730"/>
+</kw>
+<kw name="Gennerate Reference Site Code File" library="Excel_Temp_New">
+<arg>${SOURCE_FILE For Small Cell}</arg>
+<arg>${i + 1}</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.730" endtime="20250828 10:04:53.731"/>
+</kw>
+<kw name="Prepare the template file data For Small Cell" library="Excel_Temp_For_Small_Cell">
+<arg>${SOURCE_FILE For Small Cell}</arg>
+<arg>${DESTINATION_FILE For Small Cell}</arg>
+<arg>${i + 1}</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.731" endtime="20250828 10:04:53.731"/>
+</kw>
+<kw name="Write Value Running Date File" library="Excel_Temp_New">
+<arg>${SOURCE_FILE For Small Cell}</arg>
+<arg>${i + 1}</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.731" endtime="20250828 10:04:53.731"/>
+</kw>
+<kw name="Write Value From Column Name" library="Excel_Temp_New">
+<arg>${SOURCE_FILE For Small Cell}</arg>
+<arg>${i + 1}</arg>
+<arg>Result</arg>
+<arg>Fail</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.731" endtime="20250828 10:04:53.731"/>
+</kw>
+<kw name="Your connection is not private" library="login_keywords">
+<status status="NOT RUN" starttime="20250828 10:04:53.731" endtime="20250828 10:04:53.733"/>
+</kw>
+<kw name="Transporter_Login" library="login_keywords">
+<arg>${SSR Create Code USER}</arg>
+<arg>${SSR Create Code PASS}</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.733" endtime="20250828 10:04:53.733"/>
+</kw>
+<kw name="Welcome Page Should Be Open" library="login_keywords">
+<arg>${LOGIN TITLE}</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.733" endtime="20250828 10:04:53.733"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20250828 10:04:53.733" endtime="20250828 10:04:53.733"/>
+</kw>
+<kw name="Click Menu List" library="menu_keywords">
+<status status="NOT RUN" starttime="20250828 10:04:53.733" endtime="20250828 10:04:53.733"/>
+</kw>
+<kw name="Select Menu" library="menu_keywords">
+<arg>${Site Management Menu ID}</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.733" endtime="20250828 10:04:53.734"/>
+</kw>
+<kw name="Select Menu" library="menu_keywords">
+<arg>${Create Draft Site Code Menu ID}</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.734" endtime="20250828 10:04:53.734"/>
+</kw>
+<kw name="Click Import" library="create_draft_site_code">
+<status status="NOT RUN" starttime="20250828 10:04:53.734" endtime="20250828 10:04:53.735"/>
+</kw>
+<kw name="Click Search Proforma No" library="create_draft_site_code">
+<status status="NOT RUN" starttime="20250828 10:04:53.735" endtime="20250828 10:04:53.735"/>
+</kw>
+<kw name="Get Column Values By Name File" library="Excel_Temp_New">
+<var>${Proferma No List}</var>
+<arg>${SOURCE_FILE For Small Cell}</arg>
+<arg>Proferma_No</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.735" endtime="20250828 10:04:53.735"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${Proferma No}</var>
+<arg>${Proferma No List[${i - 1}]}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20250828 10:04:53.735" endtime="20250828 10:04:53.735"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Proferma No :&gt;&gt;&gt;${Proferma No}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20250828 10:04:53.736" endtime="20250828 10:04:53.736"/>
+</kw>
+<kw name="Search Proforma No" library="create_draft_site_code">
+<arg>${Proferma No}</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.736" endtime="20250828 10:04:53.736"/>
+</kw>
+<kw name="Click Budget Check List" library="create_draft_site_code">
+<status status="NOT RUN" starttime="20250828 10:04:53.736" endtime="20250828 10:04:53.736"/>
+</kw>
+<kw name="Get Column Values By Name File" library="Excel_Temp_New">
+<var>${Purchase Cat Group List}</var>
+<arg>${SOURCE_FILE For Small Cell}</arg>
+<arg>Purchase Cat Group</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.737" endtime="20250828 10:04:53.737"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${Purchase Cat Group}</var>
+<arg>${Purchase Cat Group List[${i - 1}]}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20250828 10:04:53.737" endtime="20250828 10:04:53.737"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Purchase Cat Group :&gt;&gt;&gt;${Purchase Cat Group}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20250828 10:04:53.737" endtime="20250828 10:04:53.737"/>
+</kw>
+<kw name="Get Column Values By Name File" library="Excel_Temp_New">
+<var>${Purchase Cat List}</var>
+<arg>${SOURCE_FILE For Small Cell}</arg>
+<arg>Purchase Cat</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.737" endtime="20250828 10:04:53.737"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${Purchase Cat}</var>
+<arg>${Purchase Cat List[${i - 1}]}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20250828 10:04:53.737" endtime="20250828 10:04:53.738"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Purchase Cat :&gt;&gt;&gt;${Purchase Cat}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20250828 10:04:53.738" endtime="20250828 10:04:53.738"/>
+</kw>
+<kw name="Get Column Values By Name File" library="Excel_Temp_New">
+<var>${Action Type List}</var>
+<arg>${SOURCE_FILE For Small Cell}</arg>
+<arg>Action Type</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.738" endtime="20250828 10:04:53.738"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${Action Type}</var>
+<arg>${Action Type List[${i - 1}]}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20250828 10:04:53.738" endtime="20250828 10:04:53.738"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Action Type :&gt;&gt;&gt;${Action Type}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20250828 10:04:53.739" endtime="20250828 10:04:53.739"/>
+</kw>
+<kw name="Get Column Values By Name File" library="Excel_Temp_New">
+<var>${System Type List}</var>
+<arg>${SOURCE_FILE For Small Cell}</arg>
+<arg>System Type</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.739" endtime="20250828 10:04:53.739"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${System Type}</var>
+<arg>${System Type List[${i - 1}]}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20250828 10:04:53.739" endtime="20250828 10:04:53.739"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>System Type :&gt;&gt;&gt;${System Type}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20250828 10:04:53.739" endtime="20250828 10:04:53.739"/>
+</kw>
+<kw name="Get Column Values By Name File" library="Excel_Temp_New">
+<var>${Service Code List}</var>
+<arg>${SOURCE_FILE For Small Cell}</arg>
+<arg>Service Code</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.739" endtime="20250828 10:04:53.739"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${Service Code}</var>
+<arg>${Service Code List[${i - 1}]}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20250828 10:04:53.741" endtime="20250828 10:04:53.741"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Service Code :&gt;&gt;&gt;${Service Code}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20250828 10:04:53.741" endtime="20250828 10:04:53.741"/>
+</kw>
+<kw name="Get Column Values By Name File" library="Excel_Temp_New">
+<var>${Company Code List}</var>
+<arg>${SOURCE_FILE For Small Cell}</arg>
+<arg>Company Code</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.741" endtime="20250828 10:04:53.741"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${Company Code}</var>
+<arg>${Company Code List[${i - 1}]}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20250828 10:04:53.742" endtime="20250828 10:04:53.742"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Company Code :&gt;&gt;&gt;${Company Code}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20250828 10:04:53.743" endtime="20250828 10:04:53.743"/>
+</kw>
+<kw name="Search Budget Check List" library="create_draft_site_code">
+<arg>${Purchase Cat Group}</arg>
+<arg>${Purchase Cat}</arg>
+<arg>${Action Type}</arg>
+<arg>${System Type}</arg>
+<arg>${Service Code}</arg>
+<arg>${Company Code}</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.743" endtime="20250828 10:04:53.743"/>
+</kw>
+<kw name="Clck Search Purchase" library="create_draft_site_code">
+<status status="NOT RUN" starttime="20250828 10:04:53.744" endtime="20250828 10:04:53.744"/>
+</kw>
+<kw name="Select Purchase Cat Group" library="create_draft_site_code">
+<status status="NOT RUN" starttime="20250828 10:04:53.744" endtime="20250828 10:04:53.744"/>
+</kw>
+<kw name="Click Search Procurator" library="create_draft_site_code">
+<status status="NOT RUN" starttime="20250828 10:04:53.744" endtime="20250828 10:04:53.744"/>
+</kw>
+<kw name="Get Column Values By Name File" library="Excel_Temp_New">
+<var>${Procurator Workflow Type List}</var>
+<arg>${SOURCE_FILE For Small Cell}</arg>
+<arg>Procurator Workflow Type</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.744" endtime="20250828 10:04:53.744"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${Procurator Workflow Type}</var>
+<arg>${Procurator Workflow Type List[${i - 1}]}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20250828 10:04:53.745" endtime="20250828 10:04:53.745"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Procurator Workflow Type :&gt;&gt;&gt;${Procurator Workflow Type}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20250828 10:04:53.745" endtime="20250828 10:04:53.745"/>
+</kw>
+<kw name="Get Column Values By Name File" library="Excel_Temp_New">
+<var>${Procurator SSR Type List}</var>
+<arg>${SOURCE_FILE For Small Cell}</arg>
+<arg>Procurator SSR Type</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.745" endtime="20250828 10:04:53.745"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${Procurator SSR Type}</var>
+<arg>${Procurator SSR Type List[${i - 1}]}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20250828 10:04:53.745" endtime="20250828 10:04:53.745"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Procurator SSR Type :&gt;&gt;&gt;${Procurator SSR Type}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20250828 10:04:53.746" endtime="20250828 10:04:53.746"/>
+</kw>
+<kw name="Get Column Values By Name File" library="Excel_Temp_New">
+<var>${Procurator Region List}</var>
+<arg>${SOURCE_FILE For Small Cell}</arg>
+<arg>Procurator Region</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.746" endtime="20250828 10:04:53.746"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${Procurator Region}</var>
+<arg>${Procurator Region List[${i - 1}]}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20250828 10:04:53.746" endtime="20250828 10:04:53.746"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Procurator Region :&gt;&gt;&gt;${Procurator Region}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20250828 10:04:53.746" endtime="20250828 10:04:53.747"/>
+</kw>
+<kw name="Search Procurator" library="create_draft_site_code">
+<arg>${Procurator Workflow Type}</arg>
+<arg>${Procurator SSR Type}</arg>
+<arg>${Procurator Region}</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.747" endtime="20250828 10:04:53.747"/>
+</kw>
+<kw name="Get Column Values By Name File" library="Excel_Temp_New">
+<var>${Import Site Template File List}</var>
+<arg>${SOURCE_FILE For Small Cell}</arg>
+<arg>Import_Site_Template_File</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.747" endtime="20250828 10:04:53.747"/>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<var>${Import_Site_Template path}</var>
+<arg>SEPARATOR=</arg>
+<arg>C:\\Users\\arnoj885\\Robot Framework\\Obsolate Transporter\\tests\\TYPE_Non-Turnkey\\Small Cell for TPT III/data file/</arg>
+<arg>${Import Site Template File List[${i - 1}]}</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="NOT RUN" starttime="20250828 10:04:53.747" endtime="20250828 10:04:53.747"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${Import_Site_Template path}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="NOT RUN" starttime="20250828 10:04:53.747" endtime="20250828 10:04:53.747"/>
+</kw>
+<kw name="Normalize Path" library="OperatingSystem">
+<var>${Import_Site_Template path}</var>
+<arg>${Import_Site_Template path}</arg>
+<doc>Normalizes the given path.</doc>
+<status status="NOT RUN" starttime="20250828 10:04:53.747" endtime="20250828 10:04:53.747"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${Import_Site_Template path}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20250828 10:04:53.747" endtime="20250828 10:04:53.747"/>
+</kw>
+<kw name="Import Type" library="create_draft_site_code">
+<arg>${Import_Site_Template path}</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.747" endtime="20250828 10:04:53.747"/>
+</kw>
+<kw name="Upload Site" library="create_draft_site_code">
+<status status="NOT RUN" starttime="20250828 10:04:53.747" endtime="20250828 10:04:53.747"/>
+</kw>
+<kw name="Reference Site Code" library="result_massage_keywords">
+<var>${SSR ID Reference Site Code}</var>
+<status status="NOT RUN" starttime="20250828 10:04:53.747" endtime="20250828 10:04:53.747"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${SSR ID Reference Site Code}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="NOT RUN" starttime="20250828 10:04:53.747" endtime="20250828 10:04:53.750"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Reference Site Code เลขที่ดึงออกมา: ${SSR ID Reference Site Code}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20250828 10:04:53.750" endtime="20250828 10:04:53.750"/>
+</kw>
+<kw name="Write Value From Column Name" library="Excel_Temp_New">
+<arg>${SOURCE_FILE For Small Cell}</arg>
+<arg>${i + 1}</arg>
+<arg>Reference_Site_Code</arg>
+<arg>${SSR ID Reference Site Code}</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.750" endtime="20250828 10:04:53.750"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20250828 10:04:53.750" endtime="20250828 10:04:53.750"/>
+</kw>
+<kw name="Write Value From Column Name" library="Excel_Temp_New">
+<arg>${SOURCE_FILE For Small Cell}</arg>
+<arg>${i + 1}</arg>
+<arg>Run_Status</arg>
+<arg>Create Draft Site Code</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.750" endtime="20250828 10:04:53.750"/>
+</kw>
+<kw name="Click Menu List" library="menu_keywords">
+<status status="NOT RUN" starttime="20250828 10:04:53.750" endtime="20250828 10:04:53.750"/>
+</kw>
+<kw name="Select Menu" library="menu_keywords">
+<arg>${SSR Create Menu ID}</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.750" endtime="20250828 10:04:53.750"/>
+</kw>
+<kw name="SSR Search Site Workflow Type" library="ssr_create_keywords">
+<arg>${Small Cell for TPT III Auto PO}</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.750" endtime="20250828 10:04:53.750"/>
+</kw>
+<kw name="SSR Search Reference Site Code" library="ssr_create_keywords">
+<arg>${SSR ID Reference Site Code}</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.750" endtime="20250828 10:04:53.750"/>
+</kw>
+<kw name="SSR Click Search Reference Site Code" library="ssr_create_keywords">
+<status status="NOT RUN" starttime="20250828 10:04:53.750" endtime="20250828 10:04:53.750"/>
+</kw>
+<kw name="SSR Select Reference Site Code" library="ssr_create_keywords">
+<status status="NOT RUN" starttime="20250828 10:04:53.750" endtime="20250828 10:04:53.750"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>SSR &gt; SSR Submitted New</arg>
+<arg>timeout=15s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="NOT RUN" starttime="20250828 10:04:53.750" endtime="20250828 10:04:53.750"/>
+</kw>
+<kw name="Get Column Values By Name File" library="Excel_Temp_New">
+<var>${SSR Submitted Picture List}</var>
+<arg>${SOURCE_FILE For Small Cell}</arg>
+<arg>SSR_Submitted_Upload_File</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.750" endtime="20250828 10:04:53.750"/>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<var>${SSR Submitted Picture}</var>
+<arg>SEPARATOR=</arg>
+<arg>C:\\Users\\arnoj885\\Robot Framework\\Obsolate Transporter\\tests\\TYPE_Non-Turnkey\\Small Cell for TPT III/data file/</arg>
+<arg>${SSR Submitted Picture List[${i - 1}]}</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="NOT RUN" starttime="20250828 10:04:53.750" endtime="20250828 10:04:53.750"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${SSR Submitted Picture}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="NOT RUN" starttime="20250828 10:04:53.750" endtime="20250828 10:04:53.750"/>
+</kw>
+<kw name="Normalize Path" library="OperatingSystem">
+<var>${SSR Submitted Picture}</var>
+<arg>${SSR Submitted Picture}</arg>
+<doc>Normalizes the given path.</doc>
+<status status="NOT RUN" starttime="20250828 10:04:53.750" endtime="20250828 10:04:53.750"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${SSR Submitted Picture}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20250828 10:04:53.750" endtime="20250828 10:04:53.750"/>
+</kw>
+<kw name="SSR Submitted Add Picture" library="SSR_Submitted">
+<arg>${SSR Submitted Picture}</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.750" endtime="20250828 10:04:53.750"/>
+</kw>
+<kw name="SSR Submitted Save" library="SSR_Submitted">
+<status status="NOT RUN" starttime="20250828 10:04:53.750" endtime="20250828 10:04:53.750"/>
+</kw>
+<kw name="Result Massage Data recorded" library="result_massage_keywords">
+<var>${SSR ID Approval I}</var>
+<arg>${SSR Submitted Result Massage}</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.750" endtime="20250828 10:04:53.750"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${SSR ID Approval I}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="NOT RUN" starttime="20250828 10:04:53.750" endtime="20250828 10:04:53.750"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>SSR ID Approval เลขที่ดึงออกมา: ${SSR ID Approval I}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20250828 10:04:53.750" endtime="20250828 10:04:53.750"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20250828 10:04:53.755" endtime="20250828 10:04:53.755"/>
+</kw>
+<kw name="Write Value From Column Name" library="Excel_Temp_New">
+<arg>${SOURCE_FILE For Small Cell}</arg>
+<arg>${i + 1}</arg>
+<arg>SSR_ID</arg>
+<arg>${SSR ID Approval I}</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.755" endtime="20250828 10:04:53.755"/>
+</kw>
+<kw name="Write Value From Column Name" library="Excel_Temp_New">
+<arg>${SOURCE_FILE For Small Cell}</arg>
+<arg>${i + 1}</arg>
+<arg>Run_Status</arg>
+<arg>SSR Create</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.755" endtime="20250828 10:04:53.755"/>
+</kw>
+<kw name="Click Menu List" library="menu_keywords">
+<status status="NOT RUN" starttime="20250828 10:04:53.755" endtime="20250828 10:04:53.755"/>
+</kw>
+<kw name="Select Menu" library="menu_keywords">
+<arg>${Todo list Menu ID}</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.755" endtime="20250828 10:04:53.755"/>
+</kw>
+<kw name="To Do List Serach SSR ID" library="menu_to_do_list_keywords">
+<arg>${SSR ID Approval I}</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.755" endtime="20250828 10:04:53.755"/>
+</kw>
+<kw name="To Do Click Serach SSR ID" library="menu_to_do_list_keywords">
+<status status="NOT RUN" starttime="20250828 10:04:53.755" endtime="20250828 10:04:53.755"/>
+</kw>
+<kw name="Selected SSR ID" library="menu_to_do_list_keywords">
+<status status="NOT RUN" starttime="20250828 10:04:53.755" endtime="20250828 10:04:53.755"/>
+</kw>
+<kw name="Page Should Contains" library="result_massage_keywords">
+<arg>${SSR &gt; SSR Approval}</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.755" endtime="20250828 10:04:53.755"/>
+</kw>
+<kw name="SSR Approval Approved Or Rejected" library="SSR_Approval_Kewords">
+<arg>${SSR Approved Case}</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.755" endtime="20250828 10:04:53.755"/>
+</kw>
+<kw name="SSR Approval Click Save" library="SSR_Approval_Kewords">
+<status status="NOT RUN" starttime="20250828 10:04:53.755" endtime="20250828 10:04:53.755"/>
+</kw>
+<kw name="Result Massage Data recorded" library="result_massage_keywords">
+<var>${SSR ID Drawing Submitted}</var>
+<arg>${SSR Approval Result Massage}</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.755" endtime="20250828 10:04:53.755"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${SSR ID Drawing Submitted}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="NOT RUN" starttime="20250828 10:04:53.755" endtime="20250828 10:04:53.755"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>SSR ID Drawing Submitted เลขที่ดึงออกมา: ${SSR ID Drawing Submitted}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20250828 10:04:53.755" endtime="20250828 10:04:53.755"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20250828 10:04:53.755" endtime="20250828 10:04:53.755"/>
+</kw>
+<kw name="Write Value From Column Name" library="Excel_Temp_New">
+<arg>${SOURCE_FILE For Small Cell}</arg>
+<arg>${i + 1}</arg>
+<arg>Run_Status</arg>
+<arg>SSR Approval 1</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.755" endtime="20250828 10:04:53.755"/>
+</kw>
+<kw name="Log Out" library="Logout_keywords">
+<status status="NOT RUN" starttime="20250828 10:04:53.755" endtime="20250828 10:04:53.755"/>
+</kw>
+<kw name="Transporter_Login" library="login_keywords">
+<arg>${Drawing Submitted USER}</arg>
+<arg>${Drawing Submitted PASS}</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.755" endtime="20250828 10:04:53.755"/>
+</kw>
+<kw name="Welcome Page Should Be Open" library="login_keywords">
+<arg>${LOGIN TITLE}</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.755" endtime="20250828 10:04:53.755"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20250828 10:04:53.755" endtime="20250828 10:04:53.759"/>
+</kw>
+<kw name="Click Menu List" library="menu_keywords">
+<status status="NOT RUN" starttime="20250828 10:04:53.759" endtime="20250828 10:04:53.759"/>
+</kw>
+<kw name="Select Menu" library="menu_keywords">
+<arg>${Todo list Menu ID}</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.760" endtime="20250828 10:04:53.760"/>
+</kw>
+<kw name="To Do List Serach SSR ID" library="menu_to_do_list_keywords">
+<arg>${SSR ID Drawing Submitted}</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.760" endtime="20250828 10:04:53.760"/>
+</kw>
+<kw name="To Do Click Serach SSR ID" library="menu_to_do_list_keywords">
+<status status="NOT RUN" starttime="20250828 10:04:53.760" endtime="20250828 10:04:53.760"/>
+</kw>
+<kw name="Selected SSR ID" library="menu_to_do_list_keywords">
+<status status="NOT RUN" starttime="20250828 10:04:53.760" endtime="20250828 10:04:53.760"/>
+</kw>
+<kw name="Get Column Values By Name File" library="Excel_Temp_New">
+<var>${Drawing_Submitted List}</var>
+<arg>${SOURCE_FILE For Small Cell}</arg>
+<arg>Drawing_Submitted_Upload_File</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.761" endtime="20250828 10:04:53.761"/>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<var>${Drawing_Submitted Picture}</var>
+<arg>SEPARATOR=</arg>
+<arg>C:\\Users\\arnoj885\\Robot Framework\\Obsolate Transporter\\tests\\TYPE_Non-Turnkey\\Small Cell for TPT III/data file/</arg>
+<arg>${Drawing_Submitted List[${i - 1}]}</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="NOT RUN" starttime="20250828 10:04:53.761" endtime="20250828 10:04:53.761"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${Drawing_Submitted Picture}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="NOT RUN" starttime="20250828 10:04:53.761" endtime="20250828 10:04:53.761"/>
+</kw>
+<kw name="Normalize Path" library="OperatingSystem">
+<var>${Drawing_Submitted Picture}</var>
+<arg>${Drawing_Submitted Picture}</arg>
+<doc>Normalizes the given path.</doc>
+<status status="NOT RUN" starttime="20250828 10:04:53.761" endtime="20250828 10:04:53.761"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${Drawing_Submitted Picture}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20250828 10:04:53.762" endtime="20250828 10:04:53.762"/>
+</kw>
+<kw name="Drawing Submitted Add Picture" library="Drawing_Submitted_keyword">
+<arg>${Drawing_Submitted Picture}</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.762" endtime="20250828 10:04:53.762"/>
+</kw>
+<kw name="Drawing Submitted Save" library="Drawing_Submitted_keyword">
+<status status="NOT RUN" starttime="20250828 10:04:53.762" endtime="20250828 10:04:53.762"/>
+</kw>
+<kw name="Result Massage Data recorded" library="result_massage_keywords">
+<var>${Drawing Approved 1}</var>
+<arg>${Drawing Submitted Result Massage}</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.762" endtime="20250828 10:04:53.763"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${Drawing Approved 1}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="NOT RUN" starttime="20250828 10:04:53.763" endtime="20250828 10:04:53.763"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>SSR ID Drawing Approved 1 เลขที่ดึงออกมา: ${Drawing Approved 1}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20250828 10:04:53.763" endtime="20250828 10:04:53.763"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20250828 10:04:53.763" endtime="20250828 10:04:53.763"/>
+</kw>
+<kw name="Write Value From Column Name" library="Excel_Temp_New">
+<arg>${SOURCE_FILE For Small Cell}</arg>
+<arg>${i + 1}</arg>
+<arg>Run_Status</arg>
+<arg>Drawing Submitted</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.764" endtime="20250828 10:04:53.764"/>
+</kw>
+<kw name="Log Out" library="Logout_keywords">
+<status status="NOT RUN" starttime="20250828 10:04:53.764" endtime="20250828 10:04:53.764"/>
+</kw>
+<kw name="Transporter_Login" library="login_keywords">
+<arg>${Drawing Approved 1 USER}</arg>
+<arg>${Drawing Approved 1 PASS}</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.764" endtime="20250828 10:04:53.764"/>
+</kw>
+<kw name="Welcome Page Should Be Open" library="login_keywords">
+<arg>${LOGIN TITLE}</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.765" endtime="20250828 10:04:53.765"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20250828 10:04:53.765" endtime="20250828 10:04:53.765"/>
+</kw>
+<kw name="Click Menu List" library="menu_keywords">
+<status status="NOT RUN" starttime="20250828 10:04:53.765" endtime="20250828 10:04:53.765"/>
+</kw>
+<kw name="Select Menu" library="menu_keywords">
+<arg>${Todo list Menu ID}</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.765" endtime="20250828 10:04:53.765"/>
+</kw>
+<kw name="To Do List Serach SSR ID" library="menu_to_do_list_keywords">
+<arg>${Drawing Approved 1}</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.765" endtime="20250828 10:04:53.766"/>
+</kw>
+<kw name="To Do Click Serach SSR ID" library="menu_to_do_list_keywords">
+<status status="NOT RUN" starttime="20250828 10:04:53.766" endtime="20250828 10:04:53.766"/>
+</kw>
+<kw name="Selected SSR ID" library="menu_to_do_list_keywords">
+<status status="NOT RUN" starttime="20250828 10:04:53.766" endtime="20250828 10:04:53.766"/>
+</kw>
+<kw name="Drawing Approved 1 Case" library="Drawing_Approve_1and2_keyword">
+<arg>${Drawing Approved 1 Approved Case}</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.766" endtime="20250828 10:04:53.766"/>
+</kw>
+<kw name="Drawing Approved 2 Case" library="Drawing_Approve_1and2_keyword">
+<arg>${Drawing Approved 2 Approved Case}</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.766" endtime="20250828 10:04:53.766"/>
+</kw>
+<kw name="Drawing Approved Save" library="Drawing_Approve_1and2_keyword">
+<status status="NOT RUN" starttime="20250828 10:04:53.767" endtime="20250828 10:04:53.767"/>
+</kw>
+<kw name="Result Massage Data recorded" library="result_massage_keywords">
+<var>${BOQ And Document}</var>
+<arg>${Drawing Approved Result Massage}</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.767" endtime="20250828 10:04:53.767"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${BOQ And Document}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="NOT RUN" starttime="20250828 10:04:53.767" endtime="20250828 10:04:53.767"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>SSR ID BOQ And Document เลขที่ดึงออกมา: ${BOQ And Document}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20250828 10:04:53.767" endtime="20250828 10:04:53.767"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20250828 10:04:53.768" endtime="20250828 10:04:53.768"/>
+</kw>
+<kw name="Write Value From Column Name" library="Excel_Temp_New">
+<arg>${SOURCE_FILE For Small Cell}</arg>
+<arg>${i + 1}</arg>
+<arg>Run_Status</arg>
+<arg>Drawing Approved 1</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.768" endtime="20250828 10:04:53.768"/>
+</kw>
+<kw name="Log Out" library="Logout_keywords">
+<status status="NOT RUN" starttime="20250828 10:04:53.768" endtime="20250828 10:04:53.768"/>
+</kw>
+<kw name="Transporter_Login" library="login_keywords">
+<arg>${BOQ And Document USER}</arg>
+<arg>${BOQ And Document PASS}</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.768" endtime="20250828 10:04:53.768"/>
+</kw>
+<kw name="Welcome Page Should Be Open" library="login_keywords">
+<arg>${LOGIN TITLE}</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.768" endtime="20250828 10:04:53.768"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20250828 10:04:53.768" endtime="20250828 10:04:53.768"/>
+</kw>
+<kw name="Click Menu List" library="menu_keywords">
+<status status="NOT RUN" starttime="20250828 10:04:53.768" endtime="20250828 10:04:53.768"/>
+</kw>
+<kw name="Select Menu" library="menu_keywords">
+<arg>${Todo list Menu ID}</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.770" endtime="20250828 10:04:53.770"/>
+</kw>
+<kw name="To Do List Serach SSR ID" library="menu_to_do_list_keywords">
+<arg>${BOQ And Document}</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.770" endtime="20250828 10:04:53.770"/>
+</kw>
+<kw name="To Do Click Serach SSR ID" library="menu_to_do_list_keywords">
+<status status="NOT RUN" starttime="20250828 10:04:53.770" endtime="20250828 10:04:53.770"/>
+</kw>
+<kw name="Selected SSR ID" library="menu_to_do_list_keywords">
+<status status="NOT RUN" starttime="20250828 10:04:53.770" endtime="20250828 10:04:53.770"/>
+</kw>
+<kw name="BOQ &amp; Document Select Sub Project" library="BOQ_Step_Keyword">
+<arg>${Test Interface Send/Approve/Cancel PR}</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.770" endtime="20250828 10:04:53.770"/>
+</kw>
+<kw name="BOQ &amp; Document Search Standard Price" library="BOQ_Step_Keyword">
+<arg>${BOQ And Document Table 1}</arg>
+<arg>${BOQ And Document Table 3}</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.771" endtime="20250828 10:04:53.771"/>
+</kw>
+<kw name="BOQ &amp; Document Standard Price" library="BOQ_Step_Keyword">
+<arg>1</arg>
+<arg>1</arg>
+<arg>${BASE STATION-&gt;ANTENNA}</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.771" endtime="20250828 10:04:53.771"/>
+</kw>
+<kw name="Get Column Values By Name File" library="Excel_Temp_New">
+<var>${BOQ_Document List}</var>
+<arg>${SOURCE_FILE For Small Cell}</arg>
+<arg>BOQ_Document_Upload_File</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.771" endtime="20250828 10:04:53.771"/>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<var>${BOQ_Document Picture}</var>
+<arg>SEPARATOR=</arg>
+<arg>C:\\Users\\arnoj885\\Robot Framework\\Obsolate Transporter\\tests\\TYPE_Non-Turnkey\\Small Cell for TPT III/data file/</arg>
+<arg>${BOQ_Document List[${i - 1}]}</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="NOT RUN" starttime="20250828 10:04:53.771" endtime="20250828 10:04:53.771"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${BOQ_Document Picture}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="NOT RUN" starttime="20250828 10:04:53.771" endtime="20250828 10:04:53.772"/>
+</kw>
+<kw name="Normalize Path" library="OperatingSystem">
+<var>${BOQ_Document Picture}</var>
+<arg>${BOQ_Document Picture}</arg>
+<doc>Normalizes the given path.</doc>
+<status status="NOT RUN" starttime="20250828 10:04:53.772" endtime="20250828 10:04:53.772"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${BOQ_Document Picture}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20250828 10:04:53.772" endtime="20250828 10:04:53.772"/>
+</kw>
+<kw name="BOQ &amp; Document Add Picture" library="BOQ_Step_Keyword">
+<arg>${BOQ_Document Picture}</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.772" endtime="20250828 10:04:53.772"/>
+</kw>
+<kw name="BOQ &amp; Document Save" library="BOQ_Step_Keyword">
+<status status="NOT RUN" starttime="20250828 10:04:53.772" endtime="20250828 10:04:53.772"/>
+</kw>
+<kw name="Result Massage Data recorded" library="result_massage_keywords">
+<var>${BOQ Verified}</var>
+<arg>${BOQ And Document Result Massage}</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.773" endtime="20250828 10:04:53.773"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${BOQ Verified}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="NOT RUN" starttime="20250828 10:04:53.773" endtime="20250828 10:04:53.773"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>SSR ID BOQ &amp; Document เลขที่ดึงออกมา: ${BOQ Verified}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20250828 10:04:53.773" endtime="20250828 10:04:53.773"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20250828 10:04:53.773" endtime="20250828 10:04:53.773"/>
+</kw>
+<kw name="Write Value From Column Name" library="Excel_Temp_New">
+<arg>${SOURCE_FILE For Small Cell}</arg>
+<arg>${i + 1}</arg>
+<arg>Run_Status</arg>
+<arg>BOQ &amp; Document</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.774" endtime="20250828 10:04:53.774"/>
+</kw>
+<kw name="Log Out" library="Logout_keywords">
+<status status="NOT RUN" starttime="20250828 10:04:53.774" endtime="20250828 10:04:53.774"/>
+</kw>
+<kw name="Transporter_Login" library="login_keywords">
+<arg>${BOQ Verified USER}</arg>
+<arg>${BOQ Verified PASS}</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.774" endtime="20250828 10:04:53.774"/>
+</kw>
+<kw name="Welcome Page Should Be Open" library="login_keywords">
+<arg>${LOGIN TITLE}</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.774" endtime="20250828 10:04:53.774"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20250828 10:04:53.774" endtime="20250828 10:04:53.775"/>
+</kw>
+<kw name="Click Menu List" library="menu_keywords">
+<status status="NOT RUN" starttime="20250828 10:04:53.775" endtime="20250828 10:04:53.775"/>
+</kw>
+<kw name="Select Menu" library="menu_keywords">
+<arg>${Todo list Menu ID}</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.775" endtime="20250828 10:04:53.775"/>
+</kw>
+<kw name="To Do List Serach SSR ID" library="menu_to_do_list_keywords">
+<arg>${BOQ Verified}</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.775" endtime="20250828 10:04:53.775"/>
+</kw>
+<kw name="To Do Click Serach SSR ID" library="menu_to_do_list_keywords">
+<status status="NOT RUN" starttime="20250828 10:04:53.776" endtime="20250828 10:04:53.776"/>
+</kw>
+<kw name="Selected SSR ID" library="menu_to_do_list_keywords">
+<status status="NOT RUN" starttime="20250828 10:04:53.776" endtime="20250828 10:04:53.776"/>
+</kw>
+<kw name="BOQ Verified" library="BOQ_Step_Keyword">
+<arg>${BOQ Verified Pass Case}</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.776" endtime="20250828 10:04:53.776"/>
+</kw>
+<kw name="BOQ Verified Save" library="BOQ_Step_Keyword">
+<status status="NOT RUN" starttime="20250828 10:04:53.776" endtime="20250828 10:04:53.776"/>
+</kw>
+<kw name="Result Massage Data recorded" library="result_massage_keywords">
+<var>${BOQ Approved}</var>
+<arg>${BOQ And Document Result Massage}</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.777" endtime="20250828 10:04:53.777"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${BOQ Approved}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="NOT RUN" starttime="20250828 10:04:53.777" endtime="20250828 10:04:53.777"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>SSR ID BOQ Approved เลขที่ดึงออกมา: ${BOQ Approved}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20250828 10:04:53.777" endtime="20250828 10:04:53.777"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20250828 10:04:53.777" endtime="20250828 10:04:53.777"/>
+</kw>
+<kw name="Write Value From Column Name" library="Excel_Temp_New">
+<arg>${SOURCE_FILE For Small Cell}</arg>
+<arg>${i + 1}</arg>
+<arg>Run_Status</arg>
+<arg>BOQ Verified</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.777" endtime="20250828 10:04:53.778"/>
+</kw>
+<kw name="Log Out" library="Logout_keywords">
+<status status="NOT RUN" starttime="20250828 10:04:53.778" endtime="20250828 10:04:53.778"/>
+</kw>
+<kw name="Transporter_Login" library="login_keywords">
+<arg>${BOQ Approved USER}</arg>
+<arg>${BOQ Approved PASS}</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.778" endtime="20250828 10:04:53.778"/>
+</kw>
+<kw name="Welcome Page Should Be Open" library="login_keywords">
+<arg>${LOGIN TITLE}</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.778" endtime="20250828 10:04:53.778"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20250828 10:04:53.778" endtime="20250828 10:04:53.778"/>
+</kw>
+<kw name="Click Menu List" library="menu_keywords">
+<status status="NOT RUN" starttime="20250828 10:04:53.779" endtime="20250828 10:04:53.779"/>
+</kw>
+<kw name="Select Menu" library="menu_keywords">
+<arg>${Todo list Menu ID}</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.779" endtime="20250828 10:04:53.779"/>
+</kw>
+<kw name="To Do List Serach SSR ID" library="menu_to_do_list_keywords">
+<arg>${BOQ Verified}</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.779" endtime="20250828 10:04:53.779"/>
+</kw>
+<kw name="To Do Click Serach SSR ID" library="menu_to_do_list_keywords">
+<status status="NOT RUN" starttime="20250828 10:04:53.779" endtime="20250828 10:04:53.779"/>
+</kw>
+<kw name="Selected SSR ID" library="menu_to_do_list_keywords">
+<status status="NOT RUN" starttime="20250828 10:04:53.780" endtime="20250828 10:04:53.780"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20250828 10:04:53.780" endtime="20250828 10:04:53.780"/>
+</kw>
+<kw name="BOQ Approved" library="BOQ_Step_Keyword">
+<arg>${BOQ Approved Approved Case}</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.780" endtime="20250828 10:04:53.780"/>
+</kw>
+<kw name="BOQ Approved Save" library="BOQ_Step_Keyword">
+<status status="NOT RUN" starttime="20250828 10:04:53.780" endtime="20250828 10:04:53.780"/>
+</kw>
+<kw name="Result Massage Data recorded" library="result_massage_keywords">
+<var>${GR Approved}</var>
+<arg>${BOQ And Document Result Massage}</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.780" endtime="20250828 10:04:53.780"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${GR Approved}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="NOT RUN" starttime="20250828 10:04:53.780" endtime="20250828 10:04:53.780"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>SSR ID GR Approved เลขที่ดึงออกมา: ${GR Approved}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20250828 10:04:53.780" endtime="20250828 10:04:53.780"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20250828 10:04:53.781" endtime="20250828 10:04:53.781"/>
+</kw>
+<kw name="Write Value From Column Name" library="Excel_Temp_New">
+<arg>${SOURCE_FILE For Small Cell}</arg>
+<arg>${i + 1}</arg>
+<arg>Run_Status</arg>
+<arg>BOQ Approved</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.781" endtime="20250828 10:04:53.781"/>
+</kw>
+<kw name="Click Menu List" library="menu_keywords">
+<status status="NOT RUN" starttime="20250828 10:04:53.781" endtime="20250828 10:04:53.781"/>
+</kw>
+<kw name="Select Menu" library="menu_keywords">
+<arg>${SSR Tracking Menu ID}</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.781" endtime="20250828 10:04:53.781"/>
+</kw>
+<kw name="Search SSR ID Tracking" library="menu_ssr_tracking_keywords">
+<arg>${GR Approved}</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.782" endtime="20250828 10:04:53.782"/>
+</kw>
+<kw name="Click SSR Search Button" library="menu_ssr_tracking_keywords">
+<status status="NOT RUN" starttime="20250828 10:04:53.782" endtime="20250828 10:04:53.782"/>
+</kw>
+<kw name="Select SSR ID" library="menu_ssr_tracking_keywords">
+<status status="NOT RUN" starttime="20250828 10:04:53.782" endtime="20250828 10:04:53.782"/>
+</kw>
+<kw name="Page Should Contains" library="result_massage_keywords">
+<arg>${SSR Tracking &gt; View}</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.782" endtime="20250828 10:04:53.782"/>
+</kw>
+<kw name="Buffer Pre-PR Small Cell" library="menu_ssr_tracking_keywords">
+<var>${Pre PR No}</var>
+<status status="NOT RUN" starttime="20250828 10:04:53.783" endtime="20250828 10:04:53.783"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${Pre PR No}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="NOT RUN" starttime="20250828 10:04:53.783" endtime="20250828 10:04:53.783"/>
+</kw>
+<kw name="Write Value Pre PR File" library="Excel_Temp_New">
+<arg>${SOURCE_FILE For Small Cell}</arg>
+<arg>${Pre PR No}</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.783" endtime="20250828 10:04:53.783"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Pre PR&gt;&gt;&gt;&gt;&gt;: ${Pre PR No}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20250828 10:04:53.783" endtime="20250828 10:04:53.783"/>
+</kw>
+<kw name="Write Value From Column Name" library="Excel_Temp_New">
+<arg>${SOURCE_FILE For Small Cell}</arg>
+<arg>${i + 1}</arg>
+<arg>Run_Status</arg>
+<arg>SSR Tracking Get PO</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.783" endtime="20250828 10:04:53.784"/>
+</kw>
+<kw name="Log Out" library="Logout_keywords">
+<status status="NOT RUN" starttime="20250828 10:04:53.784" endtime="20250828 10:04:53.784"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" starttime="20250828 10:04:53.784" endtime="20250828 10:04:53.784"/>
+</kw>
+<kw name="Open Browser To My net-work" library="login_keywords">
+<status status="NOT RUN" starttime="20250828 10:04:53.784" endtime="20250828 10:04:53.784"/>
+</kw>
+<kw name="Welcome Page Should Be Open" library="login_keywords">
+<arg>${LOGIN TITLE MY NETWORK}</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.784" endtime="20250828 10:04:53.784"/>
+</kw>
+<kw name="Login Mynetwork" library="My_network">
+<arg>${Mynetwork User}</arg>
+<arg>${Mynetwork Pass}</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.785" endtime="20250828 10:04:53.785"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20250828 10:04:53.785" endtime="20250828 10:04:53.785"/>
+</kw>
+<kw name="Select Mynetwork Menu" library="My_network">
+<status status="NOT RUN" starttime="20250828 10:04:53.785" endtime="20250828 10:04:53.785"/>
+</kw>
+<kw name="Select Mynetwork Sub Menu" library="My_network">
+<arg>${Pre PR}</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.785" endtime="20250828 10:04:53.785"/>
+</kw>
+<kw name="Select Mynetwork Sub Menu" library="My_network">
+<arg>${Search Pre PR}</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.786" endtime="20250828 10:04:53.786"/>
+</kw>
+<kw name="Mynetwork Serach Doc ID" library="My_network">
+<arg>${Pre PR No}</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.786" endtime="20250828 10:04:53.786"/>
+</kw>
+<kw name="Mynetwork Click Serach Doc ID" library="My_network">
+<status status="NOT RUN" starttime="20250828 10:04:53.786" endtime="20250828 10:04:53.786"/>
+</kw>
+<kw name="Mynetwork Click View Pre-PR" library="My_network">
+<status status="NOT RUN" starttime="20250828 10:04:53.786" endtime="20250828 10:04:53.786"/>
+</kw>
+<kw name="Get PO Detail" library="My_network">
+<var>${PO Number}</var>
+<status status="NOT RUN" starttime="20250828 10:04:53.786" endtime="20250828 10:04:53.786"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${PO Number}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="NOT RUN" starttime="20250828 10:04:53.787" endtime="20250828 10:04:53.787"/>
+</kw>
+<kw name="Write Value From Column Name" library="Excel_Temp_New">
+<arg>${SOURCE_FILE For Small Cell}</arg>
+<arg>${i + 1}</arg>
+<arg>PO</arg>
+<arg>${PO Number}</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.787" endtime="20250828 10:04:53.787"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20250828 10:04:53.787" endtime="20250828 10:04:53.787"/>
+</kw>
+<kw name="Write Value From Column Name" library="Excel_Temp_New">
+<arg>${SOURCE_FILE For Small Cell}</arg>
+<arg>${i + 1}</arg>
+<arg>Run_Status</arg>
+<arg>My Net-Work Stagging</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.787" endtime="20250828 10:04:53.787"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" starttime="20250828 10:04:53.788" endtime="20250828 10:04:53.788"/>
+</kw>
+<kw name="Open Browser To test-mynetwork-asset" library="login_keywords">
+<status status="NOT RUN" starttime="20250828 10:04:53.788" endtime="20250828 10:04:53.788"/>
+</kw>
+<kw name="Login AMM Mynetwork" library="AMM_load_PO">
+<arg>${AMM USER}</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.788" endtime="20250828 10:04:53.788"/>
+</kw>
+<kw name="Get Column Values By Name File" library="Excel_Temp_New">
+<var>${PO Number List}</var>
+<arg>${SOURCE_FILE For Small Cell}</arg>
+<arg>PO</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.788" endtime="20250828 10:04:53.788"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${PO Number}</var>
+<arg>${PO Number List[${i - 1}]}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20250828 10:04:53.789" endtime="20250828 10:04:53.789"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${PO Number}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="NOT RUN" starttime="20250828 10:04:53.789" endtime="20250828 10:04:53.789"/>
+</kw>
+<kw name="AMM Mynetwork Load PO" library="AMM_load_PO">
+<arg>${PO Number}</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.789" endtime="20250828 10:04:53.790"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20250828 10:04:53.790" endtime="20250828 10:04:53.790"/>
+</kw>
+<kw name="AMM Check Text Results" library="AMM_load_PO">
+<status status="NOT RUN" starttime="20250828 10:04:53.790" endtime="20250828 10:04:53.790"/>
+</kw>
+<kw name="Write Value From Column Name" library="Excel_Temp_New">
+<arg>${SOURCE_FILE For Small Cell}</arg>
+<arg>${i + 1}</arg>
+<arg>Run_Status</arg>
+<arg>AMM Steps</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.790" endtime="20250828 10:04:53.790"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" starttime="20250828 10:04:53.790" endtime="20250828 10:04:53.790"/>
+</kw>
+<kw name="Open Browser To Mynetwork AMM Test SGAdd New" library="login_keywords">
+<status status="NOT RUN" starttime="20250828 10:04:53.791" endtime="20250828 10:04:53.791"/>
+</kw>
+<kw name="AMM Test SGAdd New" library="AMM_gateway">
+<status status="NOT RUN" starttime="20250828 10:04:53.791" endtime="20250828 10:04:53.791"/>
+</kw>
+<kw name="AMM Mynetwork Gateway Run Batch" library="AMM_gateway">
+<status status="NOT RUN" starttime="20250828 10:04:53.791" endtime="20250828 10:04:53.791"/>
+</kw>
+<kw name="AMM Run BATCH_CREATE_GR_TO_TPT" library="AMM_gateway">
+<status status="NOT RUN" starttime="20250828 10:04:53.791" endtime="20250828 10:04:53.791"/>
+</kw>
+<kw name="Write Value From Column Name" library="Excel_Temp_New">
+<arg>${SOURCE_FILE For Small Cell}</arg>
+<arg>${i + 1}</arg>
+<arg>Run_Status</arg>
+<arg>Run BATCH_CREATE_GR_TO_TPT</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.792" endtime="20250828 10:04:53.792"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" starttime="20250828 10:04:53.792" endtime="20250828 10:04:53.792"/>
+</kw>
+<kw name="Open Browser To Login Page" library="login_keywords">
+<status status="NOT RUN" starttime="20250828 10:04:53.792" endtime="20250828 10:04:53.792"/>
+</kw>
+<kw name="Your connection is not private" library="login_keywords">
+<status status="NOT RUN" starttime="20250828 10:04:53.792" endtime="20250828 10:04:53.792"/>
+</kw>
+<kw name="Transporter_Login" library="login_keywords">
+<arg>${GR Approved USER}</arg>
+<arg>${GR Approved PASS}</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.792" endtime="20250828 10:04:53.792"/>
+</kw>
+<kw name="Welcome Page Should Be Open" library="login_keywords">
+<arg>${LOGIN TITLE}</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.793" endtime="20250828 10:04:53.793"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>30 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20250828 10:04:53.793" endtime="20250828 10:04:53.793"/>
+</kw>
+<kw name="Click Menu List" library="menu_keywords">
+<status status="NOT RUN" starttime="20250828 10:04:53.793" endtime="20250828 10:04:53.793"/>
+</kw>
+<kw name="Select Menu" library="menu_keywords">
+<arg>${Todo list Menu ID}</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.793" endtime="20250828 10:04:53.793"/>
+</kw>
+<kw name="Get Column Values By Name File" library="Excel_Temp_New">
+<var>${SSR ID GR Approved List}</var>
+<arg>${SOURCE_FILE For Small Cell}</arg>
+<arg>SSR_ID</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.794" endtime="20250828 10:04:53.794"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${SSR ID GR Approved}</var>
+<arg>${SSR ID GR Approved List[${i - 1}]}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20250828 10:04:53.794" endtime="20250828 10:04:53.794"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${SSR ID GR Approved}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="NOT RUN" starttime="20250828 10:04:53.794" endtime="20250828 10:04:53.794"/>
+</kw>
+<kw name="To Do List Serach SSR ID" library="menu_to_do_list_keywords">
+<arg>${SSR ID GR Approved}</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.794" endtime="20250828 10:04:53.794"/>
+</kw>
+<kw name="To Do Click Serach SSR ID" library="menu_to_do_list_keywords">
+<status status="NOT RUN" starttime="20250828 10:04:53.795" endtime="20250828 10:04:53.795"/>
+</kw>
+<kw name="Selected SSR ID" library="menu_to_do_list_keywords">
+<status status="NOT RUN" starttime="20250828 10:04:53.795" endtime="20250828 10:04:53.795"/>
+</kw>
+<kw name="GR Approved" library="GR_Approved">
+<status status="NOT RUN" starttime="20250828 10:04:53.795" endtime="20250828 10:04:53.795"/>
+</kw>
+<kw name="GR Approved Case" library="GR_Approved">
+<status status="NOT RUN" starttime="20250828 10:04:53.795" endtime="20250828 10:04:53.795"/>
+</kw>
+<kw name="GR Approved Save Case" library="GR_Approved">
+<status status="NOT RUN" starttime="20250828 10:04:53.795" endtime="20250828 10:04:53.795"/>
+</kw>
+<kw name="Result Massage Data recorded" library="result_massage_keywords">
+<var>${SSR ID FAT Permission Submitted}</var>
+<arg>${GR Approved Result Massage}</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.795" endtime="20250828 10:04:53.795"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${SSR ID FAT Permission Submitted}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="NOT RUN" starttime="20250828 10:04:53.796" endtime="20250828 10:04:53.796"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20250828 10:04:53.796" endtime="20250828 10:04:53.796"/>
+</kw>
+<kw name="Write Value From Column Name" library="Excel_Temp_New">
+<arg>${SOURCE_FILE For Small Cell}</arg>
+<arg>${i + 1}</arg>
+<arg>Run_Status</arg>
+<arg>GR Approved</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.796" endtime="20250828 10:04:53.796"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>60 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20250828 10:04:53.796" endtime="20250828 10:04:53.796"/>
+</kw>
+<kw name="Click Menu List" library="menu_keywords">
+<status status="NOT RUN" starttime="20250828 10:04:53.797" endtime="20250828 10:04:53.797"/>
+</kw>
+<kw name="Select Menu" library="menu_keywords">
+<arg>${SSR Tracking Menu ID}</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.797" endtime="20250828 10:04:53.797"/>
+</kw>
+<kw name="Search SSR ID Tracking" library="menu_ssr_tracking_keywords">
+<arg>${SSR ID FAT Permission Submitted}</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.797" endtime="20250828 10:04:53.797"/>
+</kw>
+<kw name="Click SSR Search Button" library="menu_ssr_tracking_keywords">
+<status status="NOT RUN" starttime="20250828 10:04:53.797" endtime="20250828 10:04:53.797"/>
+</kw>
+<kw name="Select SSR ID" library="menu_ssr_tracking_keywords">
+<status status="NOT RUN" starttime="20250828 10:04:53.797" endtime="20250828 10:04:53.797"/>
+</kw>
+<kw name="Check Process Status" library="menu_ssr_tracking_keywords">
+<arg>${Process Status Checking Step 9}</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.797" endtime="20250828 10:04:53.797"/>
+</kw>
+<kw name="Write Value From Column Name" library="Excel_Temp_New">
+<arg>${SOURCE_FILE For Small Cell}</arg>
+<arg>${i + 1}</arg>
+<arg>Result</arg>
+<arg>Pass</arg>
+<status status="NOT RUN" starttime="20250828 10:04:53.799" endtime="20250828 10:04:53.799"/>
+</kw>
+<kw name="Log Out" library="Logout_keywords">
+<status status="NOT RUN" starttime="20250828 10:04:53.799" endtime="20250828 10:04:53.799"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" starttime="20250828 10:04:53.799" endtime="20250828 10:04:53.799"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>=== จบการทำงาน ===</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20250828 10:04:53.799" endtime="20250828 10:04:53.799"/>
+</kw>
+<status status="NOT RUN" starttime="20250828 10:04:53.729" endtime="20250828 10:04:53.799"/>
+</branch>
+<branch type="EXCEPT">
+<kw name="Log" library="BuiltIn">
+<arg>!!! ERROR in round ${i} — skipping rest of this round</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20250828 10:04:53.800" endtime="20250828 10:04:53.800"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" starttime="20250828 10:04:53.800" endtime="20250828 10:04:53.800"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>=== จบการทำงาน ===</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20250828 10:04:53.800" endtime="20250828 10:04:53.800"/>
+</kw>
+<continue>
+<status status="NOT RUN" starttime="20250828 10:04:53.800" endtime="20250828 10:04:53.800"/>
+</continue>
+<status status="NOT RUN" starttime="20250828 10:04:53.800" endtime="20250828 10:04:53.800"/>
+</branch>
+<status status="NOT RUN" starttime="20250828 10:04:53.729" endtime="20250828 10:04:53.800"/>
+</try>
+<status status="NOT RUN" starttime="20250828 10:04:53.729" endtime="20250828 10:04:53.800"/>
+</iter>
+<status status="NOT RUN" starttime="20250828 10:04:53.728" endtime="20250828 10:04:53.800"/>
+</for>
+<kw name="Close Workbook" library="RPA.Excel.Files">
+<doc>Close the active workbook.</doc>
+<status status="NOT RUN" starttime="20250828 10:04:53.801" endtime="20250828 10:04:53.801"/>
+</kw>
+<doc>สามารถทำงาน Transporter : Type Non Turnkey [Small Cell for TPT III] ได้</doc>
+<tag>Standard_Test</tag>
+<status status="FAIL" starttime="20250828 10:04:53.692" endtime="20250828 10:04:53.802">ValueError: Failed to open Excel file (C:\Users\arnoj885\Robot Framework\Obsolate Transporter\tests\TYPE_Non-Turnkey\Small Cell for TPT III\data file\Small_Cell_for_TPT_III_Config.xlsx), verify that the path and extension are correct</status>
+</test>
+<status status="FAIL" starttime="20250828 10:04:50.309" endtime="20250828 10:04:53.804"/>
+</suite>
+<status status="FAIL" starttime="20250828 10:04:50.257" endtime="20250828 10:04:53.805"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">Standard_Test</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Small Cell for TPT III">Small Cell for TPT III</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Small Cell for TPT III">Small Cell for TPT III.Small Cell for TPT III</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
