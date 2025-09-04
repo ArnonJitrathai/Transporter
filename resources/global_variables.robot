@@ -89,6 +89,7 @@ ${SSR Create Menu ID}                   iconheader:frmMenu:SSRCreate
 #Static Value
 ${Project Name}                         Test Interface Send/Approve/Cancel PR [Y]
 ${SSR Reference Site Code By Pass}      BKK_BMKSM_VAS_202500036
+${SSR By Pass}                          BKK-2025011983
 
 #Import Site
 ${Import Site Serch Project}            //tr/td/form/fieldset[1]/table/tbody/tr[2]/td[3]/input[2]
@@ -325,12 +326,12 @@ ${Permission Start Approve Result Massage}          //fieldset/table/tbody/tr[2]
 
 #PAT BOQ Submitted
 ${SSR ID PAT BOQ Submitted By Pass}                 BKK-2025011983
-${PAT BOQ Submitted Sub Project}                    //tbody/tr[3]/td[3]/select
+${PAT BOQ Submitted Sub Project Select}             //tbody/tr[3]/td[3]/select
 ${Test Interface Send/Approve/Cancel PR PF}         //tr[3]/td[3]/select/option[3]
 ${PAT BOQ Submitted Sub Project Serach}             //tr[4]/td/table/tbody/tr/td[3]/input
 ${Standard Price 1}                                 //div[2]/table/tbody/tr[1]/td[1]/input
 ${Standard Price 2}                                 //div[2]/table/tbody/tr[2]/td[1]/input
-${PAT BOQ Submitted Standard Price}                 //span/span/table/tbody/tr/td/input
+${PAT BOQ Submitted Standard Price Confirm}         //span/span/table/tbody/tr/td/input
 ${Input Vendor QTY 1}                               //div/div/table/tbody/tr[1]/td[17]/input
 ${Input Vendor QTY 2}                               //div/div/table/tbody/tr[2]/td[17]/input
 # ${1}                                                1
@@ -342,9 +343,11 @@ ${PAT/BOQ Submitted Add Picture}                    //table/tbody/tr/td/div[1]/d
 ${PAT/BOQ Submitted Download Picture}               //tr/td[3]/a[1]/img
 ${PAT/BOQ Submitted Save}                           //tr[1]/td[3]/input[4]
 ${PAT/BOQ Submitted Result Massage}                 //form/fieldset/table/tbody/tr[2]/td
+${PAT BOQ Submitted Standard Price Content}         //div[2]/table/tbody/tr[2]/td/div[1]/div/fieldset
+${PAT BOQ Submitted Standard Price List}            //div[3]/table/tbody/tr/td[2]/select
 
 #PAT BOQ Verify
-${SSR ID PAT BOQ Verify By Pass}                    BKK-2025000263
+${SSR ID PAT BOQ Verify By Pass}                    BKK-2025011983
 ${PAT BOQ Verify Click Pass Fail}                   //tbody/tr/td[2]/select
 ${Verify Pass Case}                                 //tr/td[2]/select/option[2]
 ${PAT BOQ Verify Save}                              //tbody/tr[1]/td[3]/input[4]
